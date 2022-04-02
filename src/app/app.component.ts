@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+interface AppState {
+  Auth: Auth;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,11 +38,7 @@ export class AppComponent {
     ]),
   })
 
-  constructor (public _Router:Router, private _Store:Store, public _AuthService:AuthService) {
-    // this._Store.select("Auth").subscribe((Res) => {
-    //   console.log(Res.JWT);
-    // })
-  }
+  constructor (public _Router:Router, private _Store:Store<AppState>, public _AuthService:AuthService) { }
 
   onLogin(loginData: FormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {
