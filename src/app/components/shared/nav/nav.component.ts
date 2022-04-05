@@ -12,17 +12,18 @@ export class NavComponent implements OnInit {
   }
 
   changeNavbarColor(): void {
-    const iPoint = 20;
-    $(window).on('scroll', () => {
-      const wScorll = $(window).scrollTop()!;
-      if (wScorll > iPoint) {
-        $('nav').css('backgroundColor', '#11828f92');
-        $('nav').css('boxShdow', '0px 1px 10px #999');
-        $('.color-shift').css('color', '#fff');
+    const iPoint:number = 100;
+    const nav: HTMLDivElement = document.querySelector('nav')! as HTMLDivElement
+    window.onscroll = () => {
+      if (window.pageYOffset > iPoint) {
+        nav.classList.add('bg-orange')
+        nav.style.animationName = 'fadeDown'
+        nav.classList.remove('bg-transparent')
       } else {
-        $('nav').css('backgroundColor', 'transparent');
-        $('.color-shift').css('color', '#707070');
+        nav.style.animationName = ''
+        nav.classList.add('bg-transparent')
+        nav.classList.remove('bg-orange')
       }
-    });
+    }
   }
 }

@@ -1,9 +1,67 @@
 nav {
-  // a {
-  //   color: #fff;
-  // }
-  // .toggle-nav-icon{
-  //   font-size: 25px;
-  //   color: orange;
-  // }
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  transition: background-color 0.5s;
+
+  .container-fluid {
+    max-width: 85%;
+    .logo {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 24px;
+        font-weight: bold;
+        color: #da520c;
+        margin: 0;
+      }
+    }
+    .nav-item {
+      a {
+        color: #fff;
+        font-size: 22px;
+      }
+      button {
+        border-radius: 30px;
+        padding-inline: 2rem;
+        font-size: 22px;
+        color: #fff;
+        &:hover {
+          background-color: #da520c;
+          color: #fff;
+          border-color: #da520c;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .active-link {
+    color: #da520c !important;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    transition: color 0.3s;
+  }
+}
+
+.bg-orange {
+  background-color: #da520c;
+  box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
 }
