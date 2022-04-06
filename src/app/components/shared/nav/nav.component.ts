@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -9,6 +10,20 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.changeNavbarColor()
+  }
+
+  visible = false;
+  placement: NzDrawerPlacement = 'right';
+  open(): void {
+    if (this.visible == false) {
+      this.visible = true;
+    } else {
+      this.visible = false;
+    }
+  }
+
+  close(): void {
+    this.visible = false;
   }
 
   changeNavbarColor(): void {

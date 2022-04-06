@@ -1,0 +1,121 @@
+@import '../../../../styles.scss';
+footer {
+  background-color: $main-theme;
+
+  .footer-content {
+      padding: 2rem 0;
+      .main-content {
+          .logo {
+              img {
+                  max-width: 164px;
+              }
+          }
+          .call-us {
+              display: flex;
+              align-items: center;
+              margin: 10px 0;
+              .icon {
+                  img {
+                      max-width: 35px;
+                  }
+              }
+              .content {
+                  margin: 0 15px;
+                  span {
+                      font-size: 14px;
+                      display: block;
+                      color: #F7F7F9;
+                      font-weight: 300;
+                  }
+                  a {
+                      text-decoration: none;
+                      color: #F7F7F9;
+                      font-weight: 700;
+                      transition: all .3s;
+                      &:hover {
+                          color: #FCA818;
+                      }
+                  }
+              }
+          }
+          .location {
+              span {
+                  font-size: 14px;
+                  display: block;
+                  color: #F7F7F9;
+                  font-weight: 300;
+              }
+              a {
+                  text-decoration: none;
+                  color: #F7F7F9;
+                  font-weight: 700;
+                  font-size: 13px;
+                  transition: all .3s;
+                  &:hover {
+                      color: #FCA818;
+                  }
+              }
+          }
+          .social-links {
+              margin: 1rem 0;
+              ul {
+                  display: flex;
+                  li {
+                      margin-right: 5%;
+                      a {
+                          font-size: 14px;
+                          color: #F7F7F9;
+                          transition: all .3s;
+                          &:hover {
+                              color: #FCA818;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      .links {
+          header {
+              h5 {
+                  color: #FCA818;
+                  font-size: 17px;
+                  font-weight: 700;
+              }
+          }
+          article {
+              ul {
+                  li {
+                      a {
+                          color: #F7F7F9;
+                          text-decoration: none;
+                          font-size: 18px;
+                          font-weight: 300;
+                          transition: all .3s;
+                          &:hover {
+                              color: #FCA818;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+  .copyright {
+      background-color: $main-theme-dark;
+      p {
+          color: #cbcbcb;
+          font-size: 14px;
+          padding: 15px 0;
+          text-align: center;
+          a {
+              transition: all .3s;
+              color: #ADADAD;
+              text-decoration: none;
+              font-weight: bold;
+              &:hover {
+                  color: #FCA818;
+              }
+          }
+      }
+  }
+}
