@@ -1,4 +1,4 @@
-@import '../../../../styles.scss';
+@import "../../../../styles.scss";
 
 nav {
   animation-duration: 1s;
@@ -10,20 +10,26 @@ nav {
   animation-play-state: running;
   transition: background-color 0.5s;
 
-  .container {
+  .container-md {
     .logo {
       display: flex;
       align-items: center;
       img {
-        max-width: 220px;
-      }
-    }
-    ul {
-        gap: 3.5rem;
-        @media screen and (max-width: 1300px) {
-          gap: 2rem;
+           @media screen and (min-width: 1300px) {
+            max-width: 300px;
+          } 
         }
       }
+      .navbar-toggler{
+        padding-top: .7rem;
+      }
+
+      ul {
+      gap: 3.5rem;
+      @media screen and (max-width: 1300px) {
+        gap: 2rem;
+      }
+    }
 
     .login-btn {
       border-radius: 30px;
@@ -43,16 +49,27 @@ nav {
     }
     .nav-item {
       a {
-        color: #fff;
+        color: #fff !important;
         font-size: 18px;
         white-space: nowrap;
-        &:hover {
-          color: $main-theme;
-        }
       }
-      
     }
   }
+
+  .hover-text-main:hover {
+    transition: color 0.5s;
+    &:hover {
+      color: $main-theme !important;
+    }
+  }
+
+  .hover-text-dark:hover {
+    transition: color 0.5s;
+    &:hover {
+      color: #000 !important;
+    }
+  }
+
 
   @keyframes fadeDown {
     0% {
@@ -75,4 +92,40 @@ nav {
 .bg-orange {
   background-color: $main-theme;
   box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
+}
+
+// .sideNav-content {
+//   filter: blur(30px);
+//   .nav-item {
+//     a {
+//       color: #fff !important;
+//       font-size: 18px;
+//     }
+//   }
+// }
+
+.ant-drawer-content{
+  background-color: transparent;
+  .nav-link {
+    font-size: 18px;
+    color: #fff;
+  }
+}
+
+.ant-drawer-header{
+  background-color: transparent;
+  border-bottom: 2px solid $main-theme;
+  padding: 1rem .2rem;
+  .ant-drawer-title{
+    color: #fff;
+  }
+}
+
+#nav-toggle {
+  box-shadow: none;
+  border: none;
+  i {
+    font-size: 28px;
+    color: #fff;
+  }
 }
