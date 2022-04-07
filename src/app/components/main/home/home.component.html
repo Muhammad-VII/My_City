@@ -1,6 +1,71 @@
-<section role="main">
-
+<!--START HERO SECTION-->
+<section role="main" class="hero">
+  <div class="container">
+    <div class="d-flex gap-5 flex-column w-100">
+      <div>
+        <h1>Explore Everything In <span>El-Sherouk City</span></h1>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing</p>
+      </div>
+      <div>
+        <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+          <input type="text" nz-input placeholder="What are you looking for?" />
+        </nz-input-group>
+        <ng-template #suffixButton>
+          <button nz-button nzSize="large" nzSearch>Explore</button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
 </section>
-<section role="main">
+<!--END HERO SECTION-->
 
+<!--START CATEGORIES SECTION-->
+<section class="categories">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="title">
+        <header>
+          <h2>Categories</h2>
+        </header>
+      </div>
+
+      <div class="show-more">
+        <button>
+         View All
+        </button>
+      </div>
+    </div>
+    <p>What are you looking for?</p>
+
+    <div class="categories-grid">
+      <article class="category">
+        <img src="../../../../assets/Home/shopping.png" alt="Shopping">
+        <h3>Shopping</h3>
+      </article>
+
+      <article class="category">
+        <img src="../../../../assets/Home/food.png" alt="Food">
+        <h3>Food</h3>
+      </article>
+
+      <article class="category">
+        <img src="../../../../assets/Home/services.png" alt="Services">
+        <h3>Services</h3>
+      </article>
+
+      <article class="category">
+        <img src="../../../../assets/Home/entertainment.png" alt="Entertainment">
+        <h3>Entertainment</h3>
+      </article>
+
+      <article class="category">
+        <img src="../../../../assets/Home/medical.png" alt="Medical">
+        <h3>Medical</h3>
+      </article>
+      
+    </div>
+  </div>
 </section>
+<!--END CATEGORIES SECTION-->

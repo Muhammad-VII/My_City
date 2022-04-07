@@ -10,20 +10,21 @@
       <i class="bi bi-list"></i>
     </button>
 
-
     <nz-drawer
-      [nzBodyStyle]="{'padding': '2rem', 'background-color': 'transparent', 'backdrop-filter': 'blur(5px)'}"
+      [nzBodyStyle]="{'padding': '2rem', 'background-color': 'rgba(0,0,0,.5)', 'backdrop-filter': 'blur(5px)'}"
       [nzMask]="true"
-      nzWidth="100%"
+      nzWidth="70%"
+      [nzMaskStyle]	= "{'background-color': 'rgba(0,0,0,.3)'}"
       [nzCloseOnNavigation]="true"
-      [nzMaskClosable] = "false"
+      [nzMaskClosable] = "true"
       [nzKeyboard]="true"
       [nzClosable]="false"
       [nzVisible]="visible"
       [nzPlacement]="placement"
-      nzTitle="<img id='logo' src='assets/Home/logo.png' alt='my_city_logo'>"
+      nzTitle="<img id='logo' src='assets/Home/logo.png' alt='my_city_logo'/>"
       (nzOnClose)="close()"
     >
+
     <ng-container *nzDrawerContent>
       <nav class="sideNav-content">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
@@ -50,7 +51,8 @@
       </nav>
 
     </ng-container>
-  </nz-drawer>
+    </nz-drawer>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -96,7 +98,5 @@
       </li> -->
 
     </div>
-
-
   </div>
 </nav>

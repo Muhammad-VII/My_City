@@ -15,16 +15,16 @@ nav {
       display: flex;
       align-items: center;
       img {
-           @media screen and (min-width: 1300px) {
-            max-width: 300px;
-          } 
+        @media screen and (min-width: 1300px) {
+          max-width: 300px;
         }
       }
-      .navbar-toggler{
-        padding-top: .7rem;
-      }
+    }
+    .navbar-toggler {
+      padding-top: 0.7rem;
+    }
 
-      ul {
+    ul {
       gap: 3.5rem;
       @media screen and (max-width: 1300px) {
         gap: 2rem;
@@ -38,9 +38,7 @@ nav {
       white-space: nowrap;
       color: #fff;
       &:hover {
-        background-color: $main-theme;
-        color: #fff;
-        border-color: $main-theme;
+        background-color: transparent;
       }
       &:focus {
         outline: none;
@@ -70,7 +68,6 @@ nav {
     }
   }
 
-
   @keyframes fadeDown {
     0% {
       opacity: 0;
@@ -94,17 +91,7 @@ nav {
   box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
 }
 
-// .sideNav-content {
-//   filter: blur(30px);
-//   .nav-item {
-//     a {
-//       color: #fff !important;
-//       font-size: 18px;
-//     }
-//   }
-// }
-
-.ant-drawer-content{
+.ant-drawer-content {
   background-color: transparent;
   .nav-link {
     font-size: 18px;
@@ -112,11 +99,11 @@ nav {
   }
 }
 
-.ant-drawer-header{
-  background-color: transparent;
+.ant-drawer-header {
+  background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid $main-theme;
-  padding: 1rem .2rem;
-  .ant-drawer-title{
+  padding: 1rem 0.2rem;
+  .ant-drawer-title {
     color: #fff;
   }
 }

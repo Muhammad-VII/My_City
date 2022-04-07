@@ -1,7 +1,139 @@
-section {
+@import "../../../../styles.scss";
+// Start Hero Section
+.hero {
   height: 100vh;
   width: 100%;
   background-image: url(../../../../assets/Home/HeaderHome.png);
   background-position: center center;
   background-size: cover;
+  .container {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+  }
+  h1 {
+    font-size: 50px;
+    color: #fff;
+    span {
+      color: $main-theme;
+    }
+  }
+  p {
+    font-size: 32px;
+    font-weight: 300;
+  }
+  nz-input-group {
+    max-width: 50%;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    input {
+      &::placeholder {
+        color: #686868c9;
+      }
+    }
+  }
+  button {
+    background-color: $main-theme;
+    color: #000 !important;
+    border: none;
+    font-weight: 400;
+  }
 }
+// End Hero section
+
+// Start categories section
+.categories {
+  padding: 2rem 0rem;
+  header {
+    h2 {
+      font-weight: 500;
+      font-size: 40px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 87px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: $main-theme;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -50%;
+      }
+    }
+  }
+  p {
+    font-size: 27px;
+    font-weight: 300;
+  }
+  button {
+    background-color: transparent;
+    border-radius: 50px;
+    @media screen and (min-width: 768px) {
+      font-size: 23px;
+    }
+    padding: 0.5rem 2rem;
+    border: 1px solid $main-theme;
+    color: $main-theme;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover {
+      background-color: $main-theme;
+      color: #fff;
+    }
+  }
+
+  .category {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      min-height: 100%;
+      transition: all .3s;
+    }
+    h3 {
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      transform: translateX(-50%);
+      font-size: 30px;
+      color: #fff;
+    }
+    &:hover {
+      img{
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .categories-grid {
+      display: grid;
+      gap: .7rem;
+      grid-auto-columns: 1fr;
+      grid-template-areas:
+       "one two three three"
+       "one four four five"
+  }
+  .category:nth-child(1) {
+    grid-area: one;
+  }
+
+  .category:nth-child(2) {
+    grid-area: two;
+  }
+
+  .category:nth-child(3) {
+    grid-area: three;
+  }
+
+  .category:nth-child(4) {
+    grid-area: four;
+  }
+
+  .category:nth-child(5) {
+    grid-area: five;
+  }
+}
+// End categories section

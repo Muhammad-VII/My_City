@@ -48,6 +48,7 @@ registerLocaleData(en);
     FooterComponent,
     PrivacyPolicyComponent,
     NotfoundComponent,
+    ImgScanPipe
   ],
   imports: [
     BrowserModule,
