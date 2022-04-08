@@ -257,13 +257,13 @@
       &:after {
         content: "";
         position: absolute;
-        width: 87px;
+        width: 140px;
         height: 5px;
         border-radius: 5px;
         background-color: $main-theme;
         top: 50%;
         transform: translateY(-50%);
-        right: -42%;
+        right: -65%;
       }
 
       @media screen and (max-width: 33em) {
@@ -299,6 +299,339 @@
     &:hover {
       background-color: $main-theme;
       color: #fff;
+    }
+  }
+  .offer-card{
+    position: relative;
+    .offer-img {
+      img {
+        width: 100%;
+        min-height: 100%;
+        transition: all .3s;
+      }
+      .offer-value {
+        position: absolute;
+        left: 10px;
+        top: 0;
+        background-color: $main-theme;
+        padding: 0.5rem 1rem;
+        border-end-start-radius: 5px;
+        border-end-end-radius: 5px;
+        h3 {
+          color: #fff;
+          font-size: 25px;
+          margin-block: .4rem;
+        }
+      }
+      .is-fav {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: grid;
+        place-items: center;
+        i {
+          transition: color .5s;
+          font-size: 21px;
+          background-color: #fff;
+        }
+        &:hover {
+          cursor: pointer;
+          i {
+            color: red;
+          }
+        } 
+      }
+
+    }
+    .offer-title {
+      padding: .8rem 0rem;
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #000;
+        @media screen and (max-width: 33em) {
+          font-size: 20px;
+        }      
+      }
+      .offer-des{
+        margin-top: 3rem;
+        p {
+          font-size: 25px;
+          font-weight: 300;
+          padding: 0;
+          margin: 0;
+          color: #000;
+          @media screen and (max-width: 33em) {
+            font-size: 18px;
+          }
+        }
+      }
+
+    }
+    .view-offer{
+      padding-top: .5rem;
+      a {
+        text-decoration: none;
+        background-color: $main-theme;
+        color: #000;
+        display: inline-block;
+        min-width: 100%;
+        text-align: center;
+        padding: 1rem 3rem;
+        border-radius: 5px;
+        font-size: 23px;
+        font-weight: bold;
+        transition: all .3s;
+        border: 2px solid $main-theme;
+        &:hover {
+          background-color: transparent;
+          color: $main-theme;
+        }
+      } 
+    }
+  }
+}
+
+.popular-places {
+  padding: 3rem 0rem;
+  background-color: #F8F8F8;
+  header {
+    h2 {
+      font-weight: 500;
+      font-size: 40px;
+     
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: $main-theme;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -60%;
+      }
+
+      @media screen and (max-width: 33em) {
+        font-size: 30px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 27px;
+    font-weight: 300;
+
+    @media screen and (max-width: 33em) {
+      font-size: 20px;
+    }
+  }
+  .view-all-btn {
+    background-color: transparent;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 0.5rem 2rem;
+    border: 1px solid $main-theme;
+    color: $main-theme;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    @media screen and (max-width: 33em) {
+      font-size: 17px;
+      padding: 0.3rem 1rem;
+    }
+    &:hover {
+      background-color: $main-theme;
+      color: #fff;
+    }
+  }
+  .place-card{
+    position: relative;
+    .place-img {
+      img {
+        width: 100%;
+        min-height: 100%;
+        transition: all .3s;
+      }
+      .is-fav {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: grid;
+        place-items: center;
+        i {
+          transition: color .5s;
+          font-size: 21px;
+          background-color: #fff;
+        }
+        &:hover {
+          cursor: pointer;
+          i {
+            color: red;
+          }
+        } 
+      }
+
+    }
+    .place-title {
+      padding: .8rem 0rem;
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #000;
+        @media screen and (max-width: 33em) {
+          font-size: 20px;
+        }      
+      }
+      .place-des{
+        margin-top: 3rem;
+        p {
+          font-size: 25px;
+          font-weight: 300;
+          padding: 0;
+          margin: 0;
+          color: #000;
+          @media screen and (max-width: 33em) {
+            font-size: 18px;
+          }
+        }
+      }
+
+    }
+    .view-place{
+      padding-top: .5rem;
+      a {
+        text-decoration: none;
+        background-color: $main-theme;
+        color: #000;
+        display: inline-block;
+        min-width: 100%;
+        text-align: center;
+        padding: 1rem 3rem;
+        border-radius: 5px;
+        font-size: 23px;
+        font-weight: bold;
+        transition: all .3s;
+        border: 2px solid $main-theme;
+        &:hover {
+          background-color: transparent;
+          color: $main-theme;
+        }
+      } 
+    }
+  }
+}
+
+.news {
+  padding: 3rem 0rem;
+  header {
+    h2 {
+      font-weight: 500;
+      font-size: 40px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: $main-theme;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 120%;
+      }
+
+      @media screen and (max-width: 47em) {
+        font-size: 30px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 27px;
+    font-weight: 300;
+
+    @media screen and (max-width: 33em) {
+      font-size: 20px;
+    }
+  }
+  .view-all-btn {
+    background-color: transparent;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 0.5rem 2rem;
+    border: 1px solid $main-theme;
+    color: $main-theme;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    @media screen and (max-width: 33em) {
+      font-size: 17px;
+      padding: 0.3rem 1rem;
+    }
+    &:hover {
+      background-color: $main-theme;
+      color: #fff;
+    }
+  }
+  .news-card {
+    position: relative;
+    @media screen and (max-width: 33em) {
+      margin-block: 10px;
+    }
+    img {
+      width: 100%;
+    }
+    h4 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 1rem;
+      @media screen and (max-width: 33em) {
+        font-size: 26px;
+      }
+    }
+    p {
+      font-size: 23px;
+      font-weight: 300;
+      @media screen and (max-width: 33em) {
+        font-size: 22px;
+      }
+    }
+
+    .news-date {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 1rem;
+      background-color: $main-theme;
+      h4 {
+        font-size: 30px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 32px;
+      font-weight: bold;
+      @media screen and (max-width: 33em) {
+        font-size: 26px;
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 interface AppState {
   Auth: Auth;
 }
@@ -38,7 +39,12 @@ export class AppComponent {
     ]),
   })
 
-  constructor (public _Router:Router, private _Store:Store<AppState>, public _AuthService:AuthService) { }
+  constructor (public _Router:Router, private _Store:Store<AppState>, public _AuthService:AuthService, public _SpinnerService: NgxSpinnerService) { 
+    this._SpinnerService.show()
+    window.onload = () => {
+      this._SpinnerService.hide()
+    }
+  }
 
   onLogin(loginData: FormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {

@@ -145,7 +145,432 @@
         </a>
       </div>
     </div>
-    <p data-aos="fade-right">Check the latests offers in the city</p>
+    <p data-aos="fade-right">Check the latests offers in the city!</p>
+    <div data-aos="fade-up" class="carousel">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-2.png">
+            <div class="offer-value">
+              <h3>20%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template carouselSlide>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-1.png">
+            <div class="offer-value">
+              <h3>20%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template> 
+
+      <ng-template carouselSlide>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-2.png">
+            <div class="offer-value">
+              <h3>20%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template> 
+
+      <ng-template carouselSlide>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-1.png">
+            <div class="offer-value">
+              <h3>20%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template> 
+
+      <ng-template carouselSlide>
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-2.png">
+            <div class="offer-value">
+              <h3>20%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template> 
+       
+    </owl-carousel-o>
+  </div>
+
   </div>
 </section>
 <!--END OFFERS SECTION-->
+
+<!--START PLACES SECTION-->
+<section class="popular-places">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="title" data-aos="fade-right">
+        <header>
+          <h2>Popular Places</h2>
+        </header>
+      </div>
+
+      <div class="show-more" data-aos="fade-left">
+        <a class="view-all-btn" [routerLink]="['/categories']">
+         View All
+        </a>
+      </div>
+    </div>
+    <p data-aos="fade-right">The most popular places in the city!</p>
+    <div data-aos="fade-down" class="carousel">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-1.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-2.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-1.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-2.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-1.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template carouselSlide>
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-2.png">
+              <div class="is-fav">
+                <i class="bi bi-heart"></i>
+              </div>
+            </div>
+  
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+  
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </ng-template>
+
+      </owl-carousel-o>
+    </div>
+
+  </div>
+</section>
+<!--END PLACES SECTION-->
+
+<!--START NEWS SECTION-->
+<section class="news">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="title" data-aos="fade-right">
+        <header>
+          <h2>News</h2>
+        </header>
+      </div>
+
+      <div class="show-more" data-aos="fade-left">
+        <a class="view-all-btn" [routerLink]="['/categories']">
+         View All
+        </a>
+      </div>
+    </div>
+    <p data-aos="fade-right">What is new in El-Sherouk City</p>
+    <div class="row">
+      <div data-aos="fade-up" data-aos-delay="300" class="col-md-4">
+        <div class="news-card">
+          <img src="assets/Home/pexels-anna-shvets-1.png">
+          <h4 class="news-title">
+            Golden Coffee Cafe Opening
+          </h4>
+
+          <p class="news-captian">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+          </p>
+          <div class="news-date">
+            <h4>01</h4>
+            <h4>DEC</h4>
+          </div>
+
+          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+       
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="500" class="col-md-4">
+        <div class="news-card">
+          <img src="assets/Home/pexels-anna-shvets-1.png">
+          <h4 class="news-title">
+            Golden Coffee Cafe Opening
+          </h4>
+
+          <p class="news-captian">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+          </p>
+          <div class="news-date">
+            <h4>01</h4>
+            <h4>DEC</h4>
+          </div>
+
+          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+       
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="700" class="col-md-4">
+        <div class="news-card">
+          <img src="assets/Home/pexels-anna-shvets-1.png">
+          <h4 class="news-title">
+            Golden Coffee Cafe Opening
+          </h4>
+
+          <p class="news-captian">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+          </p>
+          <div class="news-date">
+            <h4>01</h4>
+            <h4>DEC</h4>
+          </div>
+
+          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--END NEWS SECTION-->

@@ -1,16 +1,9 @@
 <app-nav *ngIf="_AuthService.token$ | async"></app-nav>
 <router-outlet></router-outlet>
 <app-footer *ngIf="!(_Router.url === '/404')"></app-footer>
-
 <!-- <form class="d-flex flex-column gap-2 w-25 m-auto align-items-center" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
   <input type="text"  class="form-control" placeholder="username">
   <input type="text"  class="form-control" placeholder="password">
   <button type="submit" class="btn btn-outline-info w-25">Submit form</button>
 </form> -->
-
-<!-- <div class="row">
-  <div *ngFor="let movie of movies$ | async" class="col-md-4">
-    <img src="" alt="" srcset="">
-  <h2>{{movie.title}}</h2>
-  </div>
-</div> -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#da520c" type = "square-jelly-box" [fullScreen] = "true"></ngx-spinner>

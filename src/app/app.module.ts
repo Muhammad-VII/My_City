@@ -29,7 +29,9 @@ import { NotfoundComponent } from './components/shared/notfound/notfound.compone
 import * as fromAuth from './States/Auth_State/Reducer/auth-reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { EffectsModule } from '@ngrx/effects';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -61,8 +63,9 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NGZORROModule,
+    CarouselModule,
+    NgxSpinnerModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    // EffectsModule.forRoot([]),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
