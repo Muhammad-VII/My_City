@@ -1,4 +1,4 @@
-<app-nav *ngIf="_AuthService.token$ | async"></app-nav>
+<app-nav></app-nav>
 <router-outlet></router-outlet>
 <app-footer *ngIf="!(_Router.url === '/404')"></app-footer>
 <!-- <form class="d-flex flex-column gap-2 w-25 m-auto align-items-center" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
