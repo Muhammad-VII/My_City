@@ -3,17 +3,17 @@
   <div class="container">
     <div class="d-flex gap-5 flex-column w-100">
       <div>
-        <h1>Explore Everything In <span>El-Sherouk City</span></h1>
+        <h1 data-aos="fade-right" data-aos-delay="2000">Explore Everything In <span data-aos="fade" data-aos-delay="2500" >El-Sherouk City</span></h1>
       </div>
       <div>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing</p>
+        <p data-aos="fade-left" data-aos-delay="500">Lorem ipsum dolor sit amet, consetetur sadipscing</p>
       </div>
-      <div>
+      <div data-aos="fade-up" data-aos-delay="3000">
         <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
           <input type="text" nz-input placeholder="What are you looking for?" />
         </nz-input-group>
         <ng-template #suffixButton>
-          <button nz-button nzSize="large" nzSearch>Explore</button>
+          <button nz-button nzSize="large" >Explore</button>
         </ng-template>
       </div>
     </div>
@@ -25,47 +25,127 @@
 <section class="categories">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-      <div class="title">
+      <div class="title" data-aos="fade-right">
         <header>
           <h2>Categories</h2>
         </header>
       </div>
 
-      <div class="show-more">
-        <button>
+      <div class="show-more" data-aos="fade-left">
+        <a class="view-all-btn" [routerLink]="['/categories']">
          View All
-        </button>
+        </a>
       </div>
     </div>
-    <p>What are you looking for?</p>
+    <p data-aos="fade-right">What are you looking for?</p>
 
     <div class="categories-grid">
-      <article class="category">
-        <img src="assets/Home/shopping.png" alt="Shopping">
-        <h3>Shopping</h3>
+      <article class="category" data-aos-delay="300" data-aos="fade-right">
+        <a [routerLink]="['/categories/shopping']">
+          <img src="assets/Home/shopping.png" alt="Shopping">
+          <h3>Shopping</h3>
+          <div>
+            <header>
+              <h4>Shopping Areas</h4>
+            </header>
+            <ul>
+              <li>Malls: 20</li>
+              <li>Groceries: 30</li>
+              <li>Stores: 30</li>
+            </ul>
+          </div>
+        </a>
+
       </article>
 
-      <article class="category">
+      <article class="category" data-aos-delay="300" data-aos="fade-down">
+        <a [routerLink]="['/categories/food']">
         <img src="assets/Home/food.png" alt="Food">
         <h3>Food</h3>
+        <div>
+          <header>
+            <h4>Food Areas</h4>
+          </header>
+          <ul>
+            <li>Resturants: 20</li>
+            <li>Cafes: 30</li>
+            <li>Food Cars: 30</li>
+          </ul>
+        </div>
+      </a>
       </article>
 
-      <article class="category">
+      <article class="category" data-aos-delay="300" data-aos="fade-left">
+        <a [routerLink]="['/categories/services']">
         <img src="assets/Home/services.png" alt="Services">
         <h3>Services</h3>
+        <div>
+          <header>
+            <h4>Services Ares</h4>
+          </header>
+          <ul>
+            <li>Home care: 20</li>
+            <li>Car repair: 30</li>
+          </ul>
+        </div>
+      </a>
       </article>
 
-      <article class="category">
+      <article class="category" data-aos-delay="200" data-aos="fade-up">
+        <a [routerLink]="['/categories/entertainment']">
         <img src="assets/Home/entertainment.png" alt="Entertainment">
         <h3>Entertainment</h3>
+        <div>
+          <header>
+            <h4>Entertainment Areas</h4>
+          </header>
+          <ul>
+            <li>Gardens: 5</li>
+            <li>Amusement Parks: 2</li>
+            <li>Cinemas: 1</li>
+          </ul>
+        </div>
+        </a>
       </article>
 
-      <article class="category">
+      <article class="category" data-aos-delay="200" data-aos="fade-down-left">
+        <a [routerLink]="['/categories/medical']">
         <img src="assets/Home/medical.png" alt="Medical">
         <h3>Medical</h3>
+        <div>
+          <header>
+            <h4>Health</h4>
+          </header>
+          <ul>
+            <li>Hospitals: 3</li>
+            <li>Clinics: 12</li>
+          </ul>
+        </div>
+        </a>
       </article>
       
     </div>
   </div>
 </section>
 <!--END CATEGORIES SECTION-->
+
+<!--START OFFERS SECTION-->
+<section class="offers">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="title" data-aos="fade-right">
+        <header>
+          <h2>Latest Offers</h2>
+        </header>
+      </div>
+
+      <div class="show-more" data-aos="fade-left">
+        <a class="view-all-btn" [routerLink]="['/categories']">
+         View All
+        </a>
+      </div>
+    </div>
+    <p data-aos="fade-right">Check the latests offers in the city</p>
+  </div>
+</section>
+<!--END OFFERS SECTION-->

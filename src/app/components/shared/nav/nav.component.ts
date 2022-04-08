@@ -8,7 +8,7 @@ import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
 })
 export class NavComponent implements OnInit {
   constructor() {}
-
+  logoElement:string = `<img id='logo' src='assets/Home/logo.png' alt='my_city_logo'/>`
   ngOnInit(): void {
     this.changeNavbarColor()
   }
