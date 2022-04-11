@@ -1,0 +1,35 @@
+.explore {
+  header {
+    min-width: 100%;
+    background-image: url(../../../../assets/Explore/header.png);
+    background-size: cover;
+    background-position: center center;
+    .container .explore-title {
+      min-height:  26.695371367061355vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 1rem;
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+  article {
+    padding: 2rem 0rem;
+    .ant-steps-item-title{
+      white-space: nowrap;
+    }
+    .steps-content {
+      padding: 2rem 0rem;
+      border-radius: 6px;
+    }
+
+    .steps-action {
+      margin-top: 24px;
+    }
+
+    button {
+      margin-right: 8px;
+    }
+  }
+}

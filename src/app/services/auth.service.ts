@@ -1,5 +1,5 @@
 import { Auth } from './../States/Auth_State/AuthModel/auth-model';
-import { map, Observable, tap } from 'rxjs';
+import { BehaviorSubject, map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';

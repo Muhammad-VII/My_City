@@ -1,1 +1,55 @@
-<p>explore works!</p>
+<section class="explore">
+  <header>
+    <div class="container">
+      <div class="explore-title">
+        <h2>Explore</h2>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <div class="container">
+
+    <div class="steper">
+      <nz-steps [nzLabelPlacement]="'vertical'" [nzCurrent]="current">
+        <nz-step nzTitle="Choose Area"></nz-step>
+        <nz-step nzTitle="Choose Category"></nz-step>
+        <nz-step nzTitle="Choose Sub-Category"></nz-step>
+        <nz-step nzTitle="Explore Places"></nz-step>
+      </nz-steps>
+      <div class="steps-content">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+    <div class="steps-action">
+      <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
+        <span>Previous</span>
+      </button>
+      <button nz-button nzType="default" (click)="next()" *ngIf="current < 2">
+        <span>Next</span>
+      </button>
+      <button nz-button nzType="primary" (click)="next()" *ngIf="current === 2">
+        <span>Next</span>
+      </button>
+
+      <button nz-button nzType="primary" (click)="done()" *ngIf="current === 4">
+        <span>Done</span>
+      </button>
+    </div>
+    </div>
+  </div>
+    
+  </article>
+</section>

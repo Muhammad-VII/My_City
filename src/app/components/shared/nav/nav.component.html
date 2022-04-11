@@ -32,11 +32,11 @@
             <a (click)="close()" class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item">
-            <a (click)="close()" class="nav-link" routerLinkActive="active-link" [routerLink]="['/explore']">Exolore</a>
+            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">Exolore</a>
           </li>
   
           <li class="nav-item">
-            <a (click)="close()" class="nav-link" routerLinkActive="active-link" [routerLink]="['/about-us']">About us</a>
+            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/about-us']">About us</a>
           </li>
   
           <li class="nav-item">
