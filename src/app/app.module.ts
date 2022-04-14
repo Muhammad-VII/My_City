@@ -31,6 +31,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ParticlesModule } from 'ngx-particle';
 
 registerLocaleData(en);
 
@@ -65,6 +66,7 @@ registerLocaleData(en);
     NGZORROModule,
     CarouselModule,
     NgxSpinnerModule,
+    ParticlesModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],

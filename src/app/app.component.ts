@@ -39,6 +39,8 @@ export class AppComponent {
     ]),
   })
 
+ 
+
   constructor (public _Router:Router, private _Store:Store<AppState>, public _AuthService:AuthService, public _SpinnerService: NgxSpinnerService) { 
     this._SpinnerService.show()
     window.onload = () => {
