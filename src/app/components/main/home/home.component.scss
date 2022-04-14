@@ -168,11 +168,6 @@
         max-height: 400px;
       }
   }
-
-  .category {
-    border-radius: 6px;
-    overflow: hidden;
-  }
   
   .category:nth-child(1) {
     grid-area: one;
@@ -278,7 +273,7 @@
     }
   }
   p {
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 300;
 
     @media screen and (max-width: 33em) {
@@ -352,7 +347,7 @@
     .offer-title {
       padding: .8rem 0rem;
       h3 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 500;
         color: #000;
         @media screen and (max-width: 33em) {
@@ -362,7 +357,7 @@
       .offer-des{
         margin-top: 3rem;
         p {
-          font-size: 25px;
+          font-size: 22px;
           font-weight: 300;
           padding: 0;
           margin: 0;
@@ -490,7 +485,7 @@
     .place-title {
       padding: .8rem 0rem;
       h3 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 500;
         color: #000;
         @media screen and (max-width: 33em) {
@@ -500,7 +495,7 @@
       .place-des{
         margin-top: 3rem;
         p {
-          font-size: 25px;
+          font-size: 22px;
           font-weight: 300;
           padding: 0;
           margin: 0;
@@ -599,19 +594,21 @@
     img {
       width: 100%;
     }
+
     h4 {
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 500;
       margin-top: 1rem;
       @media screen and (max-width: 33em) {
-        font-size: 26px;
+        font-size: 22px;
       }
     }
+
     p {
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 300;
       @media screen and (max-width: 33em) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
@@ -631,7 +628,7 @@
     a {
       text-decoration: none;
       color: #000;
-      font-size: 32px;
+      font-size: 25px;
       font-weight: bold;
       @media screen and (max-width: 33em) {
         font-size: 26px;
