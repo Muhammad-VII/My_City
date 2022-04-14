@@ -36,7 +36,12 @@ export class NavComponent implements OnInit {
     const logoImg: HTMLDivElement = document.getElementById('logo')! as HTMLImageElement
     const nav_items = Array.from(document.querySelectorAll('.nav-link')! as unknown as HTMLCollection)
     window.onscroll = () => {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        const bar = document.getElementById("myBar")! as HTMLDivElement
       if (window.pageYOffset > iPoint) {
+        bar.style.width = scrolled + "%";
         nav.classList.add('bg-orange');
         logoImg.setAttribute("src", "../../../../assets/Home/logo-white.png");
         nav.style.animationName = 'fadeDown'
@@ -45,6 +50,7 @@ export class NavComponent implements OnInit {
           item.classList.replace('hover-text-main', 'hover-text-dark')
         })
       } else {
+        bar.style.width = 0 + "%";
         nav.style.animationName = ''
         nav.classList.add('bg-transparent'),
         logoImg.setAttribute("src", "../../../../assets/Home/logo.png");
