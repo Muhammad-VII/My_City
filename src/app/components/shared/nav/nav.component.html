@@ -77,28 +77,40 @@
       </ul>
 
       <form class="d-flex">
-        <button class="btn btn-outline-light login-btn">
+        <button (click)="showModal()" class="btn btn-outline-light login-btn">
           Sign In
         </button>
       </form>
-      
-      <!-- <li class="nav-item dropdown list-unstyled">
-        <a class="nav-link dropdown-toggle" routerLinkActive="active-link" [routerLink]="['/']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Profile
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/']">Action</a></li>
-          <li><a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/']">Another action</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/']">Something else here</a></li>
-        </ul>
-      </li> -->
-      <!-- <li class="nav-item list-unstyled">
-        
-      </li> -->
 
     </div>
   </div>
   <div class="progress-bar" id="myBar"></div>
 
 </nav>
+  <nz-modal nzMaskClosable = false [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+        <header>
+          <h2>Welcome back, Sign In</h2>
+        </header>
+
+        <article>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </article>
+    </ng-container>
+
+  </nz-modal>

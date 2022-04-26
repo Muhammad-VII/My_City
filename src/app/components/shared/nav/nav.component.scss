@@ -16,7 +16,7 @@ nav {
     bottom: 0;
     width: 0%;
     height: 3px;
-    background-color: #FCA818;
+    background-color: #fca818;
   }
   .container-md {
     .logo {
@@ -121,5 +121,25 @@ nav {
   i {
     font-size: 28px;
     color: #fff;
+  }
+}
+
+header {
+  text-align: center;
+  h2 {
+    font-size: 26px;
+    color: $main-theme;
+  }
+}
+
+.ant-modal-body{
+  background-color: #FFFFFF;
+}
+
+article {
+  padding: 2rem 0rem;
+  form {
+    padding: 2rem 0rem;
+    
   }
 }

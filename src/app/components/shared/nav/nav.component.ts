@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
 @Component({
   selector: 'app-nav',
@@ -7,10 +8,23 @@ import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements OnInit {
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
   logoElement:string = `<img id='logo' src='assets/Home/logo.png' alt='my_city_logo'/>`
-  ngOnInit(): void {
-    this.changeNavbarColor()
+  
+  isVisible = false;
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  handleOk(): void {
+    console.log('Button ok clicked!');
+    this.isVisible = false;
+  }
+
+  handleCancel(): void {
+    console.log('Button cancel clicked!');
+    this.isVisible = false;
   }
 
   visible = false;
@@ -60,5 +74,18 @@ export class NavComponent implements OnInit {
         })
       }
     }
+  }
+  validateForm!: FormGroup;
+
+  submitForm(): void {
+    console.log('submit', this.validateForm.value);
+  }
+  ngOnInit(): void {
+    this.changeNavbarColor()
+    this.validateForm = this.fb.group({
+      userName: [null, [Validators.required]],
+      password: [null, [Validators.required]],
+      remember: [true]
+    });
   }
 }
