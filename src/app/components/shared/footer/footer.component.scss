@@ -76,6 +76,8 @@ footer {
       }
       .links {
           header {
+            text-align: left;
+
               h5 {
                   color: #222222;
                   font-size: 17px;
@@ -83,6 +85,7 @@ footer {
               }
           }
           article {
+            padding: 0;
               ul {
                   li {
                       a {
