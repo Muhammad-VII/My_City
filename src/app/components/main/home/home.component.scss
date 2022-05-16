@@ -107,6 +107,7 @@
   .category {
     position: relative;
     overflow: hidden;
+    padding: 0;
     div {
       position: absolute;
       left: 0;
@@ -164,6 +165,7 @@
   .categories-grid {
       display: grid;
       gap: 0.625rem;
+
       img {
         max-height: 400px;
       }
