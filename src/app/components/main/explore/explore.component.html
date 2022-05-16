@@ -17,8 +17,8 @@
         <nz-step nzTitle="Choose Sub-Category"></nz-step>
         <nz-step nzTitle="Explore Places"></nz-step>
       </nz-steps>
-      <div class="steps-content">
-        <div class="row">
+      <div class="steps-content" [ngSwitch]="index">
+        <div class="row" *ngSwitchCase="'First-content'">
           <div class="col-md-4">
             <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
           </div>
@@ -31,8 +31,33 @@
             <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
           </div>
         </div>
+
+        <div class="row" *ngSwitchCase="'Second-content'">
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+
+        
+        </div>
+
+        <div class="row" *ngSwitchCase="'Third-content'">
+       
+
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
+          </div>
+        </div>
+
       </div>
-      
+        
     <div class="steps-action">
       <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
         <span>Previous</span>
