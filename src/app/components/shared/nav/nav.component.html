@@ -77,8 +77,11 @@
       </ul>
 
       <form class="d-flex">
-        <button (click)="showModal()" class="btn btn-outline-light login-btn">
+        <button *ngIf="!isLogin" [routerLink]="['profile']" class="btn btn-outline-light login-btn">
           Sign In
+        </button>
+        <button *ngIf="isLogin" (click) = 'logout()' class="btn btn-outline-light login-btn">
+          Log out
         </button>
       </form>
 

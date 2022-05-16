@@ -1,6 +1,6 @@
-<app-nav></app-nav>
+<app-nav *ngIf="!(_Router.url === '/404' || '/rofile')"></app-nav>
 <router-outlet></router-outlet>
-<app-footer *ngIf="!(_Router.url === '/404')"></app-footer>
+<app-footer *ngIf="!(_Router.url === '/404' || '/profile')"></app-footer>
 <!-- <form class="d-flex flex-column gap-2 w-25 m-auto align-items-center" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
   <input type="text"  class="form-control" placeholder="username">
   <input type="text"  class="form-control" placeholder="password">
