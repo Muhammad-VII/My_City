@@ -1,9 +1,15 @@
-<app-nav *ngIf="!(_Router.url === '/404' || '/rofile')"></app-nav>
+<app-nav
+  *ngIf="!(_Router.routerState.snapshot.url === '/profile/login' || _Router.routerState.snapshot.url === '/404' || _Router.routerState.snapshot.url === '/profile/registeration' || _Router.routerState.snapshot.url === '/profile/reset-pass')">
+</app-nav>
 <router-outlet></router-outlet>
-<app-footer *ngIf="!(_Router.url === '/404' || '/profile')"></app-footer>
+<app-footer
+  *ngIf="!(_Router.routerState.snapshot.url === '/profile/login' || _Router.routerState.snapshot.url === '/404' || _Router.routerState.snapshot.url === '/profile/registeration' || _Router.routerState.snapshot.url === '/profile/reset-pass')">
+</app-footer>
+<app-loader></app-loader>
+
 <!-- <form class="d-flex flex-column gap-2 w-25 m-auto align-items-center" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
   <input type="text"  class="form-control" placeholder="username">
   <input type="text"  class="form-control" placeholder="password">
   <button type="submit" class="btn btn-outline-info w-25">Submit form</button>
 </form> -->
-<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#da520c" type = "square-jelly-box" [fullScreen] = "true"></ngx-spinner>
+<!-- <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#da520c" type = "square-jelly-box" [fullScreen] = "true"></ngx-spinner> -->

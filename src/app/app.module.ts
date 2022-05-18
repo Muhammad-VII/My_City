@@ -32,6 +32,8 @@ import { environment } from '../environments/environment';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ParticlesModule } from 'ngx-particle';
+import { LoaderComponent } from './components/shared/loader/loader.component';
+import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 
 registerLocaleData(en);
 
@@ -51,7 +53,9 @@ registerLocaleData(en);
     FooterComponent,
     PrivacyPolicyComponent,
     NotfoundComponent,
-    ImgScanPipe
+    ImgScanPipe,
+    LoaderComponent,
+    PassResetComponent
   ],
   imports: [
     BrowserModule,

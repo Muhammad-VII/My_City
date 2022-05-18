@@ -14,43 +14,46 @@ interface AppState {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title:string = 'my_city_SHOROUK'
-  loginForm: FormGroup = new FormGroup({
-    AppId: new FormControl('bee4a01a-7260-4e33-a315-fe623f223846'),
-    Platform: new FormControl('w'),
-    Uid: new FormControl('XwIBtz15PBTSV7ne1oPP1SXvep93'),
-    lang: new FormControl(`ar`),
-    DeviceId: new FormControl('string'),
-    Token: new FormControl('3YGMcZ7ROq_j6aX46zTna5hCzvFGuXBLDfOBBpsgMyI', Validators.required),
-    cart: new FormControl([
-      {
-        "itemID": "5fa3c65a-4cdb-4d11-9591-1af64e4379b8",
-        "cartCount": 5
-      },{
-        "itemID": "de16b3fa-0e0e-4b20-91bc-29a52e0ee38b",
-        "cartCount": 6
-      },{
-        "itemID": "9836a6f0-67fb-49be-b945-7056de3ae76c",
-        "cartCount": 7
-      }
-    ]),
-  })
+  title: string = 'my_city_SHOROUK';
+  // loginForm: FormGroup = new FormGroup({ //** FOR TESTING **/
+  //   AppId: new FormControl('bee4a01a-7260-4e33-a315-fe623f223846'),
+  //   Platform: new FormControl('w'),
+  //   Uid: new FormControl('XwIBtz15PBTSV7ne1oPP1SXvep93'),
+  //   lang: new FormControl(`ar`),
+  //   DeviceId: new FormControl('string'),
+  //   Token: new FormControl(
+  //     '3YGMcZ7ROq_j6aX46zTna5hCzvFGuXBLDfOBBpsgMyI',
+  //     Validators.required
+  //   ),
+  //   cart: new FormControl([
+  //     {
+  //       itemID: '5fa3c65a-4cdb-4d11-9591-1af64e4379b8',
+  //       cartCount: 5,
+  //     },
+  //     {
+  //       itemID: 'de16b3fa-0e0e-4b20-91bc-29a52e0ee38b',
+  //       cartCount: 6,
+  //     },
+  //     {
+  //       itemID: '9836a6f0-67fb-49be-b945-7056de3ae76c',
+  //       cartCount: 7,
+  //     },
+  //   ]),
+  // });
 
- 
-
-  constructor (public _Router:Router, private _Store:Store<AppState>, public _AuthService:AuthService, public _SpinnerService: NgxSpinnerService) { 
-    this._SpinnerService.show()
-    window.onload = () => {
-      this._SpinnerService.hide()
-    }
+  constructor(
+    public _Router: Router,
+    private _Store: Store<AppState>,
+    public _AuthService: AuthService
+  ) {
   }
 
   onLogin(loginData: FormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {
-      this._Store.dispatch(AuthActions.login({JWT: res.JWT, user: res.user}));
-    })
+      this._Store.dispatch(AuthActions.login({ JWT: res.JWT, user: res.user }));
+    });
   }
 }

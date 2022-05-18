@@ -1,7 +1,6 @@
 @import "../../../../styles.scss";
 
 article {
-  background-color: #c32e10c5;
   min-height: 100vh;
   overflow: hidden;
   display: grid;
@@ -160,7 +159,7 @@ article {
 
   .authfy-login,
   .authfy-panel-left .brand-col {
-    height: 390px;
+    min-height: 280px;
   }
   .authfy-panel-left .brand-col {
     display: table;

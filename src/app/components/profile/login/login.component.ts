@@ -1,6 +1,6 @@
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import anime from 'animejs'; 
-declare var $: any;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,34 +8,28 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
   constructor() {}
+  checked = true;
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
+  });
 
+  submitLogin(loginFormValue: FormGroup) {
+    console.log(loginFormValue);
+  }
+  
+  showHidePass(): void {
+    let pass:HTMLInputElement = document.getElementById('password')! as HTMLInputElement;
+    let pwToggle:HTMLSpanElement = document.querySelector('.pwd-toggle')! as HTMLSpanElement;
+    if (pass.type === 'password') {
+      pass.type = 'text';
+      pwToggle.classList.replace('bi-eye-slash','bi-eye');
+    } else if (pass.type === 'text') {
+      pass.type = 'password';
+      pwToggle.classList.replace('bi-eye','bi-eye-slash');
+    }
+  }
   ngOnInit(): void {
-    var design = anime({
-      targets: 'svg #XMLID5',
-      keyframes: [
-        {translateX: -500},
-        {rotateY: 180},
-        {translateX: 920},
-        {rotateY: 0},
-        {translateX: -500},
-        {rotateY: 180},
-        {translateX: -500},
-      ],
-      easing: 'easeInOutSine',
-      duration: 60000,
-    });
-    
-    anime({
-      targets: '#dust-paarticle path',
-      translateY: [10, -150],
-      direction: 'alternate',
-      loop: true,
-      delay: function(el, i, l) {
-        return i * 100;
-      },
-      endDelay: function(el, i, l) {
-        return (l - i) * 100;
-      }
-    });
+
   }
 }

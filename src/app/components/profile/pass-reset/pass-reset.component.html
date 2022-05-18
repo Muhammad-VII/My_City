@@ -49,16 +49,12 @@
 								<div class="headline">
 									<!-- brand-logo start -->
 									<div class="brand-logo">
-										<a [routerLink]="['/']">
+                    <a [routerLink]="['/']">
                       <img src="assets/Home/logo.png" alt="brand-logo">
                     </a>
 									</div><!-- ./brand-logo -->
-									<p>By logging in you agree to the ridiculously long terms that you didn't bother to read
-									</p>
+									<p>By reseting your password you agree to that we are going to annoy you with an email</p>
 									<!-- social login buttons start -->
-									<div class="row social-buttons">
-										
-									</div><!-- ./social-buttons -->
 								</div>
 							</div>
 						</div>
@@ -68,41 +64,21 @@
 								<!-- panel-login start -->
 								<div class="authfy-panel panel-login text-center active">
 									<div class="authfy-heading">
-										<h3 class="auth-title">Login to your account</h3>
-										<p>Don’t have an account? <a class="lnk-toggler" [routerLink]="['/profile/registeration']" style="color: #da520c;">Sign Up!</a></p>
+										<h3 class="auth-title">Password Reset</h3>
+                    <p>Change your mind? <a class="lnk-toggler" [routerLink]="['/profile/login']" style="color: #da520c;">Login!</a></p>
 									</div>
 									<div class="row">
 										<div class="col-xs-12 col-sm-12">
-											<form nz-form name="loginForm" class="loginForm" [formGroup]="loginForm" (ngSubmit)="submitLogin(loginForm.value)">
+											<form nz-form name="loginForm" class="loginForm" [formGroup]="passResetForm" (ngSubmit)="submitPassReset(passResetForm.value)">
 												<nz-form-item>
 													<nz-form-control nzErrorTip="Please enter your email!">
 														<nz-input-group nzPrefixIcon="mail">
-															<input autocomplete="email" type="text" nz-input formControlName="email" placeholder="Email" />
+															<input autocomplete="email" type="text" nz-input formControlName="email" placeholder="Enter your email to reset your password" />
 														</nz-input-group>
 													</nz-form-control>
 												</nz-form-item>
-												<nz-form-item>
-													<nz-form-control nzErrorTip="Please input your Password!">
-														<nz-input-group nzPrefixIcon="lock">
-															<input autocomplete="current-password" type="password" nz-input formControlName="password" placeholder="Password" />
-														</nz-input-group>
-													</nz-form-control>
-												</nz-form-item>
-												<!-- start remember-row -->
-												<div class="row remember-row">
-													<div class="col-xs-6 col-sm-6 text-left">
-														<label class="checkbox">
-															<label nz-checkbox [(ngModel)]="checked">Remember me</label>
-														</label>
-													</div>
-													<div class="col-xs-6 col-sm-6">
-														<p class="forgotPwd">
-															<a class="lnk-toggler" [routerLink]="['/profile/reset-pass']" style="color: #da520c;">Forgot password?</a>
-														</p>
-													</div>
-												</div> <!-- ./remember-row -->
 												<div class="form-group">
-													<button class="btn btn-lg btn-block login-btn" type="submit" [disabled]="loginForm.invalid">Enter The City <i class="bi bi-door-open-fill"></i></button>
+													<button class="btn btn-lg btn-block login-btn" type="submit" [disabled]="passResetForm.invalid">Reset password </button>
 												</div>
 											</form>
 										</div>

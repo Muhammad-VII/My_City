@@ -1,3 +1,4 @@
+import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
 import { SignupComponent } from './components/profile/signup/signup.component';
 import { ContactUsComponent } from './components/main/contact-us/contact-us.component';
@@ -19,8 +20,10 @@ const routes: Routes = [
   {
     path: 'profile',
     children: [
-      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'registeration', component: SignupComponent },
+      { path: 'reset-pass', component: PassResetComponent },
+      { path: '**', redirectTo: 'login', pathMatch: 'full' },
     ],
   },
   { path: '404', component: NotfoundComponent },
