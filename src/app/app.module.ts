@@ -34,6 +34,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ParticlesModule } from 'ngx-particle';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 registerLocaleData(en);
 
@@ -55,7 +56,8 @@ registerLocaleData(en);
     NotfoundComponent,
     ImgScanPipe,
     LoaderComponent,
-    PassResetComponent
+    PassResetComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
