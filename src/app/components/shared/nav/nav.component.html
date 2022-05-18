@@ -46,7 +46,14 @@
           <li class="nav-item">
             <a (click)="close()" class="nav-link" routerLinkActive="active-link" [routerLink]="['/contact']">Contact us</a>
           </li>
-          
+
+          <li class="nav-item" *ngIf="!isLogin">
+            <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/profile/login']">Login</a>
+          </li>
+
+          <li class="nav-item" *ngIf="isLogin">
+            <a class="nav-link" routerLinkActive="active-link" (click) = 'logout()'>logout</a>
+          </li>
         </ul>
       </nav>
 
@@ -90,27 +97,3 @@
   <div class="progress-bar" id="myBar"></div>
 
 </nav>
-  <nz-modal nzMaskClosable = false [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
-    <ng-container *nzModalContent>
-        <header>
-          <h2>Welcome back, Sign In</h2>
-        </header>
-
-        <article>
-          <form>
-            <div class="form-group py-2">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-            </div>
-            <div class="form-group py-2">
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Remember me</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </article>
-    </ng-container>
-
-  </nz-modal>

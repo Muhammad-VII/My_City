@@ -6,25 +6,26 @@ article {
   display: grid;
   place-items: center;
   background: rgb(2, 0, 36);
+  background: rgb(2, 0, 36);
   background: -moz-linear-gradient(
-    180deg,
+    90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(198, 76, 14, 1) 0%,
-    rgba(54, 49, 47, 1) 100%
+    rgba(243, 96, 22, 1) 0%,
+    rgba(45, 49, 66, 1) 100%
   );
   background: -webkit-linear-gradient(
-    180deg,
+    90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(198, 76, 14, 1) 0%,
-    rgba(54, 49, 47, 1) 100%
+    rgba(243, 96, 22, 1) 0%,
+    rgba(45, 49, 66, 1) 100%
   );
   background: linear-gradient(
-    180deg,
+    90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(198, 76, 14, 1) 0%,
-    rgba(54, 49, 47, 1) 100%
+    rgba(243, 96, 22, 1) 0%,
+    rgba(45, 49, 66, 1) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#36312f",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#2d3142",GradientType=1);
   @media (min-width: 576px) and (max-width: 767px) {
     .col-sm-4 {
       max-width: 100%;

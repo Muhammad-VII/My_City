@@ -39,7 +39,7 @@
 
   button {
     background-color: $main-theme;
-    color: #000;
+    color: $main-button-color;
     font-weight: 600;
     border: none;
   }
@@ -376,7 +376,7 @@
       a {
         text-decoration: none;
         background-color: $main-theme;
-        color: #000;
+        color: $main-button-color;
         display: inline-block;
         min-width: 100%;
         text-align: center;
@@ -514,7 +514,7 @@
       a {
         text-decoration: none;
         background-color: $main-theme;
-        color: #000;
+        color: $main-button-color;
         display: inline-block;
         min-width: 100%;
         text-align: center;
@@ -629,7 +629,7 @@
 
     a {
       text-decoration: none;
-      color: #000;
+      color: $main-theme;
       font-size: 25px;
       font-weight: bold;
       @media screen and (max-width: 33em) {

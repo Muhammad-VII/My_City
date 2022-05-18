@@ -9,7 +9,7 @@ import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
 })
 export class NavComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
-  logoElement:string = `<img id='logo' src='assets/Home/logo.png' alt='my_city_logo'/>`
+  logoElement:string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`
   isLogin: boolean = false;
   isVisible = false;
   
