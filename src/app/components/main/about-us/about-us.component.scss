@@ -1,0 +1,34 @@
+@import '../../../../styles.scss';
+
+.about-page {
+  .row .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    header h2 {
+      font-size: 40px;
+      position: relative;
+      text-align: left;
+      width: 63%;
+      color: $main-theme-dark;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        
+        width: 10rem;
+        height: 3px;
+        background-color: $main-theme;
+      }
+    }
+    p {
+      font-size: 22px;
+      color: $main-theme-dark;
+      line-height: 45px;
+      margin-top: 1rem;
+      font-weight: 400;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ExploreComponent implements OnInit {
-
+  pageTitle:string = 'Explore'
   constructor() { }
 
   ngOnInit(): void {
