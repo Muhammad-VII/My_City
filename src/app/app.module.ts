@@ -35,6 +35,7 @@ import { ParticlesModule } from 'ngx-particle';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { AnimationComponent } from './components/shared/animation/animation.component';
 
 registerLocaleData(en);
 
@@ -57,7 +58,8 @@ registerLocaleData(en);
     ImgScanPipe,
     LoaderComponent,
     PassResetComponent,
-    HeaderComponent
+    HeaderComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,

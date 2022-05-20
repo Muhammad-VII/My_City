@@ -47,8 +47,13 @@ export class AppComponent {
   constructor(
     public _Router: Router,
     private _Store: Store<AppState>,
-    public _AuthService: AuthService
+    public _AuthService: AuthService,
+    private _NgxSpinner: NgxSpinnerService
   ) {
+    this._NgxSpinner.show()
+    window.onload = () => {
+      this._NgxSpinner.hide()
+    }
   }
 
   onLogin(loginData: FormGroup) {

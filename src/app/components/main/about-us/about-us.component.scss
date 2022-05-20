@@ -1,34 +1,156 @@
-@import '../../../../styles.scss';
-
+@import "../../../../styles.scss";
+$header-size: 50px;
+$paragraph-size: 23px;
 .about-page {
-  .row .col-md-5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    header h2 {
-      font-size: 40px;
-      position: relative;
-      text-align: left;
-      width: 63%;
-      color: $main-theme-dark;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        
-        width: 10rem;
-        height: 3px;
-        background-color: $main-theme;
+  .about-hero {
+    .col-md-5 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      header h2 {
+        font-size: $header-size;
+        position: relative;
+        text-align: left;
+        width: 63%;
+        color: $main-theme-dark;
+        white-space: nowrap;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -12%;
+          width: 10rem;
+          height: 3px;
+          background-color: $main-theme;
+        }
+      }
+      p {
+        font-size: $paragraph-size;
+        color: $main-theme-dark;
+        line-height: 45px;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+      @media screen and (max-width: 1400px) {
+        h2 {
+          font-size: 23px;
+          margin: 0;
+          &::after {
+            display: none;
+          }
+        }
+        p {
+          font-size: 18px;
+          line-height: 27px;
+          margin: 0;
+        }
       }
     }
-    p {
-      font-size: 22px;
-      color: $main-theme-dark;
-      line-height: 45px;
-      margin-top: 1rem;
-      font-weight: 400;
+  }
+
+  .about-story {
+    background-color: #f8f8f8;
+    @media screen and (max-width: 1400px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+    }
+    .col-md-5 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      header h2 {
+        font-size: $header-size;
+        position: relative;
+        text-align: left;
+        width: 63%;
+        color: $main-theme-dark;
+        white-space: nowrap;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -15%;
+          width: 10rem;
+          height: 3px;
+          background-color: $main-theme;
+        }
+      }
+      p {
+        font-size: $paragraph-size;
+        color: $main-theme-dark;
+        line-height: 45px;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+      @media screen and (max-width: 1400px) {
+        h2 {
+          font-size: 23px;
+          margin: 0;
+          &::after {
+            display: none;
+          }
+        }
+        p {
+          font-size: 18px;
+          line-height: 27px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .about-mission {
+    @media screen and (max-width: 1400px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+    }
+    .col-md-5 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      header h2 {
+        font-size: 45px;
+        white-space: nowrap;
+        position: relative;
+        text-align: left;
+        width: 63%;
+        color: $main-theme-dark;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -43%;
+          width: 8rem;
+          height: 3px;
+          background-color: $main-theme;
+        }
+      }
+      p {
+        font-size: $paragraph-size;
+        color: $main-theme-dark;
+        line-height: 45px;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+      @media screen and (max-width: 1400px) {
+        h2 {
+          font-size: 23px;
+          margin: 0;
+          &::after {
+            display: none;
+          }
+        }
+        p {
+          font-size: 18px;
+          line-height: 27px;
+          margin: 0;
+        }
+      }
     }
   }
 }
