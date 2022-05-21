@@ -1,4 +1,6 @@
-.items{
+@import '../../../../styles.scss';
+
+.items {
   padding: 50px 0;
   width: 100%;
   display: flex;
@@ -6,44 +8,52 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.items .item{
+.items .item {
   flex-basis: 48%;
   padding: 10px 0;
 }
-.items .item .item-img{
+.items .item .item-img {
   background-image: url(../../../../assets/news/1.jpg);
   background-size: cover;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 300px;
   position: relative;
 }
-.items .item .item-img div{
-  background-color: #DA520C;
-  width: 89px;
+.items .item .item-img div {
+  background-color: #da520c;
+  width: 80px;
   height: 89px;
   padding: 10px;
   position: absolute;
   top: 0;
   left: 0;
 }
-.items .item .item-img div p{
+.items .item .item-img div p {
   color: white;
   font-size: 26px;
 }
-.items .item .item-text{
+.items .item .item-text {
   padding: 15px 0;
 }
-.items .item .item-text h2{
+.items .item .item-text h2 {
   font-size: 22px;
   font-weight: bold;
 }
-.items .item .item-text p{
+.items .item .item-text p {
   font-size: 18px;
 }
-.items .item .item-text h3{
+.items .item .item-text a {
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  color: $main-theme;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    flex-basis: 100% !important;
+  }
 }

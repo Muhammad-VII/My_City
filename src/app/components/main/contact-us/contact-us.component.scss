@@ -1,0 +1,104 @@
+@import "../../../../styles.scss";
+.contact-page {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  article {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    width: 880px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    header {
+      h3 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 26px;
+        font-weight: 400;
+      }
+    }
+    .container {
+      max-width: 90%;
+    }
+    form {
+      text-align: center;
+      input {
+        padding: 0.5rem 1rem;
+        font-size: 24px;
+        font-weight: 400;
+        color: #363636;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        text-align: left;
+        &::placeholder {
+          font-size: 24px;
+          font-weight: 400;
+          color: #363636;
+        }
+      }
+      textarea {
+        padding: 0.5rem 1rem;
+        font-size: 24px;
+        font-weight: 400;
+        color: #363636;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        &::placeholder {
+          font-size: 24px;
+          font-weight: 400;
+          color: #363636;
+        }
+      }
+
+      button {
+        font-size: 24px;
+        background-color: $main-theme;
+        color: #fff;
+        padding: 1rem 6rem;
+        height: auto;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      min-width: 100%;
+      height: auto;
+      p {
+        font-size: 20px !important;
+      }
+      button {
+        padding: 0.6rem 3rem !important;
+        font-size: 20px !important;
+        width: 100%;
+      }
+
+      input {
+        font-size: 20px !important;
+        &::placeholder {
+          font-size: 20px !important;
+        }
+      }
+
+      textarea {
+        font-size: 20px !important;
+        &::placeholder {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+  figure {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.3s ease-in-out;
+    img {
+      width: 100%;
+    }
+  }
+}

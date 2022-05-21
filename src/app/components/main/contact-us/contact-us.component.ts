@@ -1,15 +1,49 @@
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
+  animations: [
+    trigger(
+      'enterAnimation', [
+        transition(':enter', [
+          style({transform: 'translateX(100%)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateX(0)', opacity: 1}),
+          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
+        ])
+      ]
+    )
+  ],
 })
 export class ContactUsComponent implements OnInit {
+  pageTitle: string = 'Contact Us';
+  messageRecevied: boolean = false
+  constructor() {}
+  contactForm: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.email,
+    ]),
+    message: new FormControl('', [
+      Validators.required,
+      Validators.minLength(10),
+    ]),
+  });
 
-  constructor() { }
-
-  ngOnInit(): void {
+  submitContactForm() {
+    this.messageRecevied = true;
+    this.contactForm.reset();
+    setTimeout(() => {
+      this.messageRecevied = false;
+    }, 5000)
   }
-
+  ngOnInit(): void {}
 }

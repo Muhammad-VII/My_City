@@ -1,1 +1,45 @@
-<p>contact-us works!</p>
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="contact-page">
+
+  <article [@enterAnimation] *ngIf="!messageRecevied">
+    <header>
+      <h3>Get In Touch</h3>
+      <p>We would like to hear from you!</p>
+    </header>
+    <div class="container">
+      <form nz-form [formGroup]="contactForm" (ngSubmit)="submitContactForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="name" placeholder="Name" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Email is incorrect">
+            <nz-input-group>
+              <input type="text" nz-input formControlName="email" placeholder="Email" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Your message must be more then 10 words!">
+            <textarea formControlName="message" nz-input rows="2" placeholder="Message"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        
+        <button type="submit" nz-button>Submit Message</button>
+  
+      </form>
+    </div>
+  </article>
+
+  <figure [@enterAnimation] *ngIf="messageRecevied">
+    <img src="assets/about-us/Group 31649.png" alt="" srcset="">
+  </figure>
+<bg-animation></bg-animation>
+</section>
+
