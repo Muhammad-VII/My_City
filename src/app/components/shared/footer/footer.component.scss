@@ -79,7 +79,7 @@ footer {
             text-align: left;
 
               h5 {
-                  color: #2D3142;
+                  color:  $main-theme-dark;
                   font-size: 17px;
                   font-weight: 700;
               }
@@ -104,7 +104,7 @@ footer {
       }
   }
   .copyright {
-      background-color: #111218;
+      background-color: $main-theme-dark;
       p {
           color: #cbcbcb;
           font-size: 14px;

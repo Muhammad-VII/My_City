@@ -1,5 +1,7 @@
+@import '../../../../styles.scss';
+
 .help-page {
-  padding: 2rem 0rem;
+  padding: 1.5rem 0rem;
   header {
     text-align: left;
   }
@@ -7,6 +9,9 @@
     a {
       font-size: 20px;
       text-decoration: none;
+      &:hover {
+        color: $main-theme;
+      }
     }
     .active-bread{
       font-weight: 500;
@@ -19,20 +24,17 @@
     background-color: #F8F8F8;
     border-radius: 5px;
     h2 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
     }
     p {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       text-overflow: ellipsis;
       overflow: hidden;
     }
     @media screen and (max-width: 768px) {
       padding: .8rem;
-      &:first-child {
-        margin-top: 0rem !important;
-      }
       h2 {
         font-size: 18px;
       }
