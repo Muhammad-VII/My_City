@@ -1,0 +1,25 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="help-page">
+  <div class="container">
+    <header>
+      <nz-breadcrumb nzSeparator=">">
+        <nz-breadcrumb-item><a>Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a class="active-bread">Help</a>
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </header>
+
+    <article *ngFor="let question of questions">
+      <div class="asked-quetions">
+        <h2>
+          How can I find a place?
+        </h2>
+        <p [class.text-wrap] = 'wrapWord' (click)="wrapWordFn()">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
+        </p>
+      </div>
+    </article>
+  </div>
+</section>

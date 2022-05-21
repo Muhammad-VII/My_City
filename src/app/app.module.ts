@@ -36,6 +36,7 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
 import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { AnimationComponent } from './components/shared/animation/animation.component';
+import { HelpComponent } from './components/main/help/help.component';
 
 registerLocaleData(en);
 
@@ -59,7 +60,8 @@ registerLocaleData(en);
     LoaderComponent,
     PassResetComponent,
     HeaderComponent,
-    AnimationComponent
+    AnimationComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

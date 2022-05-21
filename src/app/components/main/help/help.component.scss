@@ -1,0 +1,45 @@
+.help-page {
+  padding: 2rem 0rem;
+  header {
+    text-align: left;
+  }
+  nz-breadcrumb {
+    a {
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .active-bread{
+      font-weight: 500;
+    }
+  }
+  article {
+    padding: 1.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-block: 2rem;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+    h2 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    @media screen and (max-width: 768px) {
+      padding: .8rem;
+      &:first-child {
+        margin-top: 0rem !important;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

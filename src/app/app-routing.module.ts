@@ -1,3 +1,4 @@
+import { HelpComponent } from './components/main/help/help.component';
 import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
 import { SignupComponent } from './components/profile/signup/signup.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact', component: ContactUsComponent },
+  { path: 'help', component: HelpComponent },
   { path: 'news', component: NewsComponent },
   {
     path: 'profile',
