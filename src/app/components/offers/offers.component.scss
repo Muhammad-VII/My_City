@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.offers-page {
+  padding: 2rem 0rem;
+  overflow: hidden;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    nz-breadcrumb {
+      width: 880px;
+      margin: auto;
+      text-align: left;
+      margin-bottom: .6rem;
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        &:hover {
+          color: $main-theme;
+        }
+      }
+      .active-bread{
+        font-weight: 500;
+      }
+    }
+    h4 {
+      text-align: left;
+    }
+    select {
+      max-width: 110px;
+      height: 35px;
+      border-radius: 5px;
+      border: none;
+      padding: 0px;
+      font-size: 15px;
+      color: #666;
+      background: transparent;
+      outline: none;
+      &:focus {
+        border: none;
+      }
+    }
+    h6 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .side-filter {
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    max-width: 50%;
+    border-radius: 5px;
+    padding: 1.5rem .7rem;
+    border: 1px solid #222222;
+    .side-filter-content {
+      article {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 19px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0rem;
+    header {
+      display: block; 
+    }
+  }
+}

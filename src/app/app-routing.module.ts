@@ -13,6 +13,7 @@ import { LoginComponent } from './components/profile/login/login.component';
 import { NewsComponent } from './components/main/news/news.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AuthGuard } from './gurds/auth.guard';
+import { OffersComponent } from './components/offers/offers.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'help', component: HelpComponent },
+  { path: 'offers', component: OffersComponent },
   { path: 'news', component: NewsComponent },
   {
     path: 'profile',

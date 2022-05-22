@@ -1,0 +1,62 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="offers-page">
+  <div class="container">
+    <header>
+      <div>
+        <nz-breadcrumb nzSeparator=">">
+          <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a [routerLink]="['/offers']" class="active-bread">Offers</a>
+          </nz-breadcrumb-item>
+        </nz-breadcrumb>
+        <h4>Latest Offers</h4>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <p class="p-0 m-0 text-nowrap fw-bold">Sort By</p>
+        <select>
+          <option value="">Top Rated</option>
+          <option value="">Recently Added</option>
+          <option value="">Added long time ago</option>
+        </select>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="side-filter">
+          <div class="side-filter-content">
+            <header>
+              <h4>Areas</h4>
+            </header>
+            <article>
+              <label nz-checkbox [(ngModel)]="checked">Art</label>
+              <label nz-checkbox [(ngModel)]="checked">Books</label>
+              <label nz-checkbox [(ngModel)]="checked">Electronics</label>
+              <label nz-checkbox [(ngModel)]="checked">Fashion</label>
+              <label nz-checkbox [(ngModel)]="checked">Home & Decor</label>
+              <label nz-checkbox [(ngModel)]="checked">Music</label>
+              <label nz-checkbox [(ngModel)]="checked">Vehichles</label>
+            </article>
+          </div>
+          <div class="side-filter-content">
+            <header>
+              <h4>Categories</h4>
+            </header>
+            <article>
+              <label nz-checkbox [(ngModel)]="checked">Entertainment</label>
+              <label nz-checkbox [(ngModel)]="checked">Food</label>
+              <label nz-checkbox [(ngModel)]="checked">Medical</label>
+              <label nz-checkbox [(ngModel)]="checked">Services</label>
+              <label nz-checkbox [(ngModel)]="checked">Shopping</label>
+              <label nz-checkbox [(ngModel)]="checked">Workshops</label>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+
+      </div>
+    </div>
+  </div>
+  <bg-animation></bg-animation>
+</section>

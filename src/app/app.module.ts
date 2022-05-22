@@ -40,6 +40,7 @@ import { HelpComponent } from './components/main/help/help.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
+import { OffersComponent } from './components/offers/offers.component';
 
 registerLocaleData(en);
 
@@ -66,7 +67,8 @@ registerLocaleData(en);
     AnimationComponent,
     HelpComponent,
     SettingsComponent,
-    SavedPlacesComponent
+    SavedPlacesComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
