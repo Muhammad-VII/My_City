@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 interface AppState {
   Auth: Auth;
 }
@@ -48,7 +49,8 @@ export class AppComponent {
     public _Router: Router,
     private _Store: Store<AppState>,
     public _AuthService: AuthService,
-    private _NgxSpinner: NgxSpinnerService
+    private _NgxSpinner: NgxSpinnerService,
+    private toastr: ToastrService
   ) {
     this._NgxSpinner.show()
     window.onload = () => {

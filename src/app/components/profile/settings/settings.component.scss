@@ -1,0 +1,111 @@
+@import '../../../../styles.scss';
+
+.settings-page {
+  padding: 2rem 0;
+  overflow: hidden;
+  nz-breadcrumb {
+    width: 880px;
+    margin: auto;
+    text-align: left;
+    margin-bottom: .6rem;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      &:hover {
+        color: $main-theme;
+      }
+    }
+    .active-bread{
+      font-weight: 500;
+    }
+  }
+  article {
+    margin: auto;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    width: 880px;
+    height: 560px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    .container {
+      max-width: 90%;
+    }
+    form {
+      text-align: center;
+      input {
+        padding: 0.5rem 1rem;
+        font-size: 21px;
+        font-weight: 400;
+        color: #363636;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        text-align: left;
+        &::placeholder {
+          font-size: 21px;
+          font-weight: 400;
+        }
+      }
+      textarea {
+        padding: 0.5rem 1rem;
+        font-size: 24px;
+        font-weight: 400;
+        color: #363636;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        &::placeholder {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+
+      button {
+        font-size: 24px;
+        background-color: $main-theme;
+        color: #fff;
+        padding: 1rem 6rem;
+        height: auto;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      min-width: 100%;
+      height: auto;
+      p {
+        font-size: 20px !important;
+      }
+      button {
+        padding: 0.6rem 3rem !important;
+        font-size: 20px !important;
+        width: 100%;
+      }
+
+      input {
+        font-size: 20px !important;
+        &::placeholder {
+          font-size: 20px !important;
+        }
+      }
+
+      textarea {
+        font-size: 20px !important;
+        &::placeholder {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+  figure {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.3s ease-in-out;
+    img {
+      width: 100%;
+    }
+  }
+}

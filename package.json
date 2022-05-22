@@ -30,6 +30,7 @@
     "ngx-owl-carousel-o": "^7.0.2",
     "ngx-particle": "^1.5.0",
     "ngx-spinner": "^13.1.1",
+    "ngx-toastr": "^14.3.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

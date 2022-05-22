@@ -1,0 +1,47 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="saved-places-page">
+  <div class="container">
+    <header>
+      <nz-breadcrumb nzSeparator=">">
+        <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile']">Profile</a>
+        </nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/saved-places']" class="active-bread">Saved Places</a>
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </header>
+
+    <article>
+      <div class="row">
+        <div class="col-md-3 p-2" *ngFor="let place of places">
+          <div class="place-card">
+            <div class="place-img">
+              <img src="assets/Home/place-1.png">
+              <div class="is-fav">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+            </div>
+    
+            <div class="place-title">
+              <h3>Glory Palace For</h3>
+                <div class="place-des">
+                  <p>
+                    Lorem ipsum dolor 
+                  </p>
+    
+                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                </div>
+            </div>
+            
+            <div class="view-place">
+              <a [routerLink]="['places/1']">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

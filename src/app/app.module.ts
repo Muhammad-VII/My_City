@@ -37,6 +37,9 @@ import { PassResetComponent } from './components/profile/pass-reset/pass-reset.c
 import { HeaderComponent } from './components/shared/header/header.component';
 import { AnimationComponent } from './components/shared/animation/animation.component';
 import { HelpComponent } from './components/main/help/help.component';
+import { ToastrModule } from 'ngx-toastr';
+import { SettingsComponent } from './components/profile/settings/settings.component';
+import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
 
 registerLocaleData(en);
 
@@ -61,7 +64,9 @@ registerLocaleData(en);
     PassResetComponent,
     HeaderComponent,
     AnimationComponent,
-    HelpComponent
+    HelpComponent,
+    SettingsComponent,
+    SavedPlacesComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +83,7 @@ registerLocaleData(en);
     NgxSpinnerModule,
     ParticlesModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    ToastrModule.forRoot()
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

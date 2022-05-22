@@ -1,0 +1,67 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="settings-page">
+  <header>
+    <nz-breadcrumb nzSeparator=">">
+      <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a [routerLink]="['/profile']">Profile</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a [routerLink]="['/profile/settings']" class="active-bread">Account</a>
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </header>
+
+  <article *ngIf="!messageRecevied">
+    <div class="container">
+      <form nz-form [formGroup]="settingsForm" (ngSubmit)="submitSettingsForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your username!">
+            <nz-input-group>
+              <input autocomplete="name" type="text" nz-input formControlName="name" placeholder="Ahmed Ahmed" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Email is incorrect">
+            <nz-input-group>
+              <input autocomplete="email" type="email" nz-input formControlName="email" placeholder="ahmed@gmail.com" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Phone is incorrect">
+            <nz-input-group>
+              <input autocomplete="tel" type="tel" nz-input formControlName="phone" placeholder="+2597340963" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Password is incorrect">
+            <nz-input-group>
+              <input autocomplete="new-password" type="password" nz-input formControlName="password"
+                placeholder="●●●●●●●" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+
+        <button *ngIf="!buttonShowen" type="button" nz-button (click)='unlockEditFn()'>Edit
+          Settings</button>
+
+        <button [disabled]="!settingsForm.valid" *ngIf="buttonShowen" class="hvr-bounce-out" type="submit"
+          nz-button>Save changes</button>
+
+      </form>
+    </div>
+  </article>
+
+  <!-- <figure [@enterAnimation] *ngIf="messageRecevied">
+    <img src="assets/about-us/Group 31649.png" alt="" srcset="">
+  </figure> -->
+  <bg-animation></bg-animation>
+</section>
