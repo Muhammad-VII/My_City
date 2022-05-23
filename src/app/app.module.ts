@@ -43,6 +43,7 @@ import { OffersComponent } from './components/main/offers/offers.component';
 import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
+import { SearchComponent } from './components/main/search/search.component';
 
 registerLocaleData(en);
 
@@ -72,7 +73,8 @@ registerLocaleData(en);
     OffersComponent,
     PopularPlacesComponent,
     HowItWorksComponent,
-    PolicyComponent
+    PolicyComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

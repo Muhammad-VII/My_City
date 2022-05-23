@@ -1,0 +1,92 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="offers-page">
+  <div class="container">
+    <header>
+      <div>
+        <nz-breadcrumb nzSeparator=">">
+          <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a [routerLink]="['/search']" class="active-bread">Search</a>
+          </nz-breadcrumb-item>
+        </nz-breadcrumb>
+        <h4>Search Results</h4>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <p class="p-0 m-0 text-nowrap fw-bold">Sort By:</p>
+        <select>
+          <option value="">Top Rated</option>
+          <option value="">Recently Added</option>
+          <option value="">Added long time ago</option>
+        </select>
+      </div>
+      <button class="toggle-filter-btn" nz-button (click)="openFilter()">Filter <i class="bi bi-arrow-down"></i></button>
+    </header>
+    <div class="row">
+      <div class="col-md-2 side-filter-container">
+          <div class="side-filter">
+            <div class="side-filter-content">
+              <header>
+                <h4>Areas</h4>
+              </header>
+              <article>
+                <label nz-checkbox>Art</label>
+                <label nz-checkbox>Books</label>
+                <label nz-checkbox>Electronics</label>
+                <label nz-checkbox>Fashion</label>
+                <label nz-checkbox>Home & Decor</label>
+                <label nz-checkbox>Music</label>
+                <label nz-checkbox>Vehichles</label>
+              </article>
+            </div>
+            <nz-divider nzType="horizontal" class="m-0 mb-2"></nz-divider>
+
+            <div class="side-filter-content">
+              <header>
+                <h4>Categories</h4>
+              </header>
+              <article>
+                <label nz-checkbox>Entertainment</label>
+                <label nz-checkbox>Food</label>
+                <label nz-checkbox>Medical</label>
+                <label nz-checkbox>Services</label>
+                <label nz-checkbox>Shopping</label>
+                <label nz-checkbox>Workshops</label>
+              </article>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let offer of offers">
+            <div class="place-card">
+              <div class="place-img">
+                <img src="assets/Home/place-2.png">
+                <div class="is-fav">
+                  <i class="bi bi-heart"></i>
+                </div>
+              </div>
+    
+              <div class="place-title">
+                <h3>Glory Palace For</h3>
+                  <div class="place-des">
+                    <p>
+                      Lorem ipsum dolor 
+                    </p>
+    
+                    <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                  </div>
+              </div>
+              
+              <div class="view-place">
+                <a [routerLink]="['places/1']">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <bg-animation></bg-animation>
+</section>

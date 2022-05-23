@@ -10,10 +10,13 @@
       </div>
       <div data-aos="fade-up" data-aos-delay="3000">
         <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
-          <input type="text" nz-input placeholder="What are you looking for?" />
+          <input [(ngModel)]="inputValue"
+          (input)="onInput($event)"
+          [nzAutocomplete]="auto" type="text" nz-input placeholder="What are you looking for?" />
+          <nz-autocomplete [nzDataSource]="options" nzBackfill #auto></nz-autocomplete>
         </nz-input-group>
         <ng-template #suffixButton>
-          <button nz-button nzSize="large" >Explore</button>
+          <a nz-button nzSize="large" [routerLink]="['/search']">Explore</a>
         </ng-template>
       </div>
     </div>

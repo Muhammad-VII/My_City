@@ -1,3 +1,4 @@
+import { SearchComponent } from './components/main/search/search.component';
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';
 import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'how-it-works', component: HowItWorksComponent },
   { path: 'privacy-policy', component: PolicyComponent },
+  { path: 'search', component: SearchComponent },
   {
     path: 'profile',
     children: [

@@ -9,7 +9,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent implements OnInit {
   
   constructor() { }
-
+  inputValue?: string;
+  options: string[] = [];
+  onInput(event: Event): void {
+    const value = (event.target as HTMLInputElement).value;
+    this.options = value ? [value, value + value, value + value + value] : [];
+    //TODO Calling search api
+  }
   ngOnInit(): void {
   }
   customOptions: OwlOptions = {
