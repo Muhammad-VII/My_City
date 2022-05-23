@@ -1,3 +1,4 @@
+import { AuthService } from './../../../services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import anime from 'animejs'; 
@@ -7,7 +8,7 @@ import anime from 'animejs';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private _AuthService: AuthService) {}
   checked = true;
   loginForm: FormGroup = new FormGroup({
     email: new FormControl(null, [Validators.required, Validators.email]),
@@ -16,6 +17,9 @@ export class LoginComponent implements OnInit {
 
   submitLogin(loginFormValue: FormGroup) {
     console.log(loginFormValue);
+    this._AuthService.login(loginFormValue).subscribe(res => {
+      console.log(res);
+    });
   }
   
   showHidePass(): void {

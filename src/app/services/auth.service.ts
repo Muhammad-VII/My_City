@@ -24,14 +24,13 @@ export class AuthService {
   }
 
   login(loginForm: any): Observable<any>{
-    return this._HttpClient.post(`https://voltapi.azurewebsites.net/web/login`, loginForm,
-      {
-        headers: {
-          "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmcgc3RyaW5nMSIsImp0aSI6IjAzYWQwOTM0LWVjNWMtNDM1ZS05MDY5LWYxMjJhMmRiNWQwYyIsImVtYWlsIjoic3RyaW5nIiwiZmlyc05hbWUiOiJzdHJpbmciLCJsYXN0TmFtZSI6InN0cmluZzEiLCJjcmVhdGVkSW4iOiIzLzI2LzIwMjIgMjo0NTowNiBQTSIsIkVtYWlsIjoic3RyaW5nIiwiZXhwIjoxNjQ5NjAxOTA2LCJpc3MiOiJKTUtJc3N1ZXIiLCJhdWQiOiJKTUtBdWRpZW5jZSJ9.kcTqHL7Vi_HnZAF3FvnTciN0dx3xM2AaZbEoJpsLtgk`
-        }
-      }
-    ).pipe(tap((res: any) => {
-      localStorage.setItem("Token", res.JWT)
+    return this._HttpClient.post(`http://localhost:3000/login`, loginForm).pipe(tap((res: any) => {
+      console.log(res);
+      // res.cookie("api-auth", res.JWT, {
+      //   secure: false,
+      //   httpOnly: true,
+      //   expire: new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 7))
+      // })
     }))
   }
 }
