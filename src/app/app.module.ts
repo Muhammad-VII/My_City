@@ -24,7 +24,6 @@ import { LoginComponent } from './components/profile/login/login.component';
 import { SignupComponent } from './components/profile/signup/signup.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { PrivacyPolicyComponent } from './components/shared/privacy-policy/privacy-policy.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
 import * as fromAuth from './States/Auth_State/Reducer/auth-reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -40,7 +39,10 @@ import { HelpComponent } from './components/main/help/help.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
-import { OffersComponent } from './components/offers/offers.component';
+import { OffersComponent } from './components/main/offers/offers.component';
+import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';
+import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
+import { PolicyComponent } from './components/main/policy/policy.component';
 
 registerLocaleData(en);
 
@@ -58,7 +60,6 @@ registerLocaleData(en);
     SignupComponent,
     NavComponent,
     FooterComponent,
-    PrivacyPolicyComponent,
     NotfoundComponent,
     ImgScanPipe,
     LoaderComponent,
@@ -68,7 +69,10 @@ registerLocaleData(en);
     HelpComponent,
     SettingsComponent,
     SavedPlacesComponent,
-    OffersComponent
+    OffersComponent,
+    PopularPlacesComponent,
+    HowItWorksComponent,
+    PolicyComponent
   ],
   imports: [
     BrowserModule,

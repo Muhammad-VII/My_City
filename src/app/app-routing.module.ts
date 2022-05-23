@@ -1,3 +1,5 @@
+import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
+import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';
 import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
 import { HelpComponent } from './components/main/help/help.component';
 import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
@@ -13,7 +15,8 @@ import { LoginComponent } from './components/profile/login/login.component';
 import { NewsComponent } from './components/main/news/news.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AuthGuard } from './gurds/auth.guard';
-import { OffersComponent } from './components/offers/offers.component';
+import { OffersComponent } from './components/main/offers/offers.component';
+import { PolicyComponent } from './components/main/policy/policy.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +26,10 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'offers', component: OffersComponent },
+  { path: 'trend-places', component: PopularPlacesComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'how-it-works', component: HowItWorksComponent },
+  { path: 'privacy-policy', component: PolicyComponent },
   {
     path: 'profile',
     children: [

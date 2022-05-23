@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../../styles.scss";
 
 .offers-page {
   padding: 2rem 0rem;
@@ -60,7 +60,7 @@
     flex-direction: column;
     padding: 0;
     border-radius: 3px;
-    padding: 1rem .7rem;
+    padding: 1rem 0.7rem;
     position: sticky;
     left: 0;
     top: 0;
@@ -93,28 +93,14 @@
       }
     }
   }
-  .offer-card{
+  .place-card {
     position: relative;
     margin-bottom: 1rem;
-    .offer-img {
+    .place-img {
       img {
         width: 100%;
         min-height: 100%;
-        transition: all .3s;
-      }
-      .offer-value {
-        position: absolute;
-        left: 10px;
-        top: 0;
-        background-color: $main-theme;
-        padding: 0.5rem 1rem;
-        border-end-start-radius: 5px;
-        border-end-end-radius: 5px;
-        h3 {
-          color: #fff;
-          font-size: 25px;
-          margin-block: .4rem;
-        }
+        transition: all 0.3s;
       }
       .is-fav {
         position: absolute;
@@ -127,7 +113,7 @@
         display: grid;
         place-items: center;
         i {
-          transition: color .5s;
+          transition: color 0.5s;
           font-size: 21px;
           background-color: #fff;
         }
@@ -136,24 +122,23 @@
           i {
             color: red;
           }
-        } 
+        }
       }
-
     }
-    .offer-title {
-      padding-top: .8rem;
+    .place-title {
+      padding: 0.8rem 0rem;
       h3 {
-        font-size: 22px;
+        font-size: 25px;
         font-weight: 500;
         color: #000;
         @media screen and (max-width: 33em) {
           font-size: 20px;
-        }      
+        }
       }
-      .offer-des{
-        margin-top: 2rem;
+      .place-des {
+        margin-top: 3rem;
         p {
-          font-size: 20px;
+          font-size: 22px;
           font-weight: 300;
           padding: 0;
           margin: 0;
@@ -163,10 +148,9 @@
           }
         }
       }
-
     }
-    .view-offer{
-      padding-top: .5rem;
+    .view-place {
+      padding-top: 0.5rem;
       a {
         text-decoration: none;
         background-color: $main-theme;
@@ -178,13 +162,13 @@
         border-radius: 5px;
         font-size: 23px;
         font-weight: bold;
-        transition: all .3s;
+        transition: all 0.3s;
         border: 2px solid $main-theme;
         &:hover {
           background-color: transparent;
           color: $main-theme;
         }
-      } 
+      }
     }
   }
   @media screen and (max-width: 768px) {
