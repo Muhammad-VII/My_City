@@ -1,4 +1,4 @@
-import { AuthService } from './services/auth.service';
+import { AuthService } from './modules/auth/auth.service';
 import { SharedService } from './services/shared.service';
 import * as AuthActions from '../app/States/Auth_State/Actions/auth-actions';
 import { Auth } from './States/Auth_State/AuthModel/auth-model';

@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "my_city_EL_SHOROUK"
+  "defaultProject": "my_city_EL_SHOROUK",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

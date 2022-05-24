@@ -34,14 +34,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   {
     path: 'profile',
-    children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'registeration', component: SignupComponent },
-      { path: 'reset-pass', component: PassResetComponent },
-      { path: 'settings', component: SettingsComponent },
-      { path: 'saved-places', component: SavedPlacesComponent },
-      { path: '**', redirectTo: 'settings', pathMatch: 'full' },
-    ],
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   { path: '404', component: NotfoundComponent },
   { path: '**', redirectTo: '404' },

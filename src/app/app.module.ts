@@ -25,7 +25,7 @@ import { SignupComponent } from './components/profile/signup/signup.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
-import * as fromAuth from './States/Auth_State/Reducer/auth-reducer';
+// import * as fromAuth from './States/Auth_State/Reducer/auth-reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -44,6 +44,7 @@ import { PopularPlacesComponent } from './components/main/popular-places/popular
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
 import { SearchComponent } from './components/main/search/search.component';
+import * as fromAuth from './Store';
 
 registerLocaleData(en);
 
@@ -57,18 +58,14 @@ registerLocaleData(en);
     AboutUsComponent,
     NewsComponent,
     ContactUsComponent,
-    LoginComponent,
-    SignupComponent,
     NavComponent,
     FooterComponent,
     NotfoundComponent,
     ImgScanPipe,
     LoaderComponent,
-    PassResetComponent,
     HeaderComponent,
     AnimationComponent,
     HelpComponent,
-    SettingsComponent,
     SavedPlacesComponent,
     OffersComponent,
     PopularPlacesComponent,
@@ -79,9 +76,6 @@ registerLocaleData(en);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({
-      Auth: fromAuth.loginReducer,
-    }),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -91,8 +85,10 @@ registerLocaleData(en);
     NgxSpinnerModule,
     ParticlesModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    StoreModule.forRoot(fromAuth.reducers),
   ],
+  exports: [AnimationComponent, HeaderComponent],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
 })

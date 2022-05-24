@@ -1,9 +1,9 @@
-import { Auth } from './../States/Auth_State/AuthModel/auth-model';
+import { Auth } from '../../States/Auth_State/AuthModel/auth-model';
 import { map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import * as AuthActions from '../../app/States/Auth_State/Actions/auth-actions';
+import * as AuthActions from '../../States/Auth_State/Actions/auth-actions';
 
 interface AppState {
   Auth: Auth
