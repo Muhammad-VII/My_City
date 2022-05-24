@@ -60,7 +60,7 @@ export class AppComponent {
 
   onLogin(loginData: FormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {
-      this._Store.dispatch(AuthActions.login({ JWT: res.JWT, user: res.user }));
+      // this._Store.dispatch(AuthActions.login({ JWT: res.JWT, user: res.user }));
     });
   }
 }

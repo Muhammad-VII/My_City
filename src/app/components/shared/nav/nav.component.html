@@ -84,7 +84,7 @@
       </ul>
 
       <form class="d-flex">
-        <button *ngIf="!isLogin" [routerLink]="['profile']" class="btn btn-outline-light login-btn">
+        <button *ngIf="!isLogin" [routerLink]="['/profile/login']" class="btn btn-outline-light login-btn">
           Sign In
         </button>
         <button *ngIf="isLogin" (click) = 'logout()' class="btn btn-outline-light login-btn">

@@ -1,8 +1,7 @@
 import { createSelector } from '@ngrx/store';
 
 export interface DefaultAuthState {
-  JWT: string;
-  User: object;
+  access_token: string;
 }
 
 export interface AppState {
@@ -13,5 +12,5 @@ export const selectUser = (state: AppState) => state.Auth;
 
 export const selectUserData = createSelector(
   selectUser,
-  (state: DefaultAuthState) => state.User
+  (state: DefaultAuthState) => state.access_token
 );

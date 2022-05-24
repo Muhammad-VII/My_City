@@ -1,6 +1,9 @@
+import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
+import { Subject } from 'rxjs';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -8,9 +11,12 @@ import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private _AuthService:AuthService) {
+    // this.isLogin.next()
+    this.isLogin.next(this._AuthService.token$)
+  }
   logoElement:string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`
-  isLogin: boolean = false;
+  isLogin: Subject<any> = new Subject();
   isVisible = false;
   
   logout() {

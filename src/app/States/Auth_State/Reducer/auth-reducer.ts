@@ -7,8 +7,7 @@ import { Auth } from '../AuthModel/auth-model';
 
 // Default auth state
 const defaultState: Auth = {
-  JWT: '',
-  user: {}
+  access_token: ''
 };
 
 // Helper function to create new state object
@@ -26,3 +25,4 @@ const authReducer: ActionReducer<any> = createReducer(
 export function loginReducer(state: State<Auth>, action: Action) {
   return authReducer(state, action);
 }
+
