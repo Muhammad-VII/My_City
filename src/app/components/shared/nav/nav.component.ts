@@ -11,6 +11,12 @@ import { Subject, Observable, Subscription } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 export class NavComponent implements OnInit, OnDestroy {
+  subscribtions: Subscription[] = []
+  logoElement:string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`
+  isLogin: boolean = false
+  isVisible = false;
+  visible = false;
+  placement: NzDrawerPlacement = 'left';
   constructor(private fb: FormBuilder, private _AuthService:AuthService) {
     this.subscribtions.push(
       this._AuthService.token$.subscribe(res => {
@@ -25,11 +31,7 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscribtions.forEach(sub => sub.unsubscribe())
   }
-  subscribtions: Subscription[] = []
-  logoElement:string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`
-  isLogin: boolean = false
-  isVisible = false;
-  
+
   logout() {
     // TODO: CALL AUTH SERVICE TO LOGOUT
   }
@@ -48,8 +50,6 @@ export class NavComponent implements OnInit, OnDestroy {
     this.isVisible = false;
   }
 
-  visible = false;
-  placement: NzDrawerPlacement = 'right';
   open(): void {
     if (this.visible == false) {
       document.querySelector('nav')!.classList.add('d-none')
@@ -66,14 +66,14 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   changeNavbarColor(): void {
-    const iPoint:number = 250;
+    const iPoint:number = 0;
     const nav: HTMLDivElement = document.querySelector('nav')! as HTMLDivElement
     const logoImg: HTMLDivElement = document.getElementById('logo')! as HTMLImageElement
     const nav_items = Array.from(document.querySelectorAll('.nav-link')! as unknown as HTMLCollection)
     window.onscroll = () => {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
         const bar = document.getElementById("myBar")! as HTMLDivElement
       if (window.pageYOffset > iPoint) {
         bar.style.width = scrolled + "%";

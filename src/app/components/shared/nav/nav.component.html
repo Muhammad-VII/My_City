@@ -1,4 +1,4 @@
-<nav data-aos="fade-down" data-aos-delay="3000" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+<nav data-aos="fade-down" data-aos-delay="2500" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
   <div class="container-md">
     <div class="logo">
       <a class="navbar-brand" [routerLink]="['/']">
@@ -29,30 +29,30 @@
       <nav class="sideNav-content">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a (click)="close()" class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+            <a (click)="close()" class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item">
             <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">Exolore</a>
           </li>
   
           <li class="nav-item">
-            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/about-us']">About us</a>
+            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The City</a>
           </li>
   
           <li class="nav-item">
-            <a (click)="close()" class="nav-link" routerLinkActive="active-link" [routerLink]="['/news']">News</a>
+            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
           </li>
   
           <li class="nav-item">
-            <a (click)="close()" class="nav-link" routerLinkActive="active-link" [routerLink]="['/contact']">Contact us</a>
+            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact us</a>
           </li>
 
           <li class="nav-item" *ngIf="!isLogin">
-            <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/profile/login']">Login</a>
+            <a class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/profile/login']">Login</a>
           </li>
 
           <li class="nav-item" *ngIf="isLogin">
-            <a class="nav-link" routerLinkActive="active-link" (click) = 'logout()'>logout</a>
+            <a class="nav-link" (click) = 'logout()'>logout</a>
           </li>
         </ul>
       </nav>
@@ -63,22 +63,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active hover-text-main" aria-current="page" [routerLink]="['/']">Home</a>
+          <a class="nav-link hover-text-main" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hover-text-main" routerLinkActive="active-link" [routerLink]="['/explore']">Exolore</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link hover-text-main" routerLinkActive="active-link" [routerLink]="['/about-us']">About us</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">Exolore</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" routerLinkActive="active-link" [routerLink]="['/news']">News</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The City</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" routerLinkActive="active-link" [routerLink]="['/contact']">Contact us</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact us</a>
         </li>
         
       </ul>

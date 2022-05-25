@@ -16,6 +16,15 @@
   h1 {
     font-size: 50px;
     color: #fff;
+    .br-on-mob{
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      .br-on-mob{
+        display: block;
+      }
+    } 
     span {
       color: $main-theme;
     }
@@ -23,6 +32,9 @@
   p {
     font-size: 32px;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    } 
   }
   nz-input-group {
     max-width: 50%;

@@ -1,7 +1,6 @@
 @import '../../../../styles.scss';
 footer {
   background-color: $main-theme;
-
   .footer-content {
       padding: 2rem 0;
       .main-content {
@@ -60,10 +59,10 @@ footer {
               margin: 1rem 0;
               ul {
                   display: flex;
+                  gap: 1.4rem;
                   li {
-                      margin-right: 5%;
                       a {
-                          font-size: 14px;
+                          font-size: 25px;
                           color: #F7F7F9;
                           transition: all .3s;
                           &:hover {
