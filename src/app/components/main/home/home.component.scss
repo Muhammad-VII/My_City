@@ -388,20 +388,20 @@
       padding-top: .5rem;
       a {
         text-decoration: none;
-        background-color: $main-theme;
-        color: $main-button-color;
+        background-color: transparent;
+        color: $main-theme;
         display: inline-block;
         min-width: 100%;
         text-align: center;
-        padding: 1rem 3rem;
         border-radius: 5px;
-        font-size: 23px;
+        font-size: 21px;
         font-weight: bold;
         transition: all .3s;
-        border: 2px solid $main-theme;
+        padding: .5rem 3rem;
+        border: 1.5px solid $main-theme;
         &:hover {
-          background-color: transparent;
-          color: $main-theme;
+          background-color: $main-theme;
+          color: #fff;
         }
       } 
     }
@@ -526,20 +526,20 @@
       padding-top: .5rem;
       a {
         text-decoration: none;
-        background-color: $main-theme;
-        color: $main-button-color;
+        background-color: transparent;
+        color: $main-theme;
         display: inline-block;
         min-width: 100%;
         text-align: center;
-        padding: 1rem 3rem;
         border-radius: 5px;
         font-size: 23px;
         font-weight: bold;
         transition: all .3s;
-        border: 2px solid $main-theme;
+        padding: .5rem 3rem;
+        border: 1.5px solid $main-theme;
         &:hover {
-          background-color: transparent;
-          color: $main-theme;
+          background-color: $main-theme;
+          color: #fff;
         }
       } 
     }

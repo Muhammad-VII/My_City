@@ -23,17 +23,10 @@
     margin: auto;
     background-color: #f8f8f8;
     border-radius: 5px;
-    width: 880px;
-    height: 430px;
-    padding-top: 2rem;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      height: auto;
-    }
+    max-width: 880px;
+    padding: 3rem 2rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    .container {
-      max-width: 90%;
-    }
+
     form {
       text-align: center;
       input {
