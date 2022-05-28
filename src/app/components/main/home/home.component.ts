@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { SharedService } from './../../../services/shared.service';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -7,8 +9,15 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
-  constructor() { }
+  pageContent: any;
+  constructor(private _SharedService: SharedService) {
+    // this._SharedService.getMainScreen().subscribe(
+    //   (data: any) => {
+    //     this.pageContent = data;
+    //   }
+    // )
+  }
+   
   inputValue?: string;
   options: string[] = [];
   onInput(event: Event): void {

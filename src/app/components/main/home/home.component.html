@@ -152,6 +152,39 @@
     <p data-aos="fade-right">Check the latests offers in the city!</p>
     <div data-aos="fade-up" class="carousel">
     <owl-carousel-o [options]="customOptions">
+
+      <!-- integration template
+         <ng-template carouselSlide *ngFor="let offer of pageContent?.data[0]?.offers">
+        <div class="offer-card">
+          <div class="offer-img">
+            <img src="assets/Home/pexels-anna-shvets-2.png">
+            <div class="offer-value">
+              <h3>{{offer?.offerPercentage}}%</h3>
+              <h3>OFF</h3>
+            </div>
+
+            <div class="is-fav">
+              <i class="bi bi-heart"></i>
+            </div>
+          </div>
+
+          <div class="offer-title">
+            <h3>Glory Palace For</h3>
+              <div class="offer-des">
+                <p>
+                  Lorem ipsum dolor 
+                </p>
+
+                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+              </div>
+          </div>
+          
+          <div class="view-offer">
+            <a [routerLink]="['offers/1']">Know More</a>
+          </div>
+        </div>
+      </ng-template>
+      -->
       <ng-template carouselSlide>
         <div class="offer-card">
           <div class="offer-img">
