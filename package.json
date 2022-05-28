@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "int:extract": "ng extract-i18n"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +41,7 @@
     "@angular-devkit/build-angular": "~13.3.7",
     "@angular/cli": "~13.3.7",
     "@angular/compiler-cli": "~13.3.10",
+    "@angular/localize": "^13.3.10",
     "@types/animejs": "^3.1.4",
     "@types/jasmine": "~3.10.0",
     "@types/jquery": "^3.5.14",
