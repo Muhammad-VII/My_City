@@ -46,10 +46,12 @@ $paragraph-size: 18px;
     background-image: url(../../../../assets/about-us/backgorund-logo.png);
     background-repeat: no-repeat;
     background-position: 10% center;
+    transition: all 0.3s;
     @media screen and (max-width: 1400px) {
       .row {
         flex-direction: column-reverse;
       }
+      background-image: url(../../../../assets/Footer/backgorund-logo.png);
     }
     .col-md-5 {
       display: flex;
@@ -59,31 +61,64 @@ $paragraph-size: 18px;
         font-size: $header-size;
         position: relative;
         text-align: left;
-        color: #5C5C5C;
+        color: #5c5c5c;
         white-space: wrap;
         border-left: 5px solid $main-theme;
         background-color: #6a6a6a23;
-        padding: .5rem .8rem;
+        padding: 0.5rem 0.8rem;
+        transition: all 0.3s;
+        @media screen and (max-width: 768px) {
+          font-size: 29px;
+          padding: 0.5rem 0.4rem;
+        }
       }
       p {
         font-size: $paragraph-size;
         color: #525252;
         line-height: 32px;
-        margin-top: .7rem;
+        margin-top: 0.7rem;
         font-weight: 400;
-      }
-      @media screen and (max-width: 1400px) {
-        h2 {
-          font-size: 18px;
-          &::after {
-            display: none;
-          }
-        }
-        p {
+        transition: all 0.3s;
+        @media screen and (max-width: 768px) {
           font-size: 16px;
-          line-height: 25px;
         }
       }
+      .switch-bg {
+        background-color: #3a3a3a;
+        color: #FFF;
+        padding: .5rem .8rem;
+        height: auto;
+        &:active, &:focus {
+          border-color: $main-theme;
+        }
+        transition: all 0.3s;
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    .col-md-7 {
+      img {
+        width: 100%;
+        height: auto;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .dark {
+    background-color: #3a3a3a;
+    p {
+      color: #fff !important;
+    }
+    h2 {
+      color: #fff !important;
+    }
+    .switch-bg {
+      background-color: $main-theme;
+      color: #fff;
     }
   }
 
