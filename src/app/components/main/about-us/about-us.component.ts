@@ -9,11 +9,11 @@ export class AboutUsComponent implements OnInit {
 
   constructor() { }
   pageTitle: string = 'Get to know us';
-  swithToDark(): void {
+  swithToDark(): string {
     const about_section: HTMLDivElement = document.querySelector('.about-story')! as HTMLDivElement;
-    about_section.classList.toggle("dark")
-  }
-  ngOnInit(): void {
+    about_section.classList.toggle("dark");
+    return about_section.classList.contains("dark") ? "Turn Off Lights" : "Turn On Lights";
   }
 
+  ngOnInit(): void {}
 }
