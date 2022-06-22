@@ -1,6 +1,6 @@
 import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -29,18 +29,18 @@ export class SettingsComponent implements OnInit, OnDestroy {
     })
   }
   messageRecevied: boolean = false;
-  settingsForm: FormGroup = new FormGroup({
-    name: new FormControl({value: null, disabled: true}, [Validators.required, Validators.minLength(3)]),
-    email: new FormControl({value: null, disabled: true}, [
+  settingsForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl({value: null, disabled: true}, [Validators.required, Validators.minLength(3)]),
+    email: new UntypedFormControl({value: null, disabled: true}, [
       Validators.required,
       Validators.minLength(3),
       Validators.email,
     ]),
-    phone: new FormControl({value: null, disabled: true}, [
+    phone: new UntypedFormControl({value: null, disabled: true}, [
       Validators.required,
       Validators.minLength(10),
     ]),
-    password: new FormControl({value: null, disabled: true}, [
+    password: new UntypedFormControl({value: null, disabled: true}, [
       Validators.required,
       Validators.minLength(10),
     ]),

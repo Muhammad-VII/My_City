@@ -1,0 +1,49 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="reviews-page">
+  <div class="container">
+    <header>
+      <nz-breadcrumb nzSeparator=">">
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/']">Home</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile']">Explore</a>
+        </nz-breadcrumb-item>
+        
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/settings']">Third District</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/settings']">Food</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/settings']">Fast Food Resturants</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/settings']">Yummy Burger</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/profile/settings']" class="active-bread">Reviews</a>
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </header>
+
+    <article>
+      <header>
+        <div>
+          <h3>Yummy Burger Restaurant Reviews (33 reviews)</h3>
+        </div>
+
+        <div>
+          <button>Add Review</button>
+        </div>
+      </header>
+    </article>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { NzDrawerPlacement } from 'ng-zorro-antd/drawer';
 import { Subject, Observable, Subscription } from 'rxjs';
@@ -17,7 +17,7 @@ export class NavComponent implements OnInit, OnDestroy {
   isVisible = false;
   visible = false;
   placement: NzDrawerPlacement = 'left';
-  constructor(private fb: FormBuilder, private _AuthService:AuthService) {
+  constructor(private fb: UntypedFormBuilder, private _AuthService:AuthService) {
     this.subscribtions.push(
       this._AuthService.token$.subscribe(res => {
         if (res) {
@@ -96,7 +96,7 @@ export class NavComponent implements OnInit, OnDestroy {
       }
     }
   }
-  validateForm!: FormGroup;
+  validateForm!: UntypedFormGroup;
 
   submitForm(): void {
     console.log('submit', this.validateForm.value);

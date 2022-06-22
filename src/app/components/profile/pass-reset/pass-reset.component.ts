@@ -1,4 +1,4 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,11 +13,11 @@ export class PassResetComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  passResetForm: FormGroup = new FormGroup({
-    email: new FormControl(null, [Validators.required, Validators.email]),
+  passResetForm: UntypedFormGroup = new UntypedFormGroup({
+    email: new UntypedFormControl(null, [Validators.required, Validators.email]),
   });
 
-  submitPassReset(passResetFormValue: FormGroup) {
+  submitPassReset(passResetFormValue: UntypedFormGroup) {
     console.log(passResetFormValue);
   }
 }

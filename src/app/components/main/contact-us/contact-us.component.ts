@@ -1,4 +1,4 @@
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
@@ -23,14 +23,14 @@ export class ContactUsComponent implements OnInit {
   pageTitle: string = 'Contact Us';
   messageRecevied: boolean = false;
   constructor() {}
-  contactForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    email: new FormControl('', [
+  contactForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new UntypedFormControl('', [
       Validators.required,
       Validators.minLength(3),
       Validators.email,
     ]),
-    message: new FormControl('', [
+    message: new UntypedFormControl('', [
       Validators.required,
       Validators.minLength(10),
     ]),

@@ -6,7 +6,7 @@ import { map, Observable } from 'rxjs';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 interface AppState {
@@ -58,7 +58,7 @@ export class AppComponent {
     }
   }
 
-  onLogin(loginData: FormGroup) {
+  onLogin(loginData: UntypedFormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {
       // this._Store.dispatch(AuthActions.login({ JWT: res.JWT, user: res.user }));
     });

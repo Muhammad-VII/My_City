@@ -1,5 +1,5 @@
 import { AuthService } from './../../../services/auth.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 @Component({
@@ -12,15 +12,15 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   checked = true;
   subscriptions: Subscription[] = [];
-  loginForm: FormGroup = new FormGroup({
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [
+  loginForm: UntypedFormGroup = new UntypedFormGroup({
+    email: new UntypedFormControl(null, [Validators.required, Validators.email]),
+    password: new UntypedFormControl(null, [
       Validators.required,
       Validators.minLength(6),
     ]),
   });
 
-  submitLogin(loginFormValue: FormGroup) {
+  submitLogin(loginFormValue: UntypedFormGroup) {
     this.subscriptions.push(
       this._AuthService.login(loginFormValue).subscribe((res) => {
         // console.log(res.data.access_token);

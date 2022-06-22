@@ -126,5 +126,7 @@
       }
     }
   },
-  "defaultProject": "my_city_EL_SHOROUK"
+  "cli": {
+    "analytics": "b2791a85-4459-4346-a5bd-1f94d45f31c0"
+  }
 }

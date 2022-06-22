@@ -44,6 +44,7 @@ import { PopularPlacesComponent } from './components/main/popular-places/popular
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
 import { SearchComponent } from './components/main/search/search.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 registerLocaleData(en);
 
@@ -74,7 +75,8 @@ registerLocaleData(en);
     PopularPlacesComponent,
     HowItWorksComponent,
     PolicyComponent,
-    SearchComponent
+    SearchComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
