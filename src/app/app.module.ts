@@ -45,6 +45,7 @@ import { HowItWorksComponent } from './components/main/how-it-works/how-it-works
 import { PolicyComponent } from './components/main/policy/policy.component';
 import { SearchComponent } from './components/main/search/search.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { ShowMoreDirective } from './directives/seemore.directive';
 
 registerLocaleData(en);
 
@@ -76,7 +77,8 @@ registerLocaleData(en);
     HowItWorksComponent,
     PolicyComponent,
     SearchComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ShowMoreDirective
   ],
   imports: [
     BrowserModule,
