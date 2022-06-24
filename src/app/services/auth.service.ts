@@ -16,7 +16,7 @@ interface AppState {
 export class AuthService {
   token$: Observable<Auth | string>;
   constructor(private _HttpClient:HttpClient, private _Store: Store<AppState>) {
-    this.token$ = this._Store.select("Auth").pipe(map(res => {
+    this.token$ = this._Store.select("Auth").pipe(map((res:any) => {
       if (localStorage.getItem("Token") != null) {
         return localStorage.getItem("Token")!;
       } else {
