@@ -1,4 +1,5 @@
-import { TransportaionComponent } from './components/first-distrect/transportaion.component';
+import { DistrectDetailsComponent } from './components/distrect-details/distrect-details.component';
+import { TransportaionComponent } from './components/transportaion/transportaion.component';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { SearchComponent } from './components/main/search/search.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
     component: ExploreDetailsComponent,
   },
   { path: 'story', component: AboutUsComponent },
+  { path: 'distrect-details', component: DistrectDetailsComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'help', component: HelpComponent },
   { path: 'offers', component: OffersComponent },

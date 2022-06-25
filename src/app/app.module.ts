@@ -46,7 +46,8 @@ import { SearchComponent } from './components/main/search/search.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ShowMoreDirective } from './directives/seemore.directive';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
-import { TransportaionComponent } from './components/first-distrect/transportaion.component';
+import { TransportaionComponent } from './components/transportaion/transportaion.component';
+import { DistrectDetailsComponent } from './components/distrect-details/distrect-details.component';
 
 registerLocaleData(en);
 
@@ -81,7 +82,8 @@ registerLocaleData(en);
     ReviewsComponent,
     ShowMoreDirective,
     ExploreDetailsComponent,
-    TransportaionComponent
+    TransportaionComponent,
+    DistrectDetailsComponent
   ],
   imports: [
     BrowserModule,
