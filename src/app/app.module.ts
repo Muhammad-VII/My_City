@@ -47,7 +47,7 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ShowMoreDirective } from './directives/seemore.directive';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { TransportaionComponent } from './components/transportaion/transportaion.component';
-import { DistrectDetailsComponent } from './components/distrect-details/distrect-details.component';
+import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 
 registerLocaleData(en);
 

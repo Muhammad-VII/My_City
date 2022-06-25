@@ -1,4 +1,4 @@
-import { DistrectDetailsComponent } from './components/distrect-details/distrect-details.component';
+import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TransportaionComponent } from './components/transportaion/transportaion.component';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';

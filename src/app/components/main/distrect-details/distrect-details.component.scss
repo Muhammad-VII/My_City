@@ -1,8 +1,8 @@
-@import '../../../styles.scss';
+@import '../../../../styles.scss';
 .distrect-details {
   main {
     height: 40vh;
-    background-image: url(../../../assets/Explore/trondheim-2488x914-1.jpg);
+    background-image: url(../../../../assets/Explore/trondheim-2488x914-1.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,4 +23,10 @@
       }
     }
   }
+
+  // article {
+  //   // .distrect-services{
+
+  //   // }
+  // }
 }
