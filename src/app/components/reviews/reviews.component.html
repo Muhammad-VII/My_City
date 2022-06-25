@@ -13,22 +13,6 @@
         </nz-breadcrumb-item>
         
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']">Third District</a>
-        </nz-breadcrumb-item>
-    
-        <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']">Food</a>
-        </nz-breadcrumb-item>
-    
-        <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']">Fast Food Resturants</a>
-        </nz-breadcrumb-item>
-    
-        <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']">Yummy Burger</a>
-        </nz-breadcrumb-item>
-    
-        <nz-breadcrumb-item>
           <a [routerLink]="['/profile/settings']" class="active-bread">Reviews</a>
         </nz-breadcrumb-item>
       </nz-breadcrumb>
@@ -41,9 +25,72 @@
         </div>
 
         <div>
-          <button>Add Review</button>
+          <button data-bs-toggle="modal" data-bs-target="#reviewModal" class="hvr-bounce-to-top">Add Review</button>
         </div>
       </header>
+
+      <div class="review-content" *ngFor="let review of reviews">
+        <header>
+          <div>
+            <h2>{{review?.name}}</h2>
+          </div>
+          <div class="review-date">
+            <p>03 July 2020</p>
+          </div>
+        </header>
+        <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+        <p seeMore>
+          {{review?.review}}
+      </div>
     </article>
   </div>
 </section>
+
+<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="close-btn-section">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+
+      <div class="modal-header">  
+        <h5 class="modal-title" id="reviewModal">Add your Review</h5>
+
+      </div>
+      <div class="modal-body">
+        <h3>How do you rate your experince?</h3>
+        <div class="rate-form">
+          <nz-rate [ngModel]="0"></nz-rate>
+
+          <textarea nz-input rows="4" placeholder="Describe and review your experience"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" 
+        data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">Submit Review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reviewSubmitedModal" tabindex="-1" aria-labelledby="reviewSubmitedModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="close-btn-section">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+
+      <div class="modal-header">  
+        <h5 class="modal-title">Review Submited Successfully</h5>
+
+      </div>
+      <div class="modal-body">
+        <img src="assets/reviews/Customer Survey-pana.png">
+        <h3>Your review has been submitted successfully, and will be posted soon!</h3>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+
