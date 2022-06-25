@@ -1,3 +1,4 @@
+import { TransportaionComponent } from './components/first-distrect/transportaion.component';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { SearchComponent } from './components/main/search/search.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
     path: 'explore',
     component: ExploreComponent,
   },
+  { path: 'transportaion', component: TransportaionComponent },
   {
     path: 'exploredetails',
     component: ExploreDetailsComponent,
