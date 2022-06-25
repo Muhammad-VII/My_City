@@ -12,6 +12,7 @@ import { Subject, Observable, Subscription } from 'rxjs';
 })
 export class NavComponent implements OnInit, OnDestroy {
   subscribtions: Subscription[] = []
+  checked: boolean = false;
   logoElement:string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`
   isLogin: boolean = false
   isVisible = false;

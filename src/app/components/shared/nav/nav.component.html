@@ -6,58 +6,52 @@
       </a>
     </div>
 
-    <button id="nav-toggle" (click)="open()" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="nav-toggle" (click)="open()" class="navbar-toggler" type="button" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
     </button>
 
-    <nz-drawer
-      [nzBodyStyle]="{'padding': '2rem', 'background-color': 'rgba(0,0,0,.5)', 'backdrop-filter': 'blur(5px)'}"
-      [nzMask]="true"
-      nzWidth="70%"
-      [nzMaskStyle]	= "{'background-color': 'rgba(0,0,0,.3)'}"
-      [nzCloseOnNavigation]="true"
-      [nzMaskClosable] = "true"
-      [nzKeyboard]="true"
-      [nzClosable]="false"
-      [nzVisible]="visible"
-      [nzPlacement]="placement"
-      [nzTitle]="logoElement | safeHtml"
-      (nzOnClose)="close()"
-    >
+    <nz-drawer [nzBodyStyle]="{'padding': '2rem', 'background-color': 'rgba(0,0,0,.5)', 'backdrop-filter': 'blur(5px)'}"
+      [nzMask]="true" nzWidth="70%" [nzMaskStyle]="{'background-color': 'rgba(0,0,0,.3)'}" [nzCloseOnNavigation]="true"
+      [nzMaskClosable]="true" [nzKeyboard]="true" [nzClosable]="false" [nzVisible]="visible" [nzPlacement]="placement"
+      [nzTitle]="logoElement | safeHtml" (nzOnClose)="close()">
 
-    <ng-container *nzDrawerContent>
-      <nav class="sideNav-content">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a (click)="close()" class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item">
-            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">Explore</a>
-          </li>
-  
-          <li class="nav-item">
-            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The City</a>
-          </li>
-  
-          <li class="nav-item">
-            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
-          </li>
-  
-          <li class="nav-item">
-            <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact us</a>
-          </li>
+      <ng-container *nzDrawerContent>
+        <nav class="sideNav-content">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a (click)="close()" class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'"
+                [routerLink]="['/explore']">Explore</a>
+            </li>
 
-          <li class="nav-item" *ngIf="!isLogin">
-            <a class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/profile/login']">Login</a>
-          </li>
+            <li class="nav-item">
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About
+                The City</a>
+            </li>
 
-          <li class="nav-item" *ngIf="isLogin">
-            <a class="nav-link" (click) = 'logout()'>logout</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="nav-item">
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
+            </li>
 
-    </ng-container>
+            <li class="nav-item">
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'"
+                [routerLink]="['/contact']">Contact us</a>
+            </li>
+
+            <li class="nav-item" *ngIf="!isLogin">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+            </li>
+
+            <li class="nav-item" *ngIf="isLogin">
+              <a class="nav-link" (click)='logout()'>logout</a>
+            </li>
+          </ul>
+        </nav>
+
+      </ng-container>
     </nz-drawer>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,7 +64,8 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The City</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The
+            City</a>
         </li>
 
         <li class="nav-item">
@@ -78,16 +73,18 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact us</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact
+            us</a>
         </li>
-        
+
       </ul>
 
       <form class="d-flex">
-        <button *ngIf="!isLogin" [routerLink]="['/profile/login']" class="btn btn-outline-light login-btn">
+        <button *ngIf="!isLogin" data-bs-toggle="modal" data-bs-target="#loginModal"
+          class="btn btn-outline-light login-btn">
           Sign In
         </button>
-        <button *ngIf="isLogin" (click) = 'logout()' class="btn btn-outline-light login-btn">
+        <button *ngIf="isLogin" (click)='logout()' class="btn btn-outline-light login-btn">
           Log out
         </button>
       </form>
@@ -97,3 +94,150 @@
   <div class="progress-bar" id="myBar"></div>
 
 </nav>
+
+<!--Start Sign Up Modal-->
+<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true" class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="close-btn-section">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModal">Create An Account</h5>
+
+      </div>
+      <div class="modal-body">
+        <form nz-form>
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Name is required">
+                <input formControlName='name' type="text" class="form-control" id="" placeholder="Full name">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Email is required">
+                <input formControlName='email' type="text" class="form-control" id="" placeholder="Email">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Phone is required">
+                <input formControlName='phone' type="text" class="form-control" placeholder="Phone">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Password is required">
+                <input formControlName='password' type="text" class="form-control" id="" placeholder="Password">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit">Sign up</button>
+
+        <p>Already have an account? <button class="login-button" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Sign Up Modal-->
+
+<!--Start login Modal-->
+<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true" class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="close-btn-section">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModal">Welcome back, Sign In</h5>
+
+      </div>
+      <div class="modal-body">
+        <form nz-form>
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Email is required">
+                <input formControlName='email' type="email" class="form-control" id="" placeholder="Email">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Password is required">
+                <input formControlName='passwrod' type="password" class="form-control" placeholder="Password">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </form>
+        <div class="forget-pass">
+          <div>
+            <label nz-checkbox [(ngModel)]="checked">Remember Me</label>
+          </div>
+          <div>
+            <button class="forgot-password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forgot
+              Password?</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-column">
+          <button type="submit">Login</button>
+          <p>Don't have an account yet? <button class="signup-button" data-bs-target="#signUpModal"
+              data-bs-toggle="modal">Sign Up</button></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a data-bs-dismiss="modal">Continue as a guest <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End login Modal-->
+
+<!--Start Forget Password Modal-->
+<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true" class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="close-btn-section">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="forgetPasswordModal">Forgot Password</h5>
+        <p>Reset password link will be sent to your email in order to reset your password</p>
+
+      </div>
+      <div class="modal-body">
+        <form nz-form>
+          <div class="form-group">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Email is required">
+                <input formControlName='email' type="email" class="form-control" placeholder="Email">
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        </form>
+        <div>
+          <button type="submit">Send Link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Forget Password Modal-->
