@@ -1,74 +1,42 @@
 <section class="explore">
-  <app-header [pageTitle] = 'pageTitle'></app-header>
-
-  <article>
-    <div class="container">
-
-    <div class="steper">
-      <nz-steps [nzLabelPlacement]="'vertical'" [nzCurrent]="current">
-        <nz-step nzTitle="Choose Area"></nz-step>
-        <nz-step nzTitle="Choose Category"></nz-step>
-        <nz-step nzTitle="Choose Sub-Category"></nz-step>
-        <nz-step nzTitle="Explore Places"></nz-step>
-      </nz-steps>
-      <div class="steps-content" [ngSwitch]="index">
-        <div class="row" *ngSwitchCase="'First-content'">
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-        </div>
-
-        <div class="row" *ngSwitchCase="'Second-content'">
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-
-        
-        </div>
-
-        <div class="row" *ngSwitchCase="'Third-content'">
-       
-
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-
-          <div class="col-md-4">
-            <img class="img-fluid" src="assets/Explore/Group 31581.png" alt="">
-          </div>
-        </div>
-
+  <main>
+    <div class="bg-layer">
+      <div class="container">
+        <h1 data-aos="fade-right" data-aos-delay="300">Your guide to <br /> Explore The City</h1>
       </div>
-        
-    <div class="steps-action">
-      <button nz-button nzType="default" (click)="pre()" *ngIf="current > 0">
-        <span>Previous</span>
-      </button>
-      <button nz-button nzType="default" (click)="next()" *ngIf="current < 2">
-        <span>Next</span>
-      </button>
-      <button nz-button nzType="primary" (click)="next()" *ngIf="current === 2">
-        <span>Next</span>
-      </button>
 
-      <button nz-button nzType="primary" (click)="done()" *ngIf="current === 4">
-        <span>Done</span>
-      </button>
     </div>
+    <div class="scroll-down-btn">
+      <a (click)='scrollDown()'>
+        <i class="bi bi-arrow-down"></i>
+      </a>
     </div>
-  </div>
-    
+  </main>
+
+  <article id="explore-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let distrect of distrects">
+          <div class="distrect-content">
+            <img class="img-fluid" loading=lazy src="{{'../../../../assets/Explore/'+distrect?.imgUrl}}" alt="">
+
+            <div class="distrect-details">
+              <h3>{{distrect.title}}</h3>
+              <p>{{distrect.describtion}}</p>
+              <a class="hvr-forward" href="{{distrect.link}}">
+                <a>
+                  Read more
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </a>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
   </article>
 </section>

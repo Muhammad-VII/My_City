@@ -1,35 +1,111 @@
+@import "../../../../styles.scss";
 .explore {
-  header {
-    min-width: 100%;
-    background-image: url(../../../../assets/Explore/header.png);
+  main {
+    position: relative;
+    height: 100vh;
+    background-image: url(../../../../assets/Explore/oslo-aker-brygge-clock-tower-2600x873-1-scaled.jpg);
     background-size: cover;
     background-position: center center;
-    .container .explore-title {
-      min-height:  26.695371367061355vh;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px) {
+      height: 100vh;
+    }
+    .scroll-down-btn {
+      position: absolute;
+      bottom: 20px;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      animation-name: Bob;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      a {
+        text-decoration: none;
+        background: -webkit-linear-gradient(rgb(179, 179, 179), $main-theme);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+      }
+    }
+    .bg-layer {
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      height: 100%;
       display: flex;
-      align-items: flex-end;
-      padding-bottom: 1rem;
-      h2 {
-        color: #fff;
+      align-items: center;
+      h1 {
+        font-size: 5em;
+        line-height: 1.2;
+        @media screen and (max-width: 768px) {
+          font-size: 4em;
+        }
+        background: -webkit-linear-gradient(rgb(179, 179, 179), $main-theme);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
   }
   article {
-    padding: 2rem 0rem;
-    .ant-steps-item-title{
-      white-space: nowrap;
-    }
-    .steps-content {
-      padding: 2rem 0rem;
-      border-radius: 6px;
-    }
+    .col-md-4 {
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      .distrect-content {
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 0;
+        img {
+          width: 100%;
+          height: 237px;
+        }
+      }
 
-    .steps-action {
-      margin-top: 24px;
+      .distrect-details {
+        padding: 1rem;
+        h3 {
+          font-size: 1.5em;
+          line-height: 1.2;
+          @media screen and (max-width: 768px) {
+            font-size: 1.2em;
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.2;
+          font-weight: 300;
+          @media screen and (max-width: 768px) {
+            font-size: 1em;
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 1em;
+          font-weight: 400;
+          color: $main-theme;
+          &:hover {
+            color: gray;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 0.8em;
+          }
+        }
+      }
     }
 
     button {
       margin-right: 8px;
+    }
+  }
+  @keyframes Bob {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }
