@@ -1,3 +1,4 @@
+import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { SearchComponent } from './components/main/search/search.component';
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
@@ -23,7 +24,14 @@ import { PolicyComponent } from './components/main/policy/policy.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'explore', component: ExploreComponent },
+  {
+    path: 'explore',
+    component: ExploreComponent,
+  },
+  {
+    path: 'exploredetails',
+    component: ExploreDetailsComponent,
+  },
   { path: 'story', component: AboutUsComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'help', component: HelpComponent },
@@ -50,9 +58,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    // useHash: true
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      // useHash: true
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

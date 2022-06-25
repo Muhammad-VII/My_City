@@ -1,7 +1,6 @@
 import { NGZORROModule } from './ng-zorro-antd.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -46,6 +45,7 @@ import { PolicyComponent } from './components/main/policy/policy.component';
 import { SearchComponent } from './components/main/search/search.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ShowMoreDirective } from './directives/seemore.directive';
+import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 
 registerLocaleData(en);
 
@@ -78,7 +78,8 @@ registerLocaleData(en);
     PolicyComponent,
     SearchComponent,
     ReviewsComponent,
-    ShowMoreDirective
+    ShowMoreDirective,
+    ExploreDetailsComponent
   ],
   imports: [
     BrowserModule,

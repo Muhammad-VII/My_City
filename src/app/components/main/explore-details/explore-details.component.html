@@ -1,0 +1,358 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+<section class="explore-details-page">
+  <div class="container">
+    <header>
+      <nz-breadcrumb nzSeparator=">">
+        <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/explore']" class="active-bread">Explore</a>
+        </nz-breadcrumb-item>
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/explore']" class="active-bread">Explore Details</a>
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </header>
+
+    <article>
+      <div class="row">
+        <div class="col-md-5">
+          <img src="assets/explore-details/Yummy.png" alt="resturant-img" class="w-100">
+          <div class="social-icons">
+            <ul>
+              <li>
+               <a>
+                <img src="assets/explore-details/facebook.png" alt="" srcset="">
+               </a>
+            </li>
+
+            <li>
+              <a>
+               <img src="assets/explore-details/insta.png" alt="" srcset="">
+              </a>
+           </li>
+
+           <li>
+            <a>
+             <img src="assets/explore-details/yt.png">
+            </a>
+         </li>
+        </ul>
+
+        <div class="is-fav">
+          <i class="bi bi-heart"></i>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-7">
+          <div>
+            <h3>Yummy Burger Restaurant</h3>
+            <nz-rate [ngModel]="4" nzDisabled="true"></nz-rate>
+            <p>
+              
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            </p>
+            <div class="item-details">
+              <ul >
+                <li>
+                  <img src="assets/explore-details/distrect.png">
+                  <span>First District</span>
+                </li>
+  
+                <li>
+                  <img src="assets/explore-details/phone.png">
+                  <span>+2048046000</span>
+                </li>
+  
+                <li>
+                  <img src="assets/explore-details/times.png">
+                  <span>10:00 AM to 11:00 PM</span>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="assets/explore-details/category.png">
+                  <span>Food (Restaurants)</span>
+                </li>
+  
+                <li>
+                  <img src="assets/explore-details/website.png">
+                  <span>www.lorem.com</span>
+                </li>
+              </ul>
+            </div>
+
+        </div>
+       </div>
+      </div>
+
+      <div class="address-details">
+        <h3>
+          Address Details
+        </h3>
+
+        <p>
+          <img src="assets/explore-details/location.png" alt="">
+          Lorem ipsum dolor sit amet, First District, El-Sherouk City, Cairo, Egypt
+        </p>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55201.97889904443!2d31.594792233053802!3d30.1478797521193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f7d7c85c1e63%3A0xa16c80a505d27145!2sEl%20Shorouk%20City%2C%20El%20Shorouk%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1656165058103!5m2!1sen!2seg" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="item-gallary">
+        <header>
+          <h3>
+            Gallary (22 photos)
+          </h3>
+          <a>View All</a>
+        </header>
+
+        <article>
+          <div class="row">
+            <div class="col-md-3">
+              <img src="assets/explore-details/resturant1.png">
+            </div>
+
+            <div class="col-md-3">
+              <img src="assets/explore-details/resturant2.png">
+            </div>
+
+            <div class="col-md-3">
+              <img src="assets/explore-details/resturant3.png">
+            </div>
+
+            <div class="col-md-3">
+              <img src="assets/explore-details/resturant4.png">
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="reviews-section">
+        <header>
+          <h3>
+            Reviews (33 reviews)
+          </h3>
+          <button data-bs-toggle="modal" data-bs-target="#reviewModal">Add Review</button>
+        </header>
+          <div class="review-content" *ngFor="let review of reviews">
+            <header>
+              <div>
+                <h2>{{review?.name}}</h2>
+              </div>
+              <div class="review-date">
+                <p>03 July 2020</p>
+              </div>
+            </header>
+            <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+            <p seeMore>
+              {{review?.review}}
+          </div>
+          <div class="check-all-reviews-btn">
+            <a>Check All Reviews</a>
+          </div>
+      </div>
+
+      <section class="offers">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="title" data-aos="fade-right">
+              <header>
+                <h2>Similer places</h2>
+              </header>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="carousel">
+          <owl-carousel-o [options]="customOptions">
+      
+            <ng-template carouselSlide>
+              <div class="offer-card">
+                <div class="offer-img">
+                  <img src="assets/Home/pexels-anna-shvets-2.png">
+      
+                  <div class="is-fav">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+      
+                <div class="offer-title">
+                  <h3>Glory Palace For</h3>
+                    <div class="offer-des">
+                      <p>
+                        Lorem ipsum dolor 
+                      </p>
+      
+                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    </div>
+                </div>
+                
+                <div class="view-offer">
+                  <a [routerLink]="['offers/1']">Know More</a>
+                </div>
+              </div>
+            </ng-template>
+      
+            <ng-template carouselSlide>
+              <div class="offer-card">
+                <div class="offer-img">
+                  <img src="assets/Home/pexels-anna-shvets-1.png">
+      
+                  <div class="is-fav">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+      
+                <div class="offer-title">
+                  <h3>Glory Palace For</h3>
+                    <div class="offer-des">
+                      <p>
+                        Lorem ipsum dolor 
+                      </p>
+      
+                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    </div>
+                </div>
+                
+                <div class="view-offer">
+                  <a [routerLink]="['offers/1']">Know More</a>
+                </div>
+              </div>
+            </ng-template> 
+      
+            <ng-template carouselSlide>
+              <div class="offer-card">
+                <div class="offer-img">
+                  <img src="assets/Home/pexels-anna-shvets-2.png">
+      
+                  <div class="is-fav">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+      
+                <div class="offer-title">
+                  <h3>Glory Palace For</h3>
+                    <div class="offer-des">
+                      <p>
+                        Lorem ipsum dolor 
+                      </p>
+      
+                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    </div>
+                </div>
+                
+                <div class="view-offer">
+                  <a [routerLink]="['offers/1']">Know More</a>
+                </div>
+              </div>
+            </ng-template> 
+      
+            <ng-template carouselSlide>
+              <div class="offer-card">
+                <div class="offer-img">
+                  <img src="assets/Home/pexels-anna-shvets-1.png">
+      
+                  <div class="is-fav">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+      
+                <div class="offer-title">
+                  <h3>Glory Palace For</h3>
+                    <div class="offer-des">
+                      <p>
+                        Lorem ipsum dolor 
+                      </p>
+      
+                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    </div>
+                </div>
+                
+                <div class="view-offer">
+                  <a [routerLink]="['offers/1']">Know More</a>
+                </div>
+              </div>
+            </ng-template> 
+      
+            <ng-template carouselSlide>
+              <div class="offer-card">
+                <div class="offer-img">
+                  <img src="assets/Home/pexels-anna-shvets-2.png">
+      
+                  <div class="is-fav">
+                    <i class="bi bi-heart"></i>
+                  </div>
+                </div>
+      
+                <div class="offer-title">
+                  <h3>Glory Palace For</h3>
+                    <div class="offer-des">
+                      <p>
+                        Lorem ipsum dolor 
+                      </p>
+      
+                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    </div>
+                </div>
+                
+                <div class="view-offer">
+                  <a [routerLink]="['offers/1']">Know More</a>
+                </div>
+              </div>
+            </ng-template> 
+             
+          </owl-carousel-o>
+        </div>
+      
+        </div>
+      </section>
+    </article>
+  </div>
+</section>
+
+<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true" class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="close-btn-section">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModal">Add your Review</h5>
+
+      </div>
+      <div class="modal-body">
+        <h3>How do you rate your experince?</h3>
+        <div class="rate-form">
+          <nz-rate [ngModel]="0"></nz-rate>
+
+          <textarea nz-input rows="4" placeholder="Describe and review your experience"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">Submit Review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="reviewSubmitedModal" tabindex="-1" aria-labelledby="reviewSubmitedModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="close-btn-section">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title">Review Submited Successfully</h5>
+
+      </div>
+      <div class="modal-body">
+        <img src="assets/reviews/Customer Survey-pana.png">
+        <h3>Your review has been submitted successfully, and will be posted soon!</h3>
+      </div>
+    </div>
+  </div>
+</div>
