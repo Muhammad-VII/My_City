@@ -84,9 +84,21 @@
           class="btn btn-outline-light login-btn">
           Sign In
         </button>
-        <button *ngIf="isLogin" (click)='logout()' class="btn btn-outline-light login-btn">
-          Log out
-        </button>
+        <a nzTrigger="click" class="profile-menu" *ngIf="isLogin" nz-dropdown [nzDropdownMenu]="menu">
+          Profile
+          <i nz-icon nzType="down"></i>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item>
+              <a [routerLink]="['/profile/settings']">Account Settings</a>
+            </li>
+            <li nz-menu-item>
+              <a [routerLink]="['/profile/saved-places']">Saved Places</a>
+            </li>
+            <li nz-menu-item nzDanger><a (click)='logout()'>Logout</a> <i class="bi bi-door-closed-fill"></i></li>
+          </ul>
+        </nz-dropdown-menu>
       </form>
 
     </div>
@@ -109,11 +121,11 @@
 
       </div>
       <div class="modal-body">
-        <form nz-form>
+        <form nz-form [formGroup]='signUpForm' (ngSubmit)='submitSignUpForm()'>
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Name is required">
-                <input formControlName='name' type="text" class="form-control" id="" placeholder="Full name">
+                <input formControlName='fullName' type="text" class="form-control" placeholder="Full name">
               </nz-form-control>
             </nz-form-item>
           </div>
@@ -121,7 +133,7 @@
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Email is required">
-                <input formControlName='email' type="text" class="form-control" id="" placeholder="Email">
+                <input formControlName='email' type="text" class="form-control" placeholder="Email">
               </nz-form-control>
             </nz-form-item>
           </div>
@@ -129,7 +141,7 @@
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Phone is required">
-                <input formControlName='phone' type="text" class="form-control" placeholder="Phone">
+                <input formControlName='mobileNumber' type="tel" class="form-control" placeholder="Phone">
               </nz-form-control>
             </nz-form-item>
           </div>
@@ -137,16 +149,16 @@
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Password is required">
-                <input formControlName='password' type="text" class="form-control" id="" placeholder="Password">
+                <input formControlName='password' type="password" class="form-control" placeholder="Password">
               </nz-form-control>
             </nz-form-item>
           </div>
+          <button type="submit">Sign up</button>
+
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="submit">Sign up</button>
-
         <p>Already have an account? <button class="login-button" data-bs-toggle="modal"
             data-bs-target="#loginModal">Login</button></p>
       </div>
@@ -169,11 +181,12 @@
 
       </div>
       <div class="modal-body">
-        <form nz-form>
+        <form nz-form [formGroup]="loginForm" (ngSubmit)='submitLoginForm()'>
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Email is required">
-                <input formControlName='email' type="email" class="form-control" id="" placeholder="Email">
+                <input autocomplete="email" formControlName='email' type="email" class="form-control"
+                  placeholder="Email">
               </nz-form-control>
             </nz-form-item>
           </div>
@@ -181,25 +194,26 @@
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Password is required">
-                <input formControlName='passwrod' type="password" class="form-control" placeholder="Password">
+                <input formControlName='password' type="password" class="form-control" placeholder="Password">
               </nz-form-control>
             </nz-form-item>
           </div>
+          <div class="forget-pass">
+            <div>
+              <label nz-checkbox>Remember Me</label>
+            </div>
+            <div>
+              <button class="forgot-password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forgot
+                Password?</button>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center flex-column">
+            <button type="submit">Login</button>
+            <p>Don't have an account yet? <button class="signup-button" data-bs-target="#signUpModal"
+                data-bs-toggle="modal">Sign Up</button></p>
+          </div>
         </form>
-        <div class="forget-pass">
-          <div>
-            <label nz-checkbox [(ngModel)]="checked">Remember Me</label>
-          </div>
-          <div>
-            <button class="forgot-password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forgot
-              Password?</button>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center flex-column">
-          <button type="submit">Login</button>
-          <p>Don't have an account yet? <button class="signup-button" data-bs-target="#signUpModal"
-              data-bs-toggle="modal">Sign Up</button></p>
-        </div>
+
       </div>
       <div class="modal-footer">
         <a data-bs-dismiss="modal">Continue as a guest <i class="bi bi-arrow-right"></i></a>
@@ -211,7 +225,8 @@
 
 <!--Start Forget Password Modal-->
 <div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
-  aria-hidden="true" class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModal" aria-hidden="true">
+  aria-hidden="true" class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="forgetPasswordModal"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="close-btn-section">
@@ -224,7 +239,7 @@
 
       </div>
       <div class="modal-body">
-        <form nz-form>
+        <form nz-form [formGroup]='forgetPasswordForm' (ngSubmit)='submitResetPassForm()'>
           <div class="form-group">
             <nz-form-item>
               <nz-form-control nzErrorTip="Email is required">
@@ -232,10 +247,11 @@
               </nz-form-control>
             </nz-form-item>
           </div>
+          <div>
+            <button type="submit">Send Link</button>
+          </div>
         </form>
-        <div>
-          <button type="submit">Send Link</button>
-        </div>
+
       </div>
     </div>
   </div>

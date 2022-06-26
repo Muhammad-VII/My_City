@@ -90,6 +90,7 @@ registerLocaleData(en);
     AppRoutingModule,
     StoreModule.forRoot({
       Auth: fromAuth.loginReducer,
+      Logout: fromAuth.logoutReducer
     }),
     FormsModule,
     ReactiveFormsModule,

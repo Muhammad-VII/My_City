@@ -49,9 +49,6 @@ const routes: Routes = [
   {
     path: 'profile',
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'registeration', component: SignupComponent },
-      { path: 'reset-pass', component: PassResetComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'saved-places', component: SavedPlacesComponent },
       { path: '**', redirectTo: 'settings', pathMatch: 'full' },

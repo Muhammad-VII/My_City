@@ -26,3 +26,8 @@ export function loginReducer(state: State<Auth>, action: Action) {
   return authReducer(state, action);
 }
 
+export function logoutReducer(state: State<Auth>, action: Action) {
+  return authReducer(state, action);
+}
+
+

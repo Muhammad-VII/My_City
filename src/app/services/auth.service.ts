@@ -30,17 +30,22 @@ export class AuthService {
     localStorage.setItem("Token", token)
   }
 
+  signUp(signUpForm: any): Observable<any>{
+    return this._HttpClient.post("https://my-city-el-sherouk.herokuapp.com/register", signUpForm)
+  }
+
   login(loginForm: any): Observable<any>{
-    return this._HttpClient.post(`http://localhost:3000/login`, loginForm).pipe(tap((res: any) => {
+    return this._HttpClient.post(`https://my-city-el-sherouk.herokuapp.com/login`, loginForm).pipe(tap((res: any) => {
       if (res.data.access_token) {
         this.saveCurrentUser(res.data.access_token)
       } else {
-        alert("Invalid Credentials")
+        // alert("Invalid Credentials")
       }
     }))
   }
 
   logout(): void {
     localStorage.removeItem("Token")
+    this._Store.dispatch(AuthActions.logout());
   }
 }
