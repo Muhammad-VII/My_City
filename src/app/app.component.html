@@ -1,7 +1,7 @@
 <app-nav
   *ngIf="!(_Router.routerState.snapshot.url === '/profile/login' || _Router.routerState.snapshot.url === '/404' || _Router.routerState.snapshot.url === '/profile/registeration' || _Router.routerState.snapshot.url === '/profile/reset-pass')">
 </app-nav>
-<router-outlet></router-outlet>
+<router-outlet (activate)="scrollTop()"></router-outlet>
 <app-footer
   *ngIf="!(_Router.routerState.snapshot.url === '/profile/login' || _Router.routerState.snapshot.url === '/404' || _Router.routerState.snapshot.url === '/profile/registeration' || _Router.routerState.snapshot.url === '/profile/reset-pass')">
 </app-footer>

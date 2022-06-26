@@ -58,6 +58,10 @@ export class AppComponent {
     }
   }
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
   onLogin(loginData: UntypedFormGroup) {
     this._AuthService.login(loginData).subscribe((res) => {
       // this._Store.dispatch(AuthActions.login({ JWT: res.JWT, user: res.user }));
