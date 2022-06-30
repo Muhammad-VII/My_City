@@ -1,4 +1,12 @@
 @import "../../../../styles.scss";
+$header-font-size: 32px;
+$header-font-size-mb: 26px;
+$paragraphs-font-size: 22px;
+$paragraphs-font-size-mb: 18px;
+$card-header-font-size: 24px;
+$card-header-font-size-mb: 18px;
+$card-paragraph-font-size: 18px;
+$card-paragraph-font-size-mb: 14px;
 // Start Hero Section
 .hero {
   overflow: hidden;
@@ -30,7 +38,7 @@
     }
   }
   p {
-    font-size: 32px;
+    font-size: $header-font-size-mb;
     font-weight: 300;
     @media screen and (max-width: 768px) {
       font-size: 20px;
@@ -65,36 +73,19 @@
   header {
     h2 {
       font-weight: 500;
-      font-size: 40px;
-     
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 87px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: $main-theme;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -50%;
-      }
+      font-size: $header-font-size;
 
       @media screen and (max-width: 33em) {
-        font-size: 30px;
-
-        &:after {
-          display: none;
-        }
+        font-size: $header-font-size-mb;
       }
     }
   }
   p {
-    font-size: 27px;
+    font-size: $paragraphs-font-size;
     font-weight: 300;
 
     @media screen and (max-width: 33em) {
-      font-size: 20px;
+      font-size: $paragraphs-font-size-mb;
     }
   }
   .view-all-btn {
@@ -263,23 +254,10 @@
   header {
     h2 {
       font-weight: 500;
-      font-size: 40px;
-     
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 140px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: $main-theme;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -65%;
-      }
+      font-size: $header-font-size;
 
       @media screen and (max-width: 33em) {
-        font-size: 30px;
+        font-size: $header-font-size-mb;
 
         &:after {
           display: none;
@@ -288,11 +266,11 @@
     }
   }
   p {
-    font-size: 22px;
+    font-size: $paragraphs-font-size;
     font-weight: 300;
 
     @media screen and (max-width: 33em) {
-      font-size: 20px;
+      font-size: $paragraphs-font-size-mb;
     }
   }
   .view-all-btn {
@@ -329,6 +307,10 @@
         padding: 0.5rem 1rem;
         border-end-start-radius: 5px;
         border-end-end-radius: 5px;
+        &:lang(ar) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
         h3 {
           color: #fff;
           font-size: 25px;
@@ -362,23 +344,23 @@
     .offer-title {
       padding: .8rem 0rem;
       h3 {
-        font-size: 25px;
+        font-size: $card-header-font-size;
         font-weight: 500;
         color: #000;
         @media screen and (max-width: 33em) {
-          font-size: 20px;
+          font-size: $card-header-font-size-mb;
         }      
       }
       .offer-des{
         margin-top: 3rem;
         p {
-          font-size: 22px;
+          font-size: $card-paragraph-font-size;
           font-weight: 300;
           padding: 0;
           margin: 0;
           color: #000;
           @media screen and (max-width: 33em) {
-            font-size: 18px;
+            font-size: $card-paragraph-font-size-mb;
           }
         }
       }
@@ -415,23 +397,10 @@
   header {
     h2 {
       font-weight: 500;
-      font-size: 40px;
-     
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 140px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: $main-theme;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -60%;
-      }
+      font-size: $header-font-size;
 
       @media screen and (max-width: 33em) {
-        font-size: 30px;
+        font-size: $header-font-size-mb;
 
         &:after {
           display: none;
@@ -440,11 +409,11 @@
     }
   }
   p {
-    font-size: 27px;
+    font-size: $paragraphs-font-size;
     font-weight: 300;
 
     @media screen and (max-width: 33em) {
-      font-size: 20px;
+      font-size: $paragraphs-font-size-mb;
     }
   }
   .view-all-btn {
@@ -500,23 +469,23 @@
     .place-title {
       padding: .8rem 0rem;
       h3 {
-        font-size: 25px;
+        font-size: $card-header-font-size;
         font-weight: 500;
         color: #000;
         @media screen and (max-width: 33em) {
-          font-size: 20px;
+          font-size: $card-header-font-size-mb;
         }      
       }
       .place-des{
         margin-top: 3rem;
         p {
-          font-size: 22px;
+          font-size: $card-paragraph-font-size;
           font-weight: 300;
           padding: 0;
           margin: 0;
           color: #000;
           @media screen and (max-width: 33em) {
-            font-size: 18px;
+            font-size: $card-paragraph-font-size-mb;
           }
         }
       }
@@ -552,22 +521,10 @@
   header {
     h2 {
       font-weight: 500;
-      font-size: 40px;
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 250px;
-        height: 5px;
-        border-radius: 5px;
-        background-color: $main-theme;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 120%;
-      }
+      font-size: $header-font-size;
 
       @media screen and (max-width: 47em) {
-        font-size: 30px;
+        font-size: $header-font-size-mb;
 
         &:after {
           display: none;
@@ -576,11 +533,11 @@
     }
   }
   p {
-    font-size: 27px;
+    font-size: $paragraphs-font-size;
     font-weight: 300;
 
     @media screen and (max-width: 33em) {
-      font-size: 20px;
+      font-size: $paragraphs-font-size-mb;
     }
   }
   .view-all-btn {
@@ -611,19 +568,19 @@
     }
 
     h4 {
-      font-size: 25px;
+      font-size: $card-header-font-size;
       font-weight: 500;
       margin-top: 1rem;
       @media screen and (max-width: 33em) {
-        font-size: 22px;
+        font-size: $card-header-font-size-mb;
       }
     }
 
     p {
-      font-size: 22px;
+      font-size: $card-paragraph-font-size;
       font-weight: 300;
       @media screen and (max-width: 33em) {
-        font-size: 18px;
+        font-size: $card-paragraph-font-size-mb;
       }
     }
 
@@ -637,13 +594,16 @@
         font-size: 30px;
         color: #fff;
         margin: 0;
+        &:lang(ar) {
+          text-align: left !important;
+        }
       }
     }
 
     a {
       text-decoration: none;
       color: $main-theme;
-      font-size: 25px;
+      font-size: 21px;
       font-weight: bold;
       @media screen and (max-width: 33em) {
         font-size: 26px;

@@ -3,20 +3,20 @@
   <div class="container">
     <div class="d-flex gap-3 flex-column w-100">
       <div>
-        <h1 data-aos="fade-right" data-aos-delay="1300">Explore Everything In <br class="br-on-mob"/> <span data-aos="fade" data-aos-delay="2500" >El-Shorouk City</span></h1>
+        <h1 data-aos="fade-right" data-aos-delay="1300">{{'Explore Everything In' | translate}} <br class="br-on-mob"/> <span data-aos="fade" data-aos-delay="2500" >{{'El-Shorouk City'| translate}}</span></h1>
       </div>
       <div>
-        <p data-aos="fade-left" data-aos-delay="500">Located At The Northeast Of The Great Cairo</p>
+        <p data-aos="fade-left" data-aos-delay="500">{{'Located At The Northeast Of The Great Cairo' | translate}}</p> 
       </div>
       <div data-aos="fade-up" data-aos-delay="2500">
         <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
           <input [(ngModel)]="inputValue"
           (input)="onInput($event)"
-          [nzAutocomplete]="auto" type="text" nz-input placeholder="What are you looking for?" />
+          [nzAutocomplete]="auto" type="text" nz-input placeholder="{{'What are you looking for?' | translate}}" />
           <nz-autocomplete [nzDataSource]="options" nzBackfill #auto></nz-autocomplete>
         </nz-input-group>
         <ng-template #suffixButton>
-          <a nz-button nzSize="large" [routerLink]="['/search']">Explore</a>
+          <a nz-button nzSize="large" [routerLink]="['/search']">{{'Explore' | translate}}</a>
         </ng-template>
       </div>
     </div>
@@ -31,31 +31,31 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="title" data-aos="fade-right">
         <header>
-          <h2>Categories</h2>
+          <h2>{{'Categories' | translate}}</h2>
         </header>
       </div>
 
       <div class="show-more" data-aos="fade-left">
         <a class="view-all-btn" [routerLink]="['/categories']">
-         View All
+         {{'View All' | translate}}
         </a>
       </div>
     </div>
-    <p data-aos="fade-right">What are you looking for?</p>
+    <p data-aos="fade-right">{{'What are you looking for?' | translate}}</p>
 
     <div class="categories-grid">
       <article class="category" data-aos-delay="300" data-aos="fade-right">
         <a [routerLink]="['/categories/shopping']">
           <img src="assets/Home/shopping.png" alt="Shopping">
-          <h3>Shopping</h3>
+          <h3>{{'Shopping' | translate}}</h3>
           <div>
             <header>
-              <h4>Shopping Areas</h4>
+              <h4>{{'Shopping Areas' | translate}}</h4>
             </header>
             <ul>
-              <li>Malls: 20</li>
-              <li>Groceries: 30</li>
-              <li>Stores: 30</li>
+              <li>{{'Malls' | translate}}: 5</li>
+              <li>{{'Supermarkets' | translate}}: 2</li>
+              <li>{{'Stores' | translate}}: 30</li>
             </ul>
           </div>
         </a>
@@ -65,15 +65,15 @@
       <article class="category" data-aos-delay="300" data-aos="fade-down">
         <a [routerLink]="['/categories/food']">
         <img src="assets/Home/food.png" alt="Food">
-        <h3>Food</h3>
+        <h3>{{'Food'| translate}}</h3>
         <div>
           <header>
-            <h4>Food Areas</h4>
+            <h4>{{'Food Areas' | translate}}</h4>
           </header>
           <ul>
-            <li>Resturants: 20</li>
-            <li>Cafes: 30</li>
-            <li>Food Cars: 30</li>
+            <li>{{'Resturants' | translate}}: 20</li>
+            <li>{{'Cafes' | translate}}: 30</li>
+            <li>{{'Food Cars' | translate}}: 30</li>
           </ul>
         </div>
       </a>
@@ -82,14 +82,14 @@
       <article class="category" data-aos-delay="300" data-aos="fade-left">
         <a [routerLink]="['/categories/services']">
         <img src="assets/Home/services.png" alt="Services">
-        <h3>Services</h3>
+        <h3>{{'Services' | translate}}</h3>
         <div>
           <header>
-            <h4>Services Ares</h4>
+            <h4>{{'Services Ares' | translate}}</h4>
           </header>
           <ul>
-            <li>Home care: 20</li>
-            <li>Car repair: 30</li>
+            <li>{{'Home care' | translate}}: 20</li>
+            <li>{{'Car repair' | translate}}: 30</li>
           </ul>
         </div>
       </a>
@@ -98,15 +98,15 @@
       <article class="category" data-aos-delay="200" data-aos="fade-up">
         <a [routerLink]="['/categories/entertainment']">
         <img src="assets/Home/entertainment.png" alt="Entertainment">
-        <h3>Entertainment</h3>
+        <h3>{{'Entertainment' | translate}}</h3>
         <div>
           <header>
-            <h4>Entertainment Areas</h4>
+            <h4>{{'Entertainment Areas' | translate}}</h4>
           </header>
           <ul>
-            <li>Gardens: 5</li>
-            <li>Amusement Parks: 2</li>
-            <li>Cinemas: 1</li>
+            <li>{{'Gardens' | translate}}: 5</li>
+            <li>{{'Amusement Parks' | translate}}: 2</li>
+            <li>{{'Cinemas' | translate}}: 1</li>
           </ul>
         </div>
         </a>
@@ -115,14 +115,15 @@
       <article class="category" data-aos-delay="200" data-aos="fade-down-left">
         <a [routerLink]="['/categories/medical']">
         <img src="assets/Home/medical.png" alt="Medical">
-        <h3>Medical</h3>
+        <h3>{{'Medical' | translate}}</h3>
         <div>
           <header>
-            <h4>Health</h4>
+            <h4>{{'Health' | translate}}</h4>
           </header>
           <ul>
-            <li>Hospitals: 3</li>
-            <li>Clinics: 12</li>
+            <li>{{'Hospitals' | translate}}: 3</li>
+            <li>{{'Clinics' | translate}}: 12</li>
+            <li>{{'Pharmacies' | translate}}: 15</li>
           </ul>
         </div>
         </a>
@@ -139,28 +140,26 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="title" data-aos="fade-right">
         <header>
-          <h2>Latest Offers</h2>
+          <h2>{{'Latest Offers' | translate}}</h2>
         </header>
       </div>
 
       <div class="show-more" data-aos="fade-left">
         <a class="view-all-btn" [routerLink]="['/categories']">
-         View All
+         {{'View All' | translate}}
         </a>
       </div>
     </div>
-    <p data-aos="fade-right">Check the latests offers in the city!</p>
+    <p data-aos="fade-right">{{'Check the latests offers in the city!' | translate}}</p>
     <div data-aos="fade-up" class="carousel">
     <owl-carousel-o [options]="customOptions">
-
-      <!-- integration template
-         <ng-template carouselSlide *ngFor="let offer of pageContent?.data[0]?.offers">
+      <ng-template carouselSlide *ngFor="let offer of offers">
         <div class="offer-card">
           <div class="offer-img">
             <img src="assets/Home/pexels-anna-shvets-2.png">
             <div class="offer-value">
-              <h3>{{offer?.offerPercentage}}%</h3>
-              <h3>OFF</h3>
+              <h3>20%</h3>
+              <h3>{{'OFF' | translate}}</h3>
             </div>
 
             <div class="is-fav">
@@ -169,10 +168,10 @@
           </div>
 
           <div class="offer-title">
-            <h3>Glory Palace For</h3>
+            <h3>{{'Glory Palace For' | translate}}</h3>
               <div class="offer-des">
                 <p>
-                  Lorem ipsum dolor 
+                  {{'Lorem ipsum dolor' | translate}}
                 </p>
 
                 <nz-rate [ngModel]="5" nzDisabled></nz-rate>
@@ -180,166 +179,10 @@
           </div>
           
           <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
+            <a [routerLink]="['offers/1']">{{'Know More' | translate}}</a>
           </div>
         </div>
       </ng-template>
-      -->
-      <ng-template carouselSlide>
-        <div class="offer-card">
-          <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-2.png">
-            <div class="offer-value">
-              <h3>20%</h3>
-              <h3>OFF</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
-            </div>
-          </div>
-
-          <div class="offer-title">
-            <h3>Glory Palace For</h3>
-              <div class="offer-des">
-                <p>
-                  Lorem ipsum dolor 
-                </p>
-
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-              </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
-          </div>
-        </div>
-      </ng-template>
-
-      <ng-template carouselSlide>
-        <div class="offer-card">
-          <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-1.png">
-            <div class="offer-value">
-              <h3>20%</h3>
-              <h3>OFF</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
-            </div>
-          </div>
-
-          <div class="offer-title">
-            <h3>Glory Palace For</h3>
-              <div class="offer-des">
-                <p>
-                  Lorem ipsum dolor 
-                </p>
-
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-              </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
-          </div>
-        </div>
-      </ng-template> 
-
-      <ng-template carouselSlide>
-        <div class="offer-card">
-          <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-2.png">
-            <div class="offer-value">
-              <h3>20%</h3>
-              <h3>OFF</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
-            </div>
-          </div>
-
-          <div class="offer-title">
-            <h3>Glory Palace For</h3>
-              <div class="offer-des">
-                <p>
-                  Lorem ipsum dolor 
-                </p>
-
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-              </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
-          </div>
-        </div>
-      </ng-template> 
-
-      <ng-template carouselSlide>
-        <div class="offer-card">
-          <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-1.png">
-            <div class="offer-value">
-              <h3>20%</h3>
-              <h3>OFF</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
-            </div>
-          </div>
-
-          <div class="offer-title">
-            <h3>Glory Palace For</h3>
-              <div class="offer-des">
-                <p>
-                  Lorem ipsum dolor 
-                </p>
-
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-              </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
-          </div>
-        </div>
-      </ng-template> 
-
-      <ng-template carouselSlide>
-        <div class="offer-card">
-          <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-2.png">
-            <div class="offer-value">
-              <h3>20%</h3>
-              <h3>OFF</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
-            </div>
-          </div>
-
-          <div class="offer-title">
-            <h3>Glory Palace For</h3>
-              <div class="offer-des">
-                <p>
-                  Lorem ipsum dolor 
-                </p>
-
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-              </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">Know More</a>
-          </div>
-        </div>
-      </ng-template> 
-       
     </owl-carousel-o>
   </div>
 
@@ -353,20 +196,20 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="title" data-aos="fade-right">
         <header>
-          <h2>Popular Places</h2>
+          <h2>{{'Popular Places' | translate}}</h2>
         </header>
       </div>
 
       <div class="show-more" data-aos="fade-left">
         <a class="view-all-btn" [routerLink]="['/categories']">
-         View All
+         {{'View All' | translate}}
         </a>
       </div>
     </div>
-    <p data-aos="fade-right">The most popular places in the city!</p>
+    <p data-aos="fade-right">{{'The most popular places in the city!' | translate}}</p>
     <div data-aos="fade-down" class="carousel">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
+        <ng-template carouselSlide *ngFor="let place of places">
           <div class="place-card">
             <div class="place-img">
               <img src="assets/Home/place-1.png">
@@ -376,10 +219,10 @@
             </div>
   
             <div class="place-title">
-              <h3>Glory Palace For</h3>
+              <h3>{{'Glory Palace For' | translate}}</h3>
                 <div class="place-des">
                   <p>
-                    Lorem ipsum dolor 
+                    {{'Lorem ipsum dolor' | translate}} 
                   </p>
   
                   <nz-rate [ngModel]="5" nzDisabled></nz-rate>
@@ -387,140 +230,11 @@
             </div>
             
             <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
+              <a [routerLink]="['places/1']">{{'Know More' | translate}}</a>
             </div>
           </div>
         </ng-template>
-  
-        <ng-template carouselSlide>
-          <div class="place-card">
-            <div class="place-img">
-              <img src="assets/Home/place-2.png">
-              <div class="is-fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-  
-            <div class="place-title">
-              <h3>Glory Palace For</h3>
-                <div class="place-des">
-                  <p>
-                    Lorem ipsum dolor 
-                  </p>
-  
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                </div>
-            </div>
-            
-            <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
-            </div>
-          </div>
-        </ng-template>
-  
-        <ng-template carouselSlide>
-          <div class="place-card">
-            <div class="place-img">
-              <img src="assets/Home/place-1.png">
-              <div class="is-fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-  
-            <div class="place-title">
-              <h3>Glory Palace For</h3>
-                <div class="place-des">
-                  <p>
-                    Lorem ipsum dolor 
-                  </p>
-  
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                </div>
-            </div>
-            
-            <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
-            </div>
-          </div>
-        </ng-template>
-  
-        <ng-template carouselSlide>
-          <div class="place-card">
-            <div class="place-img">
-              <img src="assets/Home/place-2.png">
-              <div class="is-fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-  
-            <div class="place-title">
-              <h3>Glory Palace For</h3>
-                <div class="place-des">
-                  <p>
-                    Lorem ipsum dolor 
-                  </p>
-  
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                </div>
-            </div>
-            
-            <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
-            </div>
-          </div>
-        </ng-template>
-  
-        <ng-template carouselSlide>
-          <div class="place-card">
-            <div class="place-img">
-              <img src="assets/Home/place-1.png">
-              <div class="is-fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-  
-            <div class="place-title">
-              <h3>Glory Palace For</h3>
-                <div class="place-des">
-                  <p>
-                    Lorem ipsum dolor 
-                  </p>
-  
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                </div>
-            </div>
-            
-            <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
-            </div>
-          </div>
-        </ng-template>
-  
-        <ng-template carouselSlide>
-          <div class="place-card">
-            <div class="place-img">
-              <img src="assets/Home/place-2.png">
-              <div class="is-fav">
-                <i class="bi bi-heart"></i>
-              </div>
-            </div>
-  
-            <div class="place-title">
-              <h3>Glory Palace For</h3>
-                <div class="place-des">
-                  <p>
-                    Lorem ipsum dolor 
-                  </p>
-  
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                </div>
-            </div>
-            
-            <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
-            </div>
-          </div>
-        </ng-template>
+
 
       </owl-carousel-o>
     </div>
@@ -535,78 +249,37 @@
     <div class="d-flex justify-content-between align-items-center">
       <div class="title" data-aos="fade-right">
         <header>
-          <h2>News</h2>
+          <h2>{{'News' | translate}}</h2>
         </header>
       </div>
 
       <div class="show-more" data-aos="fade-left">
         <a class="view-all-btn" [routerLink]="['/categories']">
-         View All
+         {{'View All' | translate}}
         </a>
       </div>
     </div>
-    <p data-aos="fade-right">What is new in El-Sherouk City</p>
+    <p data-aos="fade-right">{{'What is new in El-Sherouk City' | translate}}</p>
     <div class="row">
-      <div data-aos="fade-up" data-aos-delay="300" class="col-md-4">
+      <div *ngFor="let subject of news" data-aos="fade-up" data-aos-delay="300" class="col-md-4">
         <div class="news-card">
           <img src="assets/Home/pexels-anna-shvets-1.png">
           <h4 class="news-title">
-            Golden Coffee Cafe Opening
+            {{'Tomorrow the water will be cut off from the 100-meter area' | translate}}
           </h4>
 
           <p class="news-captian">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            {{'Breaking news, Al-Shorouk City Authority notes that the water will be cut off tomorrow from nine in the morning until five in the evening.' | translate}}
           </p>
           <div class="news-date">
             <h4>01</h4>
             <h4>DEC</h4>
           </div>
 
-          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
+          <a class="hvr-{{'forward' | translate}}">{{'Read More' | translate}} <i class="bi bi-arrow-{{'right' | translate}}"></i></a>
         </div>
        
       </div>
-
-      <div data-aos="fade-up" data-aos-delay="500" class="col-md-4">
-        <div class="news-card">
-          <img src="assets/Home/pexels-anna-shvets-1.png">
-          <h4 class="news-title">
-            Golden Coffee Cafe Opening
-          </h4>
-
-          <p class="news-captian">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-          </p>
-          <div class="news-date">
-            <h4>01</h4>
-            <h4>DEC</h4>
-          </div>
-
-          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
-        </div>
-       
-      </div>
-      
-      <div data-aos="fade-up" data-aos-delay="700" class="col-md-4">
-        <div class="news-card">
-          <img src="assets/Home/pexels-anna-shvets-1.png">
-          <h4 class="news-title">
-            Golden Coffee Cafe Opening
-          </h4>
-
-          <p class="news-captian">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-          </p>
-          <div class="news-date">
-            <h4>01</h4>
-            <h4>DEC</h4>
-          </div>
-
-          <a class="hvr-forward">Read More <i class="bi bi-arrow-right"></i></a>
-        </div>
-       
-      </div>
-
     </div>
   </div>
 </section>

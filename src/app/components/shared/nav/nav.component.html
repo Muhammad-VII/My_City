@@ -20,33 +20,32 @@
         <nav class="sideNav-content">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a (click)="close()" class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
+              <a (click)="close()" class="nav-link" aria-current="page" [routerLink]="['/']">{{'Home' | translate}}</a>
             </li>
             <li class="nav-item">
               <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'"
-                [routerLink]="['/explore']">Explore</a>
+                [routerLink]="['/explore']">{{'Explore' | translate}}</a>
             </li>
 
             <li class="nav-item">
-              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About
-                The City</a>
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/story']">{{'About The City' | translate}}</a>
             </li>
 
             <li class="nav-item">
-              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
+              <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'" [routerLink]="['/news']">{{'News' | translate}}</a>
             </li>
 
             <li class="nav-item">
               <a (click)="close()" class="nav-link" [routerLinkActive]="'active-link'"
-                [routerLink]="['/contact']">Contact us</a>
+                [routerLink]="['/contact']">{{'Contact us' | translate}}</a>
             </li>
 
             <li class="nav-item" *ngIf="!isLogin">
-              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">{{'Login' | translate}}</a>
             </li>
 
             <li class="nav-item" *ngIf="isLogin">
-              <a class="nav-link" (click)='logout()'>logout</a>
+              <a class="nav-link" (click)='logout()'>{{'logout' | translate}}</a>
             </li>
           </ul>
         </nav>
@@ -57,24 +56,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link hover-text-main" aria-current="page" [routerLink]="['/']">Home</a>
+          <a class="nav-link hover-text-main" aria-current="page" [routerLink]="['/']">{{'Home' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">Exolore</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/story']">About The
-            City</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/explore']">{{'Explore' | translate}}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/news']">News</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/story']">{{'About The City' | translate}}</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">Contact
-            us</a>
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/news']">{{'News' | translate}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link hover-text-main" [routerLinkActive]="'active-link'" [routerLink]="['/contact']">{{'Contact us' | translate}}</a>
         </li>
 
       </ul>
@@ -82,21 +79,21 @@
       <form class="d-flex">
         <button *ngIf="!isLogin" data-bs-toggle="modal" data-bs-target="#loginModal"
           class="btn btn-outline-light login-btn">
-          Sign In
+          {{'Login' | translate}}
         </button>
         <a nzTrigger="click" class="profile-menu" *ngIf="isLogin" nz-dropdown [nzDropdownMenu]="menu">
-          Profile
+          {{'Profile' | translate}}
           <i nz-icon nzType="down"></i>
         </a>
         <nz-dropdown-menu #menu="nzDropdownMenu">
           <ul nz-menu nzSelectable>
             <li nz-menu-item>
-              <a [routerLink]="['/profile/settings']">Account Settings</a>
+              <a [routerLink]="['/profile/settings']">{{'Account Settings' | translate}}</a>
             </li>
             <li nz-menu-item>
-              <a [routerLink]="['/profile/saved-places']">Saved Places</a>
+              <a [routerLink]="['/profile/saved-places']">{{'Saved Places' | translate}}</a>
             </li>
-            <li nz-menu-item nzDanger><a (click)='logout()'>Logout</a> <i class="bi bi-door-closed-fill"></i></li>
+            <li nz-menu-item nzDanger><a (click)='logout()'>{{'Logout' | translate}}</a> <i class="bi bi-door-closed-fill"></i></li>
           </ul>
         </nz-dropdown-menu>
       </form>
@@ -117,50 +114,50 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title" id="reviewModal">Create An Account</h5>
+        <h5 class="modal-title" id="reviewModal">{{'Create An Account' | translate}}</h5>
 
       </div>
       <div class="modal-body">
         <form nz-form [formGroup]='signUpForm' (ngSubmit)='submitSignUpForm()'>
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Name is required">
-                <input formControlName='fullName' type="text" class="form-control" placeholder="Full name">
+              <nz-form-control nzErrorTip="{{'Name is required' | translate}}">
+                <input formControlName='fullName' type="text" class="form-control" placeholder="{{'Full name' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
 
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Email is required">
-                <input formControlName='email' type="text" class="form-control" placeholder="Email">
+              <nz-form-control nzErrorTip="{{'Email is required' | translate}}">
+                <input formControlName='email' type="text" class="form-control" placeholder="{{'Email' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
 
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Phone is required">
-                <input formControlName='mobileNumber' type="tel" class="form-control" placeholder="Phone">
+              <nz-form-control nzErrorTip="{{'Phone is required' | translate}}">
+                <input formControlName='mobileNumber' type="tel" class="form-control" placeholder="{{'Phone' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
 
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Password is required">
-                <input formControlName='password' type="password" class="form-control" placeholder="Password">
+              <nz-form-control nzErrorTip="{{'Password is required' | translate}}">
+                <input formControlName='password' type="password" class="form-control" placeholder="{{'Password' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
-          <button type="submit">Sign up</button>
+          <button type="submit">{{'Sign up' | translate}}</button>
 
         </form>
 
       </div>
       <div class="modal-footer">
-        <p>Already have an account? <button class="login-button" data-bs-toggle="modal"
-            data-bs-target="#loginModal">Login</button></p>
+        <p>{{'Already have an account?'| translate}} <button class="login-button" data-bs-toggle="modal"
+            data-bs-target="#loginModal">{{'Login' | translate}}</button></p>
       </div>
     </div>
   </div>
@@ -177,46 +174,54 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title" id="reviewModal">Welcome back, Sign In</h5>
+        <h5 class="modal-title" id="reviewModal">{{'Welcome back, Sign In' | translate}}</h5>
 
       </div>
       <div class="modal-body">
         <form nz-form [formGroup]="loginForm" (ngSubmit)='submitLoginForm()'>
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Email is required">
+              <nz-form-control nzErrorTip="{{'Email is required' | translate}}">
                 <input autocomplete="email" formControlName='email' type="email" class="form-control"
-                  placeholder="Email">
+                  placeholder="{{'Email' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
 
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Password is required">
-                <input formControlName='password' type="password" class="form-control" placeholder="Password">
+              <nz-form-control nzErrorTip="{{'Password is required' | translate}}">
+                <input formControlName='password' type="password" class="form-control" placeholder="{{'Password' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
           <div class="forget-pass">
             <div>
-              <label nz-checkbox>Remember Me</label>
+              <label nz-checkbox>{{'Remember Me' | translate}}</label>
             </div>
             <div>
-              <button class="forgot-password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forgot
-                Password?</button>
+              <button class="forgot-password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">{{'Forgot Password?' | translate}}</button>
             </div>
           </div>
           <div class="d-flex justify-content-center align-items-center flex-column">
-            <button type="submit">Login</button>
-            <p>Don't have an account yet? <button class="signup-button" data-bs-target="#signUpModal"
-                data-bs-toggle="modal">Sign Up</button></p>
+            <button type="submit">{{'Login' | translate}}</button>
+            <p>{{"Don't have an account yet?" | translate}} <button class="signup-button" data-bs-target="#signUpModal"
+                data-bs-toggle="modal">{{'Sign up' | translate}}</button></p>
           </div>
         </form>
 
       </div>
       <div class="modal-footer">
-        <a data-bs-dismiss="modal">Continue as a guest <i class="bi bi-arrow-right"></i></a>
+        <a data-bs-dismiss="modal">
+          <div>
+            {{'Continue as a guest' | translate}}
+          </div> 
+          <div class="guest-icon">
+            <i class="bi bi-arrow-{{'right' | translate}}">
+              
+            </i>    
+          </div>
+      </a>
       </div>
     </div>
   </div>
@@ -234,21 +239,21 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title" id="forgetPasswordModal">Forgot Password</h5>
-        <p>Reset password link will be sent to your email in order to reset your password</p>
+        <h5 class="modal-title" id="forgetPasswordModal">{{'Forgot Password' | translate}}</h5>
+        <p>{{'Reset password link will be sent to your email in order to reset your password' | translate}}</p>
 
       </div>
       <div class="modal-body">
         <form nz-form [formGroup]='forgetPasswordForm' (ngSubmit)='submitResetPassForm()'>
           <div class="form-group">
             <nz-form-item>
-              <nz-form-control nzErrorTip="Email is required">
-                <input formControlName='email' type="email" class="form-control" placeholder="Email">
+              <nz-form-control nzErrorTip="{{'Email is required' | translate}}">
+                <input formControlName='email' type="email" class="form-control" placeholder="{{'Email' | translate}}">
               </nz-form-control>
             </nz-form-item>
           </div>
           <div>
-            <button type="submit">Send Link</button>
+            <button type="submit">{{'Send Link' | translate}}</button>
           </div>
         </form>
 
@@ -257,3 +262,12 @@
   </div>
 </div>
 <!--End Forget Password Modal-->
+
+<!--Start Change Language-->
+<section class="change-lang">
+  <select (change)="changeLanguage($event)">
+    <option value="en" [selected]="lang == 'en'">{{'English' | translate}}</option>
+    <option value="ar" [selected]="lang == 'ar'">{{'Arabic' | translate}}</option>
+  </select>
+</section>
+<!--End Change Language-->

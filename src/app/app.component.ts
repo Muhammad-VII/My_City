@@ -9,6 +9,7 @@ import { Store } from '@ngrx/store';
 import { FormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
 interface AppState {
   Auth: Auth;
 }
@@ -50,8 +51,13 @@ export class AppComponent {
     private _Store: Store<AppState>,
     public _AuthService: AuthService,
     private _NgxSpinner: NgxSpinnerService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private _TranslateService: TranslateService
   ) {
+    this._TranslateService.setDefaultLang("en")
+    const lang = localStorage.getItem("lang") || "en";
+    this._TranslateService.use(lang);
+    document.documentElement.lang = lang
     this._NgxSpinner.show()
     window.onload = () => {
       this._NgxSpinner.hide()

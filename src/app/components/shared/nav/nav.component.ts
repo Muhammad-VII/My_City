@@ -29,7 +29,8 @@ export class NavComponent implements OnInit, OnDestroy {
         }
       })
     );
-  }
+  };
+  lang!: string;
   subscribtions: Subscription[] = [];
   checked: boolean = false;
   logoElement: string = `<img id='logo' src='assets/Home/logo.png' width='260px' alt='my_city_logo'/>`;
@@ -127,12 +128,10 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   handleOk(): void {
-    console.log('Button ok clicked!');
     this.isVisible = false;
   }
 
   handleCancel(): void {
-    console.log('Button cancel clicked!');
     this.isVisible = false;
   }
 
@@ -191,12 +190,14 @@ export class NavComponent implements OnInit, OnDestroy {
       }
     };
   }
-  validateForm!: UntypedFormGroup;
 
-  submitForm(): void {
-    console.log('submit', this.validateForm.value);
+  changeLanguage(lang?: any): void {
+    localStorage.setItem("lang", lang.target.value);
+    window.location.reload();
   }
+
   ngOnInit(): void {
+    this.lang = localStorage.getItem("lang") || "en";
     this.changeNavbarColor();
   }
 }

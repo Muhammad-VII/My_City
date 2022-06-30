@@ -1,5 +1,13 @@
 @import "../../../../styles.scss";
-
+.change-lang {
+  position: fixed;
+  left: 2%;
+  bottom: 5%;
+  z-index: 9999;
+  .ant-switch-checked {
+    background-color: #f36016;
+  }
+}
 nav {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -8,7 +16,7 @@ nav {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-play-state: running;
-  transition: background-color 0.5s;
+  transition: background-color 0.3s ease-in-out;
   position: relative;
   .progress-bar {
     position: absolute;
@@ -296,6 +304,7 @@ nav {
       }
     }
   }
+
   .modal-footer {
     padding-block: 1rem;
     justify-content: center;
@@ -303,6 +312,12 @@ nav {
       font-size: 24px;
       text-decoration: none;
       color: $main-theme;
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      .guest-icon {
+        margin-top: 10px;
+      }
     }
   }
 }

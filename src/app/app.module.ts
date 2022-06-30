@@ -1,3 +1,4 @@
+import { LanguageInterceptor } from './interceptors/language.interceptor';
 import { NGZORROModule } from './ng-zorro-antd.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,7 +10,11 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
@@ -48,7 +53,12 @@ import { ShowMoreDirective } from './directives/seemore.directive';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { TransportaionComponent } from './components/transportaion/transportaion.component';
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 registerLocaleData(en);
 
 @NgModule({
@@ -66,8 +76,8 @@ registerLocaleData(en);
     NavComponent,
     FooterComponent,
     NotfoundComponent,
-    ImgScanPipe, 
-    LoaderComponent, 
+    ImgScanPipe,
+    LoaderComponent,
     PassResetComponent,
     HeaderComponent,
     AnimationComponent,
@@ -83,14 +93,14 @@ registerLocaleData(en);
     ShowMoreDirective,
     ExploreDetailsComponent,
     TransportaionComponent,
-    DistrectDetailsComponent
+    DistrectDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
       Auth: fromAuth.loginReducer,
-      Logout: fromAuth.logoutReducer
+      Logout: fromAuth.logoutReducer,
     }),
     FormsModule,
     ReactiveFormsModule,
@@ -100,10 +110,28 @@ registerLocaleData(en);
     CarouselModule,
     NgxSpinnerModule,
     ParticlesModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    ToastrModule.forRoot()
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    ToastrModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LanguageInterceptor,
+      multi: true,
+    },
+    HttpClient
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
