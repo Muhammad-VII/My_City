@@ -32,9 +32,6 @@ html:lang(ar) {
   ul {
     padding: 0;
   }
-  // .owl-carousel.owl-rtl{
-  //   direction: rtl !important;
-  // }
 }
 
 // html {
@@ -59,10 +56,10 @@ body {
   }
 }
 
-html,
-body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
