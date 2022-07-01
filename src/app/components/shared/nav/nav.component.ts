@@ -140,7 +140,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   logout(): void {
     this._AuthService.logout();
-    if(localStorage.getItem('lang') === 'en'){
+    if (localStorage.getItem('lang') === 'en') {
       this._Toaster.success('Logout Successfull', 'Success');
     } else {
       this._Toaster.warning('تم تسجيل الخروج بنجاح', 'نجاح');
@@ -196,7 +196,14 @@ export class NavComponent implements OnInit, OnDestroy {
       if (window.pageYOffset > iPoint) {
         bar.style.width = scrolled + '%';
         nav.classList.add('bg-orange');
-        logoImg.setAttribute('src', '../../../../assets/Home/logo-white.png');
+        if (localStorage.getItem('lang') === 'en') {
+          logoImg.setAttribute('src', '../../../../assets/Home/logo-white.png');
+        } else {
+          logoImg.setAttribute(
+            'src',
+            '../../../../assets/Home/logo-white-ar.png'
+          );
+        }
         nav.style.animationName = 'fadeDown';
         nav.classList.remove('bg-transparent');
         nav_items.forEach((item) => {
@@ -205,8 +212,12 @@ export class NavComponent implements OnInit, OnDestroy {
       } else {
         bar.style.width = 0 + '%';
         nav.style.animationName = '';
-        nav.classList.add('bg-transparent'),
+        nav.classList.add('bg-transparent');
+        if (localStorage.getItem('lang') === 'en') {
           logoImg.setAttribute('src', '../../../../assets/Home/logo.png');
+        } else {
+          logoImg.setAttribute('src', '../../../../assets/Home/logo-ar.png');
+        }
         nav.classList.remove('bg-orange');
         nav_items.forEach((item) => {
           item.classList.replace('hover-text-dark', 'hover-text-main');
@@ -216,7 +227,7 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   changeLanguage(lang?: any): void {
-    localStorage.setItem('lang', lang.target.value);
+    localStorage.setItem('lang', lang);
     window.location.reload();
   }
 
