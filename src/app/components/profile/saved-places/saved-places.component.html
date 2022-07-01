@@ -4,12 +4,12 @@
   <div class="container">
     <header>
       <nz-breadcrumb nzSeparator=">">
-        <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item><a [routerLink]="['/']">{{'Home' | translate}}</a></nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile']">Profile</a>
+          <a [routerLink]="['/profile']">{{'Profile' | translate}}</a>
         </nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/saved-places']" class="active-bread">Saved Places</a>
+          <a [routerLink]="['/profile/saved-places']" class="active-bread">{{'Saved Places' | translate}}</a>
         </nz-breadcrumb-item>
       </nz-breadcrumb>
     </header>
@@ -26,10 +26,10 @@
             </div>
     
             <div class="place-title">
-              <h3>Glory Palace For</h3>
+              <h3>{{'Glory Palace For' | translate}}</h3>
                 <div class="place-des">
                   <p>
-                    Lorem ipsum dolor 
+                    {{'Lorem ipsum dolor' | translate}}
                   </p>
     
                   <nz-rate [ngModel]="5" nzDisabled></nz-rate>
@@ -37,7 +37,7 @@
             </div>
             
             <div class="view-place">
-              <a [routerLink]="['places/1']">Know More</a>
+              <a [routerLink]="['places/1']">{{'Know More' | translate}}</a>
             </div>
           </div>
         </div>

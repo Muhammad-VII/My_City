@@ -5,15 +5,15 @@
     <header>
       <nz-breadcrumb nzSeparator=">">
         <nz-breadcrumb-item>
-          <a [routerLink]="['/']">Home</a>
+          <a [routerLink]="['/']">{{'Home' | translate}}</a>
         </nz-breadcrumb-item>
 
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile']">Explore</a>
+          <a [routerLink]="['/profile']">{{'Explore' | translate}}</a>
         </nz-breadcrumb-item>
 
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']" class="active-bread">Reviews</a>
+          <a [routerLink]="['/profile/settings']" class="active-bread">{{'Reviews' | translate}}</a>
         </nz-breadcrumb-item>
       </nz-breadcrumb>
     </header>
@@ -21,33 +21,32 @@
     <article>
       <header>
         <div>
-          <h3>Yummy Burger Restaurant Reviews (33 reviews)</h3>
+          <h3>{{'Yummy Burger Restaurant Reviews' | translate}} (4 {{'reviews' | translate}})</h3>
         </div>
 
         <div>
-          <button data-bs-toggle="modal" data-bs-target="#reviewModal" class="hvr-bounce-to-top">Add Review</button>
+          <button data-bs-toggle="modal" data-bs-target="#addReviewModal" class="hvr-bounce-to-top">{{'Add Review' | translate}}</button>
         </div>
       </header>
 
       <div class="review-content" *ngFor="let review of reviews">
         <header>
           <div>
-            <h2>{{review?.name}}</h2>
+            <h2>{{review?.name | translate}}</h2>
           </div>
           <div class="review-date">
-            <p>03 July 2020</p>
+            <p>03 {{'July' | translate}} 2020</p>
           </div>
         </header>
         <nz-rate [ngModel]="5" nzDisabled></nz-rate>
         <p seeMore>
-          {{review?.review}}
+          {{review?.review | translate}}
       </div>
     </article>
   </div>
 </section>
 
-<div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
-  aria-hidden="true" class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
+<div aria-hidden="true" class="modal fade" id="addReviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="close-btn-section">
@@ -55,19 +54,19 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title" id="reviewModal">Add your Review</h5>
+        <h5 class="modal-title" id="reviewModal">{{'Add your Review' | translate}}</h5>
 
       </div>
       <div class="modal-body">
-        <h3>How do you rate your experince?</h3>
+        <h3>{{'How do you rate your experince?' | translate}}</h3>
         <div class="rate-form">
           <nz-rate [ngModel]="0"></nz-rate>
 
-          <textarea nz-input rows="4" placeholder="Describe and review your experience"></textarea>
+          <textarea nz-input rows="4" placeholder="{{'Describe and review your experience' | translate}}"></textarea>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">Submit Review</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">{{'Submit Review' | translate}}</button>
       </div>
     </div>
   </div>
@@ -81,12 +80,12 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title">Review Submited Successfully</h5>
+        <h5 class="modal-title">{{'Review Submited Successfully' | translate}}</h5>
 
       </div>
       <div class="modal-body">
         <img src="assets/reviews/Customer Survey-pana.png">
-        <h3>Your review has been submitted successfully, and will be posted soon!</h3>
+        <h3>{{'Your review has been submitted successfully, and will be posted soon!' | translate}}</h3>
       </div>
     </div>
   </div>

@@ -10,22 +10,22 @@ export class ReviewsComponent implements OnInit {
   pageTitle: string = `Explore`;
   reviews: any[] = [
     {
-      name: 'John Doe',
+      name: 'Ahmed Magdy',
       review:
         'This application is designed to help you to learn the basics of the English language. It will help you to understand the meaning of the words and phrases, and to practice the correct usage of the words and phrases. It will also help you to improve your English language skills.',
     },
     {
-      name: 'John Doe',
+      name: 'Ahmed Magdy',
       review:
         'This application is designed to help you to learn the basics of the English language. It will help you to understand the meaning of the words and phrases, and to practice the correct usage of the words and phrases. It will also help you to improve your English language skills.',
     },
     {
-      name: 'John Doe',
+      name: 'Ahmed Magdy',
       review:
         'This application is designed to help you to learn the basics of the English language. It will help you to understand the meaning of the words and phrases, and to practice the correct usage of the words and phrases. It will also help you to improve your English language skills.',
     },
     {
-      name: 'John Doe',
+      name: 'Ahmed Magdy',
       review:
         'This application is designed to help you to learn the basics of the English language. It will help you to understand the meaning of the words and phrases, and to practice the correct usage of the words and phrases. It will also help you to improve your English language skills.',
     },

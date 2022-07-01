@@ -48,10 +48,10 @@ import { PopularPlacesComponent } from './components/main/popular-places/popular
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
 import { SearchComponent } from './components/main/search/search.component';
-import { ReviewsComponent } from './components/reviews/reviews.component';
+import { ReviewsComponent } from './components/main/reviews/reviews.component';
 import { ShowMoreDirective } from './directives/seemore.directive';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
-import { TransportaionComponent } from './components/transportaion/transportaion.component';
+import { TransportaionComponent } from './components/main/transportaion/transportaion.component';
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';

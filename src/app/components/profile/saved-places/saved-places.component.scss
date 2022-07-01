@@ -5,6 +5,9 @@
   overflow: hidden;
   header {
     text-align: left;
+    &:lang(ar) {
+      text-align: right;
+    }
   }
   nz-breadcrumb {
     a {
@@ -56,23 +59,23 @@
       .place-title {
         padding: .8rem 0rem;
         h3 {
-          font-size: 25px;
+          font-size: 20px;
           font-weight: 500;
           color: #000;
           @media screen and (max-width: 33em) {
-            font-size: 20px;
+            font-size: 18px;
           }      
         }
         .place-des{
           margin-top: 3rem;
           p {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 300;
             padding: 0;
             margin: 0;
             color: #000;
             @media screen and (max-width: 33em) {
-              font-size: 18px;
+              font-size: 16px;
             }
           }
         }
@@ -83,19 +86,19 @@
         a {
           text-decoration: none;
           background-color: $main-theme;
-          color: $main-button-color;
+          color: #fff;
           display: inline-block;
           min-width: 100%;
           text-align: center;
-          padding: 1rem 3rem;
           border-radius: 5px;
-          font-size: 23px;
+          font-size: 21px;
           font-weight: bold;
           transition: all .3s;
-          border: 2px solid $main-theme;
+          padding: .5rem 3rem;
+          border: 1.5px solid $main-theme;
           &:hover {
             background-color: transparent;
-            color: $main-theme;
+            color:  $main-theme;
           }
         } 
       }

@@ -7,4 +7,4 @@ export const login_complete = createAction('[User] LOGIN_COMPLETE', props<Auth>(
 
 export const login_error = createAction('[User] LOGIN_ERROR', props<Auth>());
 
-export const logout = createAction('[User] LOGOUT');
+export const logout = createAction('[User] LOGOUT',props<Auth>());

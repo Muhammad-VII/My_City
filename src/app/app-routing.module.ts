@@ -1,7 +1,7 @@
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
-import { TransportaionComponent } from './components/transportaion/transportaion.component';
+import { TransportaionComponent } from './components/main/transportaion/transportaion.component';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
-import { ReviewsComponent } from './components/reviews/reviews.component';
+import { ReviewsComponent } from './components/main/reviews/reviews.component';
 import { SearchComponent } from './components/main/search/search.component';
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
 import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';

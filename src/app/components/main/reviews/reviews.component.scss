@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../../styles.scss";
 
 .reviews-page {
   padding: 1rem 0;
@@ -6,6 +6,9 @@
   nz-breadcrumb {
     margin: auto;
     text-align: left;
+    &:lang(ar) {
+      text-align: right;
+    }
     a {
       font-size: 20px;
       text-decoration: none;
@@ -73,12 +76,12 @@
         }
       }
       h2 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
         color: #000;
       }
       p {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -97,7 +100,7 @@
   }
 }
 
-#reviewModal {
+#addReviewModal {
   .close-btn-section {
     padding: 1rem 1rem 0rem 1rem;
     display: flex;
