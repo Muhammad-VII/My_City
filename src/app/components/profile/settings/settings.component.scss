@@ -8,6 +8,9 @@
     margin: auto;
     text-align: left;
     margin-bottom: .6rem;
+    &:lang(ar) {
+      text-align: right; 
+    }
     a {
       font-size: 20px;
       text-decoration: none;
@@ -38,6 +41,9 @@
         border: none;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         text-align: left;
+        &:lang(ar) {
+          text-align: right; 
+        }
         &::placeholder {
           font-size: 21px;
           font-weight: 400;

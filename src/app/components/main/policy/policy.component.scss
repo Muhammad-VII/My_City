@@ -4,6 +4,10 @@
   padding-block: 1rem;
   header {
     text-align: left;
+    &:lang(ar) {
+      text-align: right;
+      margin-bottom: .5rem;
+    }
     nz-breadcrumb {
       a {
         font-size: 20px;

@@ -5,53 +5,53 @@
     <header>
       <div>
         <nz-breadcrumb nzSeparator=">">
-          <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+          <nz-breadcrumb-item><a [routerLink]="['/']">{{'Home' | translate}}</a></nz-breadcrumb-item>
           <nz-breadcrumb-item>
-            <a [routerLink]="['/offers']" class="active-bread">Offers</a>
+            <a [routerLink]="['/offers']" class="active-bread">{{'Offers' | translate}}</a>
           </nz-breadcrumb-item>
         </nz-breadcrumb>
-        <h4>Latest Offers</h4>
+        <h4>{{'Latest Offers' | translate}}</h4>
       </div>
       <div class="d-flex gap-2 align-items-center">
-        <p class="p-0 m-0 text-nowrap fw-bold">Sort By:</p>
+        <p class="p-0 m-0 text-nowrap fw-bold">{{'Sort By' | translate}}:</p>
         <select>
-          <option value="">Top Rated</option>
-          <option value="">Recently Added</option>
-          <option value="">Added long time ago</option>
+          <option value="">{{'Top Rated' | translate}}</option>
+          <option value="">{{'Recently Added' | translate}}</option>
+          <option value="">{{'Added long time ago' | translate}}</option>
         </select>
       </div>
-      <button class="toggle-filter-btn" nz-button (click)="openFilter()">Filter <i class="bi bi-arrow-down"></i></button>
+      <button class="toggle-filter-btn" nz-button (click)="openFilter()">{{'Filter' | translate}} <i class="bi bi-arrow-down"></i></button>
     </header>
     <div class="row">
       <div class="col-md-2 side-filter-container">
           <div class="side-filter">
             <div class="side-filter-content">
               <header>
-                <h4>Areas</h4>
+                <h4>{{'Areas' | translate}}</h4>
               </header>
               <article>
-                <label nz-checkbox>Art</label>
-                <label nz-checkbox>Books</label>
-                <label nz-checkbox>Electronics</label>
-                <label nz-checkbox>Fashion</label>
-                <label nz-checkbox>Home & Decor</label>
-                <label nz-checkbox>Music</label>
-                <label nz-checkbox>Vehichles</label>
+                <label nz-checkbox>{{'Art' | translate}}</label>
+                <label nz-checkbox>{{'Books' | translate}}</label>
+                <label nz-checkbox>{{'Electronics' | translate}}</label>
+                <label nz-checkbox>{{'Fashion' | translate}}</label>
+                <label nz-checkbox>{{'Home & Decor' | translate}}</label>
+                <label nz-checkbox>{{'Music' | translate}}</label>
+                <label nz-checkbox>{{'Vehichles' | translate}}</label>
               </article>
             </div>
             <nz-divider nzType="horizontal" class="m-0 mb-2"></nz-divider>
 
             <div class="side-filter-content">
               <header>
-                <h4>Categories</h4>
+                <h4>{{'Categories' | translate}}</h4>
               </header>
               <article>
-                <label nz-checkbox>Entertainment</label>
-                <label nz-checkbox>Food</label>
-                <label nz-checkbox>Medical</label>
-                <label nz-checkbox>Services</label>
-                <label nz-checkbox>Shopping</label>
-                <label nz-checkbox>Workshops</label>
+                <label nz-checkbox>{{'Entertainment' | translate}}</label>
+                <label nz-checkbox>{{'Food' | translate}}</label>
+                <label nz-checkbox>{{'Medical' | translate}}</label>
+                <label nz-checkbox>{{'Services' | translate}}</label>
+                <label nz-checkbox>{{'Shopping' | translate}}</label>
+                <label nz-checkbox>{{'Workshops' | translate}}</label>
               </article>
             </div>
           </div>
@@ -64,7 +64,7 @@
                 <img src="assets/Home/pexels-anna-shvets-1.png">
                 <div class="offer-value">
                   <h3>20%</h3>
-                  <h3>OFF</h3>
+                  <h3>{{'OFF' | translate}}</h3>
                 </div>
     
                 <div class="is-fav">
@@ -73,10 +73,10 @@
               </div>
     
               <div class="offer-title">
-                <h3>Glory Palace For</h3>
+                <h3>{{'Glory Palace For' | translate}}</h3>
                   <div class="offer-des">
                     <p>
-                      Lorem ipsum dolor 
+                      {{'Lorem ipsum dolor' | translate}} 
                     </p>
     
                     <nz-rate [ngModel]="5" nzDisabled></nz-rate>
@@ -84,7 +84,7 @@
               </div>
               
               <div class="view-offer">
-                <a [routerLink]="['offers/1']">Know More</a>
+                <a [routerLink]="['offers/1']">{{'Know More' | translate}}</a>
               </div>
             </div>
           </div>

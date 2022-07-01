@@ -2,7 +2,7 @@
   <main>
     <div class="bg-layer">
       <div class="container">
-        <h1 data-aos="fade-right" data-aos-delay="300">Your guide to <br /> Explore The City</h1>
+        <h1 data-aos="fade-right" data-aos-delay="300">{{'Your guide' | translate}} <div>{{'to Explore The City' | translate}}</div></h1>
       </div>
 
     </div>
@@ -21,22 +21,18 @@
             <img class="img-fluid" loading=lazy src="{{'../../../../assets/Explore/'+distrect?.imgUrl}}" alt="">
 
             <div class="distrect-details">
-              <h3>{{distrect.title}}</h3>
-              <p>{{distrect.describtion}}</p>
-              <a class="hvr-forward" [routerLink]="['/distrect-details']">
+              <h3>{{distrect.title | translate}}</h3>
+              <p>{{distrect.describtion | translate}}</p>
+              <a class="hvr-{{'forward' | translate}}" [routerLink]="['/distrect-details']">
                 <a>
-                  Read more
-                  <i class="bi bi-arrow-right"></i>
+                  {{"Read More" | translate}}
+                  <i class="bi bi-arrow-{{'right' | translate}}"></i>
                 </a>
               </a>
             </div>
-
           </div>
-
-
         </div>
       </div>
     </div>
-
   </article>
 </section>

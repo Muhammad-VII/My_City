@@ -1,7 +1,26 @@
 @import '../../../../styles.scss';
-
+header {
+  text-align: left;
+  padding-block: 1rem;
+  padding-block-end: .5rem;
+  &:lang(ar) {
+    text-align: right;
+    margin-bottom: .5rem;
+  }
+  nz-breadcrumb {
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      &:hover {
+        color: $main-theme;
+      }
+    }
+    .active-bread{
+      font-weight: 500;
+    }
+  }
+}
 .items {
-  padding: 50px 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -23,8 +42,8 @@
 }
 .items .item .item-img div {
   background-color: #da520c;
-  width: 80px;
-  height: 89px;
+  width: 70px;
+  height: 70px;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -32,7 +51,7 @@
 }
 .items .item .item-img div p {
   color: white;
-  font-size: 26px;
+  font-size: 18px;
 }
 .items .item .item-text {
   padding: 15px 0;

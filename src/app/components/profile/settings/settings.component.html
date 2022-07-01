@@ -4,12 +4,12 @@
   <div class="container">
     <header>
       <nz-breadcrumb nzSeparator=">">
-        <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item><a [routerLink]="['/']">{{'Home' | translate}}</a></nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile']">Profile</a>
+          <a [routerLink]="['/profile']">{{'Profile' | translate}}</a>
         </nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/profile/settings']" class="active-bread">Account Settings</a>
+          <a [routerLink]="['/profile/settings']" class="active-bread">{{'Account Settings' | translate}}</a>
         </nz-breadcrumb-item>
       </nz-breadcrumb>
     </header>
@@ -20,15 +20,15 @@
     <article *ngIf="!messageRecevied">
       <form nz-form [formGroup]="settingsForm" (ngSubmit)="submitSettingsForm()">
         <nz-form-item>
-          <nz-form-control nzErrorTip="Please input your username!">
+          <nz-form-control nzErrorTip="{{'Please enter your name' | translate}}">
             <nz-input-group>
-              <input autocomplete="name" type="text" nz-input formControlName="name" placeholder="Ahmed Ahmed" />
+              <input autocomplete="name" type="text" nz-input formControlName="name" placeholder="{{'Ahmed Magdy' | translate}}" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-control nzErrorTip="Email is incorrect">
+          <nz-form-control nzErrorTip="{{'Email is incorrect' | translate}}">
             <nz-input-group>
               <input autocomplete="email" type="email" nz-input formControlName="email" placeholder="ahmed@gmail.com" />
             </nz-input-group>
@@ -36,7 +36,7 @@
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-control nzErrorTip="Phone is incorrect">
+          <nz-form-control nzErrorTip="{{'Phone is incorrect' | translate}}">
             <nz-input-group>
               <input autocomplete="tel" type="tel" nz-input formControlName="phone" placeholder="+2597340963" />
             </nz-input-group>
@@ -44,9 +44,9 @@
         </nz-form-item>
 
         <nz-form-item>
-          <nz-form-control nzErrorTip="Password is incorrect">
+          <nz-form-control nzErrorTip="{{'Password is incorrect' | translate}}">
             <nz-input-group>
-              <input autocomplete="new-password" type="password" nz-input formControlName="password"
+              <input autocomplete="new-password" type="password" nz-input formControlName="{{'password' | translate}}"
                 placeholder="●●●●●●●" />
             </nz-input-group>
           </nz-form-control>

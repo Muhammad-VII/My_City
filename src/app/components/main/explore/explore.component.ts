@@ -29,80 +29,62 @@ export class ExploreComponent implements OnInit {
     {
       imgUrl: 'tromso-forsidebilde-vinter-1-scaled.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'bergen-frontpage-2560x1706-1.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'asker-frontpage-2560x1464-1.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'bergen-frontpage-2560x1706-1.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'forsidebilde-stavanger-2560x1831-1.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
     {
       imgUrl: 'forsidebilde-stavern-citadellet-2560x1831-1.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'kristiansandcity.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'oslo-aker-brygge-clock-tower-2600x873-1-scaled.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
 
     {
       imgUrl: 'oslo-akershus-festning-scaled.jpg',
       title: "Distrect title",
-      describtion: `
-      The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.
-      `,
+      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
       link: 'https://www.trondheim.no/',
     },
   ];

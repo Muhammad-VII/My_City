@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() public pageTitle: string = 'El-Sherouk City News';
+  @Input() public pageTitle: string = 'EL-Sherouk City News';
   constructor() {}
 
   ngOnInit(): void {}

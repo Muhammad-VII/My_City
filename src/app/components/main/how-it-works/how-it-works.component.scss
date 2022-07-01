@@ -4,6 +4,9 @@
   padding-block: 1rem;
   header {
     text-align: left;
+    &:lang(ar) { 
+      text-align: right;
+    }
     nz-breadcrumb {
       a {
         font-size: 20px;
@@ -24,11 +27,15 @@
     padding-bottom: 1rem;
     .how-it-works-text {
       padding: 1rem;
+      h2 {
+        font-size: 25px;
+        font-weight: bold;
+      }
       p {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
         @media screen and (max-width: 768px) {
-          font-size: 19px;
+          font-size: 16px;
         }
       }
     }

@@ -14,10 +14,10 @@
     <article [class.mt-3]='i == 0' *ngFor="let question of questions; let i = index">
       <div class="asked-quetions">
         <h2>
-          {{question.question}}
+          {{question.question | translate}}
         </h2>
         <p seeMore>
-          {{question.answer}}
+          {{question.answer | translate}}
         </p>
       </div>
     </article>

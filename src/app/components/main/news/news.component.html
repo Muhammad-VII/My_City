@@ -1,7 +1,17 @@
 <app-header></app-header>
 <div class="container">
+    <header>
+        <nz-breadcrumb nzSeparator=">">
+          <nz-breadcrumb-item>
+            <a [routerLink]="['/']">{{'Home' | translate}}</a>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+            <a [routerLink]="['/privacy-policy']">{{'News' | translate}}</a>
+          </nz-breadcrumb-item>
+        </nz-breadcrumb>
+      </header>
   <div class="items">
-      <div class="item">
+      <div class="item" *ngFor="let subject of [1,2,3,4,5,6]">
           <div class="item-img">
               <div>
                   <p>01
@@ -10,79 +20,9 @@
               </div>
           </div>
           <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
-          </div>
-      </div>
-      <div class="item">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
-              </div>
-          </div>
-          <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
-          </div>
-      </div>
-      <div class="item">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
-              </div>
-          </div>
-          <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
-          </div>
-      </div>
-      <div class="item">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
-              </div>
-          </div>
-          <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
-          </div>
-      </div>
-      <div class="item">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
-              </div>
-          </div>
-          <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
-          </div>
-      </div>
-      <div class="item">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
-              </div>
-          </div>
-          <div class="item-text">
-              <h2>Spring Decoration For Areas That Has Been..</h2>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-              <a class="hvr-wobble-horizontal">Read More <span><i class="bi bi-arrow-right"></i></span></a>
+              <h2>{{'Tomorrow the water will be cut off from the 100-meter area' | translate}}</h2>
+              <p>{{'Breaking news, Al-Shorouk City Authority notes that the water will be cut off tomorrow from nine in the morning until five in the evening.' | translate}}</p>
+              <a class="hvr-{{'forward' | translate}}">{{'Read More' | translate}} <span><i class="bi bi-arrow-{{'right' | translate}}"></i></span></a>
           </div>
       </div>
   </div>
