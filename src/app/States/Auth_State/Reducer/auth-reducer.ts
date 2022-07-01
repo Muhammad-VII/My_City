@@ -24,7 +24,9 @@ const authReducer: ActionReducer<any> = createReducer(
     return newState(state, action.access_token);
   }),
   on(AuthActions.logout, () => {
-    return defaultState;
+    return {
+      access_token: '',
+    };
   })
 );
 

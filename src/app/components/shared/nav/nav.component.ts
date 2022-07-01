@@ -140,11 +140,6 @@ export class NavComponent implements OnInit, OnDestroy {
 
   logout(): void {
     this._AuthService.logout();
-    if (localStorage.getItem('lang') === 'en') {
-      this._Toaster.success('Logout Successfull', 'Success');
-    } else {
-      this._Toaster.warning('تم تسجيل الخروج بنجاح', 'نجاح');
-    }
   }
 
   showModal(): void {
