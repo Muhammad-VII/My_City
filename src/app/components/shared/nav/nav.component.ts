@@ -29,7 +29,7 @@ export class NavComponent implements OnInit, OnDestroy {
         }
       })
     );
-  };
+  }
   lang!: string;
   subscribtions: Subscription[] = [];
   checked: boolean = false;
@@ -60,10 +60,18 @@ export class NavComponent implements OnInit, OnDestroy {
         (res) => {
           this.signUpForm.reset();
           $('#signUpModal').modal('hide');
-          this._Toaster.success('Account Created Succesfully.', 'Success');
+          if (localStorage.getItem('lang') === 'en') {
+            this._Toaster.success('Account Created Succesfully.', 'Success');
+          } else {
+            this._Toaster.success('تم إنشاء الحساب بنجاح', 'نجاح');
+          }
         },
         (err) => {
-          this._Toaster.error('Account Already Exists.', 'Error');
+          if (localStorage.getItem('lang') === 'en') {
+            this._Toaster.error('Account Already Exists.', 'Error');
+          } else {
+            this._Toaster.error('الحساب موجود بالفعل', 'خطأ');
+          }
         }
       );
     } else {
@@ -81,15 +89,30 @@ export class NavComponent implements OnInit, OnDestroy {
       this._AuthService.login(this.loginForm.value).subscribe(
         (res) => {
           if (res.data.status === 401) {
-            this._Toaster.error('Invalid Email or Password.', 'Error');
+            if (localStorage.getItem('lang') === 'en') {
+              this._Toaster.error('Invalid Email or Password.', 'Error');
+            } else {
+              this._Toaster.error(
+                'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
+                'خطأ'
+              );
+            }
           } else {
             this.loginForm.reset();
             $('#loginModal').modal('hide');
-            this._Toaster.success('Login Successfull', 'Success');
+            if (localStorage.getItem('lang') === 'en') {
+              this._Toaster.success('Login Successfull', 'Success');
+            } else {
+              this._Toaster.success('تم تسجيل الدخول بنجاح', 'نجاح');
+            }
           }
         },
         (err) => {
-          this._Toaster.error('Account Does Not Exists', 'Error');
+          if (localStorage.getItem('lang') === 'en') {
+            this._Toaster.error('Account Does Not Exists', 'Error');
+          } else {
+            this._Toaster.error('الحساب غير موجود', 'خطأ');
+          }
         }
       );
     } else {
@@ -104,7 +127,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   submitResetPassForm(): void {
     if (this.forgetPasswordForm.valid) {
-      console.log(this.forgetPasswordForm.value);
+      // console.log(this.forgetPasswordForm.value);
     } else {
       Object.values(this.forgetPasswordForm.controls).forEach((control) => {
         if (control.invalid) {
@@ -115,12 +138,13 @@ export class NavComponent implements OnInit, OnDestroy {
     }
   }
 
-  logout():void {
+  logout(): void {
     this._AuthService.logout();
-  }
-  
-  ngOnDestroy(): void {
-    this.subscribtions.forEach((sub) => sub.unsubscribe());
+    if(localStorage.getItem('lang') === 'en'){
+      this._Toaster.success('Logout Successfull', 'Success');
+    } else {
+      this._Toaster.warning('تم تسجيل الخروج بنجاح', 'نجاح');
+    }
   }
 
   showModal(): void {
@@ -192,12 +216,16 @@ export class NavComponent implements OnInit, OnDestroy {
   }
 
   changeLanguage(lang?: any): void {
-    localStorage.setItem("lang", lang.target.value);
+    localStorage.setItem('lang', lang.target.value);
     window.location.reload();
   }
 
   ngOnInit(): void {
-    this.lang = localStorage.getItem("lang") || "en";
+    this.lang = localStorage.getItem('lang') || 'en';
     this.changeNavbarColor();
+  }
+
+  ngOnDestroy(): void {
+    this.subscribtions.forEach((sub) => sub.unsubscribe());
   }
 }

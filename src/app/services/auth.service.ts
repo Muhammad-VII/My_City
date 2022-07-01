@@ -26,10 +26,7 @@ export class AuthService {
           return res.access_token;
         }
       })
-    )
-    this.token$.subscribe(res => console.log(res))
-
-    
+    );
   }
 
   saveCurrentUser(token: string): void {
@@ -60,6 +57,6 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('Token');
-    this._Store.dispatch(AuthActions.logout({ access_token:'' }));
+    this._Store.dispatch(AuthActions.logout());
   }
 }
