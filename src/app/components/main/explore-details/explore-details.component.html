@@ -4,12 +4,12 @@
   <div class="container">
     <header>
       <nz-breadcrumb nzSeparator=">">
-        <nz-breadcrumb-item><a [routerLink]="['/']">Home</a></nz-breadcrumb-item>
+        <nz-breadcrumb-item><a [routerLink]="['/']">{{'Home' | translate}}</a></nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/explore']" class="active-bread">Explore</a>
+          <a [routerLink]="['/explore']" class="active-bread">{{'Explore' | translate}}</a>
         </nz-breadcrumb-item>
         <nz-breadcrumb-item>
-          <a [routerLink]="['/explore']" class="active-bread">Explore Details</a>
+          <a [routerLink]="['/explore']" class="active-bread">{{'Explore Details' | translate}}</a>
         </nz-breadcrumb-item>
       </nz-breadcrumb>
     </header>
@@ -46,18 +46,16 @@
         </div>
         <div class="col-md-7">
           <div>
-            <h3>Yummy Burger Restaurant</h3>
+            <h3>{{'Sham El Ezz Restaurant'| translate}}</h3>
             <nz-rate [ngModel]="4" nzDisabled="true"></nz-rate>
             <p>
-              
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+              {{'It serves the most delicious Syrian food, including meals, crispy sandwiches, sour shawarma, kofta, grilled chicken, broasted, vine leaves, risotto and other fresh food.' | translate}}
             </p>
             <div class="item-details">
               <ul >
                 <li>
                   <img src="assets/explore-details/distrect.png">
-                  <span>First District</span>
+                  <span>{{'Town Center Mall' | translate}}</span>
                 </li>
   
                 <li>
@@ -73,7 +71,7 @@
               <ul>
                 <li>
                   <img src="assets/explore-details/category.png">
-                  <span>Food (Restaurants)</span>
+                  <span>{{'Food' | translate}} ({{'Restaurants' | translate}})</span>
                 </li>
   
                 <li>
@@ -89,23 +87,23 @@
 
       <div class="address-details">
         <h3>
-          Address Details
+          {{'Address Details' | translate}}
         </h3>
 
         <p>
           <img src="assets/explore-details/location.png" alt="">
-          Lorem ipsum dolor sit amet, First District, El-Sherouk City, Cairo, Egypt
+          {{'Sham El Ezz Restaurant is located in El Shorouk in Town Center Mall next to Dar Misr.' | translate}}
         </p>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55201.97889904443!2d31.594792233053802!3d30.1478797521193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f7d7c85c1e63%3A0xa16c80a505d27145!2sEl%20Shorouk%20City%2C%20El%20Shorouk%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1656165058103!5m2!1sen!2seg" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d626.666121942636!2d31.638442890467513!3d30.163686213685583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc87a73b0c9371bbd!2zU2hhbSBFbC1Fenog2LTYp9mFINin2YTYudiy!5e1!3m2!1sen!2seg!4v1656720311975!5m2!1sen!2seg" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="item-gallary">
         <header>
           <h3>
-            Gallary (22 photos)
+            {{'Gallary' | translate}} (22 {{'photos' | translate}})
           </h3>
-          <a>View All</a>
+          <a>{{'View All' | translate}}</a>
         </header>
 
         <article>
@@ -133,25 +131,25 @@
       <div class="reviews-section">
         <header>
           <h3>
-            Reviews (33 reviews)
+            {{'Reviews' | translate}} (33 {{'reviews' | translate}})
           </h3>
-          <button data-bs-toggle="modal" data-bs-target="#reviewModal">Add Review</button>
+          <button data-bs-toggle="modal" data-bs-target="#itemReviewModal">{{'Add Review' | translate}}</button>
         </header>
           <div class="review-content" *ngFor="let review of reviews">
             <header>
               <div>
-                <h2>{{review?.name}}</h2>
+                <h2>{{review?.name | translate}}</h2>
               </div>
               <div class="review-date">
-                <p>03 July 2020</p>
+                <p>03 {{'July' | translate}} 2020</p>
               </div>
             </header>
             <nz-rate [ngModel]="5" nzDisabled></nz-rate>
             <p seeMore>
-              {{review?.review}}
+              {{review?.review | translate}}
           </div>
           <div class="check-all-reviews-btn">
-            <a>Check All Reviews</a>
+            <a>{{'Check All Reviews' | translate}}</a>
           </div>
       </div>
 
@@ -160,14 +158,14 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="title" data-aos="fade-right">
               <header>
-                <h2>Similer places</h2>
+                <h2>{{'Similer places' | translate}}</h2>
               </header>
             </div>
           </div>
           <div data-aos="fade-up" class="carousel">
           <owl-carousel-o [options]="customOptions">
       
-            <ng-template carouselSlide>
+            <ng-template carouselSlide *ngFor="let similerPlace of [1,2,3,4,5]">
               <div class="offer-card">
                 <div class="offer-img">
                   <img src="assets/Home/pexels-anna-shvets-2.png">
@@ -178,10 +176,10 @@
                 </div>
       
                 <div class="offer-title">
-                  <h3>Glory Palace For</h3>
+                  <h3>{{'Glory Palace For' | translate}}</h3>
                     <div class="offer-des">
                       <p>
-                        Lorem ipsum dolor 
+                        {{'Lorem ipsum dolor' | translate}} 
                       </p>
       
                       <nz-rate [ngModel]="5" nzDisabled></nz-rate>
@@ -189,122 +187,13 @@
                 </div>
                 
                 <div class="view-offer">
-                  <a [routerLink]="['offers/1']">Know More</a>
+                  <a [routerLink]="['offers/1']">{{'Know More' | translate}}</a>
                 </div>
               </div>
             </ng-template>
-      
-            <ng-template carouselSlide>
-              <div class="offer-card">
-                <div class="offer-img">
-                  <img src="assets/Home/pexels-anna-shvets-1.png">
-      
-                  <div class="is-fav">
-                    <i class="bi bi-heart"></i>
-                  </div>
-                </div>
-      
-                <div class="offer-title">
-                  <h3>Glory Palace For</h3>
-                    <div class="offer-des">
-                      <p>
-                        Lorem ipsum dolor 
-                      </p>
-      
-                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                    </div>
-                </div>
-                
-                <div class="view-offer">
-                  <a [routerLink]="['offers/1']">Know More</a>
-                </div>
-              </div>
-            </ng-template> 
-      
-            <ng-template carouselSlide>
-              <div class="offer-card">
-                <div class="offer-img">
-                  <img src="assets/Home/pexels-anna-shvets-2.png">
-      
-                  <div class="is-fav">
-                    <i class="bi bi-heart"></i>
-                  </div>
-                </div>
-      
-                <div class="offer-title">
-                  <h3>Glory Palace For</h3>
-                    <div class="offer-des">
-                      <p>
-                        Lorem ipsum dolor 
-                      </p>
-      
-                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                    </div>
-                </div>
-                
-                <div class="view-offer">
-                  <a [routerLink]="['offers/1']">Know More</a>
-                </div>
-              </div>
-            </ng-template> 
-      
-            <ng-template carouselSlide>
-              <div class="offer-card">
-                <div class="offer-img">
-                  <img src="assets/Home/pexels-anna-shvets-1.png">
-      
-                  <div class="is-fav">
-                    <i class="bi bi-heart"></i>
-                  </div>
-                </div>
-      
-                <div class="offer-title">
-                  <h3>Glory Palace For</h3>
-                    <div class="offer-des">
-                      <p>
-                        Lorem ipsum dolor 
-                      </p>
-      
-                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                    </div>
-                </div>
-                
-                <div class="view-offer">
-                  <a [routerLink]="['offers/1']">Know More</a>
-                </div>
-              </div>
-            </ng-template> 
-      
-            <ng-template carouselSlide>
-              <div class="offer-card">
-                <div class="offer-img">
-                  <img src="assets/Home/pexels-anna-shvets-2.png">
-      
-                  <div class="is-fav">
-                    <i class="bi bi-heart"></i>
-                  </div>
-                </div>
-      
-                <div class="offer-title">
-                  <h3>Glory Palace For</h3>
-                    <div class="offer-des">
-                      <p>
-                        Lorem ipsum dolor 
-                      </p>
-      
-                      <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                    </div>
-                </div>
-                
-                <div class="view-offer">
-                  <a [routerLink]="['offers/1']">Know More</a>
-                </div>
-              </div>
-            </ng-template> 
-             
           </owl-carousel-o>
         </div>
-      
+
         </div>
       </section>
     </article>
@@ -312,7 +201,7 @@
 </section>
 
 <div data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel"
-  aria-hidden="true" class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
+  aria-hidden="true" class="modal fade" id="itemReviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="close-btn-section">
@@ -320,19 +209,19 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title" id="reviewModal">Add your Review</h5>
+        <h5 class="modal-title" id="reviewModal">{{'Add your Review' | translate}}</h5>
 
       </div>
       <div class="modal-body">
-        <h3>How do you rate your experince?</h3>
+        <h3>{{'How do you rate your experince?' | translate}}</h3>
         <div class="rate-form">
           <nz-rate [ngModel]="0"></nz-rate>
 
-          <textarea nz-input rows="4" placeholder="Describe and review your experience"></textarea>
+          <textarea nz-input rows="4" placeholder="{{'Describe and review your experience' | translate}}"></textarea>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">Submit Review</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#reviewSubmitedModal">{{'Submit Review' | translate}}</button>
       </div>
     </div>
   </div>
@@ -346,12 +235,12 @@
       </div>
 
       <div class="modal-header">
-        <h5 class="modal-title">Review Submited Successfully</h5>
+        <h5 class="modal-title">{{'Review Submited Successfully' | translate}}</h5>
 
       </div>
       <div class="modal-body">
         <img src="assets/reviews/Customer Survey-pana.png">
-        <h3>Your review has been submitted successfully, and will be posted soon!</h3>
+        <h3>{{'Your review has been submitted successfully, and will be posted soon!' | translate}}</h3>
       </div>
     </div>
   </div>

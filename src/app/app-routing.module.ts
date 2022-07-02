@@ -7,16 +7,13 @@ import { HowItWorksComponent } from './components/main/how-it-works/how-it-works
 import { PopularPlacesComponent } from './components/main/popular-places/popular-places.component';
 import { SavedPlacesComponent } from './components/profile/saved-places/saved-places.component';
 import { HelpComponent } from './components/main/help/help.component';
-import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
-import { SignupComponent } from './components/profile/signup/signup.component';
 import { ContactUsComponent } from './components/main/contact-us/contact-us.component';
 import { ExploreComponent } from './components/main/explore/explore.component';
 import { HomeComponent } from './components/main/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/main/about-us/about-us.component';
-import { LoginComponent } from './components/profile/login/login.component';
 import { NewsComponent } from './components/main/news/news.component';
 import { SettingsComponent } from './components/profile/settings/settings.component';
 import { AuthGuard } from './gurds/auth.guard';
@@ -30,7 +27,10 @@ const routes: Routes = [
     path: 'explore',
     component: ExploreComponent,
   },
-  { path: 'transportaion', component: TransportaionComponent },
+  {
+    path: 'transportaion',
+    component: TransportaionComponent,
+  },
   {
     path: 'exploredetails',
     component: ExploreDetailsComponent,
@@ -47,7 +47,8 @@ const routes: Routes = [
   { path: 'reviews', component: ReviewsComponent },
   { path: 'search', component: SearchComponent },
   {
-    path: 'profile',
+    path: '',
+    canActivate: [AuthGuard],
     children: [
       { path: 'settings', component: SettingsComponent },
       { path: 'saved-places', component: SavedPlacesComponent },
@@ -61,7 +62,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true
+      useHash: true,
     }),
   ],
   exports: [RouterModule],

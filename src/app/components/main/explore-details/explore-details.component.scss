@@ -1,9 +1,14 @@
 @import '../../../../styles.scss';
-
+.ant-rate-disabled .ant-rate-star:last-child:lang(ar) {
+  margin-inline-start: 6px;
+}
 .explore-details-page {
   padding: 1.5rem 0rem;
   header {
     text-align: left;
+    &:lang(ar) { 
+      text-align: right;
+    }
   }
   nz-breadcrumb {
     a {
@@ -33,6 +38,10 @@
         .is-fav {
           position: absolute;
           right:3px;
+          &:lang(ar) {
+            right: unset;
+            left: 4px;
+          }
           top: 10px;
           width: 43px;
           height: 43px;
@@ -315,23 +324,23 @@
         .offer-title {
           padding: .8rem 0rem;
           h3 {
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 500;
             color: #000;
             @media screen and (max-width: 33em) {
-              font-size: 20px;
+              font-size: 18px;
             }      
           }
           .offer-des{
-            margin-top: 3rem;
+            margin-top: 2rem;
             p {
-              font-size: 22px;
+              font-size: 18px;
               font-weight: 300;
               padding: 0;
               margin: 0;
               color: #000;
               @media screen and (max-width: 33em) {
-                font-size: 18px;
+                font-size: 16px;
               }
             }
           }
@@ -347,7 +356,7 @@
             min-width: 100%;
             text-align: center;
             border-radius: 5px;
-            font-size: 21px;
+            font-size: 20px;
             font-weight: bold;
             transition: all .3s;
             padding: .5rem 3rem;
@@ -363,7 +372,7 @@
   }
 }
 
-#reviewModal {
+#itemReviewModal {
   .close-btn-section {
     padding: 1rem 1rem 0rem 1rem;
     display: flex;

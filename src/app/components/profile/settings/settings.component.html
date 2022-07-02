@@ -46,18 +46,17 @@
         <nz-form-item>
           <nz-form-control nzErrorTip="{{'Password is incorrect' | translate}}">
             <nz-input-group>
-              <input autocomplete="new-password" type="password" nz-input formControlName="{{'password' | translate}}"
+              <input autocomplete="new-password" type="password" nz-input formControlName="password"
                 placeholder="●●●●●●●" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
 
 
-        <button *ngIf="!buttonShowen" type="button" nz-button (click)='unlockEditFn()'>Edit
-          Settings</button>
+        <button *ngIf="!buttonShowen" type="button" nz-button (click)='unlockEditFn()'>{{'Edit Account Info' | translate}}</button>
 
         <button [disabled]="!settingsForm.valid" *ngIf="buttonShowen" class="hvr-bounce-out" type="submit"
-          nz-button>Save changes</button>
+          nz-button>{{'Save Changes' | translate}}</button>
 
       </form>
     </article>

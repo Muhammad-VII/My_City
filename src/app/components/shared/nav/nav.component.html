@@ -81,21 +81,27 @@
           class="btn btn-outline-light login-btn">
           {{'Login' | translate}}
         </button>
-        <a nzTrigger="click" class="profile-menu" *ngIf="isLogin" nz-dropdown [nzDropdownMenu]="profileMenu">
-          {{'Profile' | translate}}
-          <i nz-icon nzType="down"></i>
-        </a>
         <a nzTrigger="click" class="language-menu" nz-dropdown [nzDropdownMenu]="langMenu">
           {{'Language' | translate}}
+          <i nz-icon nzType="down"></i>
+        </a>
+        <a nzTrigger="click" class="profile-menu" *ngIf="isLogin" nz-dropdown [nzDropdownMenu]="profileMenu">
+          {{'Profile' | translate}}
           <i nz-icon nzType="down"></i>
         </a>
         <nz-dropdown-menu #langMenu="nzDropdownMenu">
           <ul nz-menu nzSelectable>
             <li nz-menu-item>
-              <a (click) = 'changeLanguage("en")'>{{'English' | translate}}</a>
+              <a (click) = 'changeLanguage("en")'>
+                <img src="assets/Home/en.png" width="25px" height="15px">
+                {{'English' | translate}}
+              </a>
             </li>
             <li nz-menu-item>
-              <a (click) = 'changeLanguage("ar")'>{{'Arabic' | translate}}</a>
+              <a (click) = 'changeLanguage("ar")'>
+                <img src="assets/Home/ar.png" width="25px" height="18px">
+                {{'Arabic' | translate}}
+              </a>
             </li>
           </ul>
         </nz-dropdown-menu>
@@ -105,7 +111,7 @@
               <a [routerLink]="['/profile/settings']">{{'Account Settings' | translate}}</a>
             </li>
             <li nz-menu-item>
-              <a [routerLink]="['/profile/saved-places']">{{'Saved Places' | translate}}</a>
+              <a [routerLink]="['/saved-places']">{{'Saved Places' | translate}}</a>
             </li>
             <li nz-menu-item nzDanger><a (click)='logout()'>{{'Logout' | translate}}</a> <i class="bi bi-door-closed-fill"></i></li>
           </ul>

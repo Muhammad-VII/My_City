@@ -14,6 +14,6 @@ export class SharedService {
   }
   getMainScreen(): any
   {
-    return this._HttpClient.get(`http://localhost:3000/homePage/getOne`)
+    return this._HttpClient.get(`https://my-city-el-sherouk.herokuapp.com/homePage/getOne`)
   }
 }

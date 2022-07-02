@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   constructor(private _SharedService: SharedService) {
     // this._SharedService.getMainScreen().subscribe(
     //   (data: any) => {
+    //     console.log(data);
     //     this.pageContent = data;
     //   }
     // )
