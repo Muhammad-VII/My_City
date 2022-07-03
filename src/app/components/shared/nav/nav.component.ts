@@ -228,6 +228,7 @@ export class NavComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en';
+    console.log(this.lang);
     this.changeNavbarColor();
   }
 

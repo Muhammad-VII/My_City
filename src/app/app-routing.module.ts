@@ -19,6 +19,8 @@ import { SettingsComponent } from './components/profile/settings/settings.compon
 import { AuthGuard } from './gurds/auth.guard';
 import { OffersComponent } from './components/main/offers/offers.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+import { MedicalComponent } from './components/categories/medical/medical.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,6 +40,9 @@ const routes: Routes = [
   { path: 'story', component: AboutUsComponent },
   { path: 'distrect-details', component: DistrectDetailsComponent },
   { path: 'contact', component: ContactUsComponent },
+  { path: 'category-details', component: CategoryDetailsComponent, children: [
+    { path: 'medical', component: MedicalComponent },
+  ]},
   { path: 'help', component: HelpComponent },
   { path: 'offers', component: OffersComponent },
   { path: 'trend-places', component: PopularPlacesComponent },
@@ -62,7 +67,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
+      useHash: false,
     }),
   ],
   exports: [RouterModule],

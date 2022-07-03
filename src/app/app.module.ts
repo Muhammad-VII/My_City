@@ -55,6 +55,8 @@ import { TransportaionComponent } from './components/main/transportaion/transpor
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CategoryDetailsComponent } from './components/category-details/category-details.component';
+import { MedicalComponent } from './components/categories/medical/medical.component';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -94,6 +96,8 @@ registerLocaleData(en);
     ExploreDetailsComponent,
     TransportaionComponent,
     DistrectDetailsComponent,
+    CategoryDetailsComponent,
+    MedicalComponent,
   ],
   imports: [
     BrowserModule,

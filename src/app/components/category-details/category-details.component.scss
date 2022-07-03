@@ -1,0 +1,85 @@
+@import "../../../styles.scss";
+
+.distrect-page {
+  background-color: #F8F8F8;
+  overflow: hidden;
+  main {
+    background-image: url(../../../assets/distrects/pexels-aleksejs-bergmanis-681335.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 30vh;
+ 
+    .bg-overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  article {
+    padding: 1rem 0rem;
+    
+    nz-breadcrumb {
+      margin: auto;
+      text-align: left;
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+        &:hover {
+          color: $main-theme;
+        }
+      }
+      .active-bread {
+        font-weight: 500;
+      }
+    }
+    .distrect-content {
+      padding-top: 2rem;
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .transportation {
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 400;
+          @media screen and (max-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+        .transportation-card {
+          padding: 1rem;
+          transition: all .3s;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 5px;
+          }
+          h3 {
+            font-size: 1.5rem;
+            color: $main-theme;
+            @media screen and (max-width: 768px) {
+              font-size: 1.2rem;
+            }
+            font-weight: 500;
+          }
+          img {
+            width: 80px;
+            // margin-bottom: .7rem;
+          }
+        }
+        hr {
+          width: 96%;
+          margin: auto;
+          margin-top: .5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
