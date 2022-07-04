@@ -1,5 +1,5 @@
 <nav data-aos="fade-down" data-aos-delay="2500" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-  <div class="container-md">
+  <div class="container">
     <div class="logo">
       <a class="navbar-brand" [routerLink]="['/']">
         <img id="logo" src="assets/Home/{{'logo.png' | translate}}" alt="my_city_logo">
@@ -45,7 +45,17 @@
             </li>
 
             <li class="nav-item" *ngIf="isLogin">
-              <a class="nav-link" (click)='logout()'>{{'logout' | translate}}</a>
+              <a class="nav-link" (click)='logout()'>{{'Logout' | translate}}</a>
+            </li>
+
+            <li class="nav-item mt-2" *ngIf="lang == 'ar'" (click) = 'changeLanguage("en")'>
+              <img src="assets/Home/en.png" width="25px" height="15px">
+            </li>
+
+            <li class="nav-item mt-2" *ngIf="lang == 'en'" (click) = 'changeLanguage("ar")'>
+              <a>
+                <img src="assets/Home/ar.png" width="25px" height="15px">
+              </a>
             </li>
           </ul>
         </nav>

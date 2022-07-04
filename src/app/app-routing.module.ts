@@ -1,3 +1,5 @@
+import { ServicesComponent } from './components/categories/services/services.component';
+import { EntertainmentComponent } from './components/categories/entertainment/entertainment.component';
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TransportaionComponent } from './components/main/transportaion/transportaion.component';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
@@ -21,6 +23,8 @@ import { OffersComponent } from './components/main/offers/offers.component';
 import { PolicyComponent } from './components/main/policy/policy.component';
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
 import { MedicalComponent } from './components/categories/medical/medical.component';
+import { ShoppingComponent } from './components/categories/shopping/shopping.component';
+import { FoodComponent } from './components/categories/food/food.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,6 +46,13 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'category-details', component: CategoryDetailsComponent, children: [
     { path: 'medical', component: MedicalComponent },
+    { path: 'shopping', component: ShoppingComponent },
+    { path: 'food', component: FoodComponent },
+    { path: 'entertainment', component: EntertainmentComponent },
+    { path: 'services', component: ServicesComponent },
+    {
+      path: '**', redirectTo: 'medical', pathMatch: 'full'
+    }
   ]},
   { path: 'help', component: HelpComponent },
   { path: 'offers', component: OffersComponent },

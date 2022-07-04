@@ -38,8 +38,8 @@ export class ExploreComponent implements OnInit {
       title: "Services",
       routerLink: 'services',
       describtion:[
-        {title: "Home Care", numberOfItems: "14"},
-        {title: "Care Repair", numberOfItems: "6"},
+        {title: "Home care", numberOfItems: "14"},
+        {title: "Car repair", numberOfItems: "6"},
       ]
     },
 

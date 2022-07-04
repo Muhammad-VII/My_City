@@ -1,16 +1,13 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NzTabScrollListDirective } from 'ng-zorro-antd/tabs/tab-scroll-list.directive';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-medical',
-  templateUrl: './medical.component.html',
-  styleUrls: ['./medical.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'app-shopping',
+  templateUrl: './shopping.component.html',
+  styleUrls: ['./shopping.component.scss']
 })
-export class MedicalComponent implements OnInit {
-  constructor() { 
-  }
+export class ShoppingComponent implements OnInit {
 
+  constructor() { }
   pharmacies: any[] = [
     {
       name: "Al Ansari Pharmacy",
@@ -31,7 +28,6 @@ export class MedicalComponent implements OnInit {
       location: "https://goo.gl/maps/RMMAoMnG412FXGjAA"
     }
   ]
-
   ngOnInit(): void {
   }
 

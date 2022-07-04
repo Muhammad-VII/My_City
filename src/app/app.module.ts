@@ -57,6 +57,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
 import { MedicalComponent } from './components/categories/medical/medical.component';
+import { ShoppingComponent } from './components/categories/shopping/shopping.component';
+import { ServicesComponent } from './components/categories/services/services.component';
+import { EntertainmentComponent } from './components/categories/entertainment/entertainment.component';
+import { FoodComponent } from './components/categories/food/food.component';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -98,6 +102,10 @@ registerLocaleData(en);
     DistrectDetailsComponent,
     CategoryDetailsComponent,
     MedicalComponent,
+    ShoppingComponent,
+    ServicesComponent,
+    EntertainmentComponent,
+    FoodComponent,
   ],
   imports: [
     BrowserModule,
