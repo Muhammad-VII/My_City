@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from './../../../services/auth.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
@@ -18,7 +19,8 @@ declare const $: any;
 export class NavComponent implements OnInit, OnDestroy {
   constructor(
     private _AuthService: AuthService,
-    private _Toaster: ToastrService
+    private _Toaster: ToastrService,
+    private translatservice:TranslateService
   ) {
     this.subscribtions.push(
       this._AuthService.token$.subscribe((res) => {
@@ -228,7 +230,12 @@ export class NavComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en';
-    console.log(this.lang);
+    if(localStorage.getItem('lang') === 'en'){
+      document.dir = 'ltr';
+    }
+    else{
+      document.dir = 'rtl';
+    }
     this.changeNavbarColor();
   }
 

@@ -52,7 +52,7 @@ const routes: Routes = [
   { path: 'reviews', component: ReviewsComponent },
   { path: 'search', component: SearchComponent },
   {
-    path: '',
+    path: 'settings',
     canActivate: [AuthGuard],
     children: [
       { path: 'settings', component: SettingsComponent },
@@ -67,7 +67,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: false,
+      useHash: true,
     }),
   ],
   exports: [RouterModule],

@@ -8,84 +8,61 @@ declare const ol: any;
 })
 export class ExploreComponent implements OnInit {
   pageTitle: string = 'Explore';
-  showStepper = true;
+  constructor() {}
 
-  constructor() {
-    // var map = new ol.Map({
-    //   target: 'map',
-    //   layers: [
-    //     new ol.layer.Tile({
-    //       source: new ol.source.OSM()
-    //     })
-    //   ],
-    //   view: new ol.View({
-    //     center: ol.proj.fromLonLat([37.41, 8.82]),
-    //     zoom: 4
-    //   })
-    // });
-  }
-
-  distrects: any[] = [
+  categories: any[] = [
     {
-      imgUrl: 'tromso-forsidebilde-vinter-1-scaled.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
+      imgUrl: 'medical.png',
+      title: "Medical",
+      routerLink: 'medical',
+      describtion:[
+        {title: "Hospitals", numberOfItems: "3"},
+        {title: "Clinics", numberOfItems: "4"},
+        {title: "Pharmacies", numberOfItems: "8"}
+      ]
     },
 
     {
-      imgUrl: 'bergen-frontpage-2560x1706-1.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
+      imgUrl: 'food.png',
+      title: "Food",
+      routerLink: 'food',
+      describtion:[
+        {title: "Resturants", numberOfItems: "14"},
+        {title: "Cafes", numberOfItems: "6"},
+        {title: "Food Cars", numberOfItems: "10"}
+      ]
     },
 
     {
-      imgUrl: 'asker-frontpage-2560x1464-1.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
+      imgUrl: 'services.png',
+      title: "Services",
+      routerLink: 'services',
+      describtion:[
+        {title: "Home Care", numberOfItems: "14"},
+        {title: "Care Repair", numberOfItems: "6"},
+      ]
     },
 
     {
-      imgUrl: 'bergen-frontpage-2560x1706-1.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
+      imgUrl: 'shopping-category.png',
+      title: "Shopping",
+      routerLink: 'shopping',
+      describtion:[
+        {title: "Malls", numberOfItems: "5"},
+        {title: "Supermarkets", numberOfItems: "2"},
+        {title: "Stores", numberOfItems: "17"}
+      ]
     },
 
     {
-      imgUrl: 'forsidebilde-stavanger-2560x1831-1.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
-    },
-    {
-      imgUrl: 'forsidebilde-stavern-citadellet-2560x1831-1.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
-    },
-
-    {
-      imgUrl: 'kristiansandcity.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
-    },
-
-    {
-      imgUrl: 'oslo-aker-brygge-clock-tower-2600x873-1-scaled.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
-    },
-
-    {
-      imgUrl: 'oslo-akershus-festning-scaled.jpg',
-      title: "Distrect title",
-      describtion: `The weather in Trondheim For more than a thousand years, Trondheim has been a center for development of science, culture, infrastructure and innovation.`,
-      link: 'https://www.trondheim.no/',
+      imgUrl: 'entertainment.png',
+      title: "Entertainment",
+      routerLink: 'entertainment',
+      describtion:[
+        {title: "Gardens", numberOfItems: "3"},
+        {title: "Amusement Parks", numberOfItems: "3"},
+        {title: "Cinemas", numberOfItems: "1"}
+      ]
     },
   ];
 

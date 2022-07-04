@@ -2,7 +2,9 @@
   <main>
     <div class="bg-layer">
       <div class="container">
-        <h1 data-aos="fade-right" data-aos-delay="300">{{'Your guide' | translate}} <div>{{'to Explore The City' | translate}}</div></h1>
+        <h1 data-aos="fade-right" data-aos-delay="300">{{'Your guide' | translate}} <div>{{'to Explore The City' |
+            translate}}</div>
+        </h1>
       </div>
 
     </div>
@@ -16,20 +18,17 @@
   <article id="explore-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-4" *ngFor="let distrect of distrects">
-          <div class="distrect-content">
-            <img class="img-fluid" loading=lazy src="{{'../../../../assets/Explore/'+distrect?.imgUrl}}" alt="">
-
-            <div class="distrect-details">
-              <h3>{{distrect.title | translate}}</h3>
-              <p>{{distrect.describtion | translate}}</p>
-              <a class="hvr-{{'forward' | translate}}" [routerLink]="['/distrect-details']">
-                <a>
-                  {{"Read More" | translate}}
-                  <i class="bi bi-arrow-{{'right' | translate}}"></i>
-                </a>
-              </a>
-            </div>
+        <div class="col-md-4 hvr-bob" *ngFor="let category of categories">
+          <div class="category-content">
+            <a [routerLink]="['/category-details/'+category.routerLink]">
+              <img class="img-fluid" loading=lazy src="{{'../../../../assets/Home/'+category.imgUrl}}" alt="">
+              <div class="category-details">
+                <h3>{{category.title | translate}}</h3>
+                <ul>
+                  <li *ngFor="let description of category.describtion">{{description.title | translate}}: <span> {{description.numberOfItems}}</span></li>
+                </ul>
+              </div>
+            </a>
           </div>
         </div>
       </div>
