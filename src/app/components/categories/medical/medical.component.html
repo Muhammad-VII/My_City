@@ -1,9 +1,22 @@
+<header>
+  <nz-breadcrumb nzSeparator=">">
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/']">{{'Home' | translate}}</a>
+    </nz-breadcrumb-item>
+
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/explore']">{{'Categories' | translate}}</a>
+    </nz-breadcrumb-item>
+
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/category-details/medical']" class="active-bread">{{'Medical' | translate}}</a>
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+</header>
+
 <nz-tabset nzType="card">
   <nz-tab nzTitle="{{'Hospitals' | translate}}">
     <div class="tab-content">
-      <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
-      </header>
       <article>
         <div class="row">
           <div class="col-md-4">
@@ -15,7 +28,7 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/aYbDZEJFmnoi6LTt7" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
 
@@ -28,7 +41,7 @@
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/ZWCp8fA6xXf3oDbk6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/ZWCp8fA6xXf3oDbk6" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
 
@@ -41,7 +54,7 @@
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/gePPmxAQpd9kmNEA7" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/gePPmxAQpd9kmNEA7" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
 
@@ -54,7 +67,7 @@
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/JjcuwbDGrQw1rkhx8" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/JjcuwbDGrQw1rkhx8" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
 
@@ -67,22 +80,10 @@
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/Na8XdGM7NsaCxXJq6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/Na8XdGM7NsaCxXJq6" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
 
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 70 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
           <div class="col-md-4">
             <div>
               <img src="https://s3-eu-west-1.amazonaws.com/static.jbcgroup.com/amd/pictures/b2e571b0bb234c34c8677112b1b42d7d.jpg" alt="Al Mostakbal" class="img-fluid">
@@ -92,21 +93,10 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
-        </div>
-      </article>
-    </div>
 
-    <hr class="m-0 mb-4">
-    
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
           <div class="col-md-4">
             <div>
               <img src="assets/category-details/Screenshot 2022-07-04 164734.png" alt="Al Mostakbal" class="img-fluid">
@@ -116,21 +106,10 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
-        </div>
-      </article>
-    </div>
 
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Motamiz' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
           <div class="col-md-4">
             <div>
               <img src="https://media.filfan.com/NewsPics/FilFanNew/Large/284421_0.jpg" alt="Al Mostakbal" class="img-fluid">
@@ -140,21 +119,10 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
-        </div>
-      </article>
-    </div>
 
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'Al-Rehan District' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
           <div class="col-md-4">
             <div>
               <img src="https://lh5.googleusercontent.com/p/AF1QipOOquAcwr8B4_KDBX0JWrz6g1wRwJ38r4oT0la4=w408-h306-k-no" alt="Al Mostakbal" class="img-fluid">
@@ -164,7 +132,7 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
         </div>
@@ -174,9 +142,6 @@
 
   <nz-tab nzTitle="{{'Clinics' | translate}}">
     <div class="tab-content">
-      <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
-      </header>
       <article>
         <div class="row">
           <div class="col-md-4">
@@ -188,7 +153,7 @@
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/1mfdDB9zofiJskDu8" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
         </div>
@@ -198,9 +163,6 @@
   
   <nz-tab nzTitle="{{'Pharmacies' | translate}}">
     <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
       <article>
         <div class="row">
           <div class="col-md-4" *ngFor="let pharmacy of pharmacies">
@@ -212,7 +174,7 @@
               </p>
             </div>
             <div>
-              <a href="{{pharmacy.location}}" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="{{pharmacy.location}}" target="_blank" class="hvr-{{'forward' | translate}}"><i class="bi bi-geo-alt-fill"></i> {{'See location' | translate}}</a>
             </div>
           </div>
         </div>

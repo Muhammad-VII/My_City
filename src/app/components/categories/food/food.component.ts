@@ -8,25 +8,59 @@ import { Component, OnInit } from '@angular/core';
 export class FoodComponent implements OnInit {
 
   constructor() { }
-  pharmacies: any[] = [
+  resturants: any[] = [
     {
-      name: "Al Ansari Pharmacy",
-      describtion: "Al-Ansari Pharmacy is considered one of the oldest pharmacies in the city and provides a distinguished service for people who want to buy a new drug or medicine",
-      imgUrl: "https://lh5.googleusercontent.com/p/AF1QipO-x03ooyrImi6-kZaLEDZAASXJbn5WFINftDwA=w408-h408-k-no",
-      location: "https://goo.gl/maps/kRpBBiKRYxkAJU5M6"
+      name: "McDonald's Shorouk City",
+      describtion: "Classic, long-running fast-food chain known for its burgers & fries",
+      imgUrl: "https://www.albayan.ae/polopoly_fs/1.4184185.1623421704!/image/image.jpg",
+      address: "Terrace Mall, Sadat Rd",
+      location:"https://goo.gl/maps/4GyRvNtHLW1kABAP7",
+      workingHours: "9:00 AM - 10:00 PM",
+      phone: "0221600377",
     },
+
     {
-      name: "Dr.Heba Pharmacy",
-      describtion: "Pharmacists are responsible for aiding customers by compounding and/or dispensing prescription medications, providing pharmaceutical information to healthcare professionals, monitoring customers' drug therapies to avoid interactions with other medications",
-      imgUrl: "https://lh5.googleusercontent.com/p/AF1QipMX8sen0S0hHdtQWGAKqITPUtqiMM0EtD1Fl-2l=w408-h408-k-no",
-      location: "https://goo.gl/maps/6ANLrrRj7ouQN1DY8"
+      name: "Shatshot Pizza",
+      describtion: "Pizza, Crepe, Pasta and a lot more with special prices",
+      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Mj1nMNVYiDLlxG-GmKOxieALjzkirtkLiA&usqp=CAU",
+      address: "Paradise Mall, Gamal Abd El-Nasser Rd",
+      location:"https://goo.gl/maps/cFeD2RBzngavuy8V9",
+      workingHours: "9:00 AM - 10:00 PM",
+      phone: "01022450455",
     },
+
     {
-      name: "EL-DOCTOR PHARMACY",
-      describtion: "Pharmacists are responsible for aiding customers by compounding and/or dispensing prescription medications, providing pharmaceutical information to healthcare professionals, monitoring customers' drug therapies to avoid interactions with other medications",
-      imgUrl: "assets/category-details/download.jpg",
-      location: "https://goo.gl/maps/RMMAoMnG412FXGjAA"
-    }
+      name: "Sham El-Ezz",
+      describtion: "Best Syrien Shawarma in town",
+      imgUrl: "https://10619-2.s.cdn12.com/rests/original/110_502271596.jpg",
+      address: "Town Center Mall, Shabab Rd",
+      location:"https://goo.gl/maps/phuiYFDtJmeXPJ7H9",
+      workingHours: "9:00 AM - 10:00 PM",
+      phone: "01067777233",
+    },
+  ]
+
+  cafes: any[] = [
+    {
+      name: "Omar Cafe",
+      describtion: "Classic coffee shop with great background music",
+      imgUrl: "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/245532579_1532876103749031_39575189267679679_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=lIrs8I1aQlAAX9EhK2V&tn=AH-7GzH7qz-B6oiq&_nc_ht=scontent.fcai19-7.fna&oh=00_AT_FUag1SvmBqwxILzsYREVgh0XvMkop2vpSpuF4FqGk1A&oe=62C7CEC2",
+      address: "Carrefour Shorouk, Sky Plaza Mall, Shuhada Rd",
+      location:"https://goo.gl/maps/4GyRvNtHLW1kABAP7",
+      workingHours: "9:00 AM - 10:00 PM",
+      phone: "0221600377",
+    },
+  ]
+
+  foodCars: any[] = [
+    {
+      name: "Egypt's Street",
+      describtion: "A unique, modern, and stylish collection of food cars all in one place with great service",
+      imgUrl: "https://gate.ahram.org.eg/Media/News/2018/7/4/19_2018-636663206723671933-367.jpg",
+      address: "Located behind EL Shorok City centeral",
+      location:"https://goo.gl/maps/fJMSBD3sCNmnvsZd7",
+      workingHours: "9:00 AM - 11:00 PM",
+    },
   ]
   ngOnInit(): void {
   }

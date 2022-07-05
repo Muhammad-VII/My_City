@@ -1,6 +1,27 @@
 @import '../../../../styles.scss';
+nz-breadcrumb {
+  margin: auto;
+  text-align: left;
+  &:lang(ar) {
+    text-align: right;
+  }
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $main-theme;
+    }
+  }
+  .active-bread {
+    font-weight: 500;
+  }
+}
+
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: $main-theme;
+  color: $main-theme !important;
 }
 
 .ant-tabs {
@@ -44,7 +65,10 @@
       p {
         font-size: 16px;
         text-align: left;
-        color: rgba($color: #000000, $alpha: .5);
+        color: rgba($color: #000000, $alpha: .6);
+        a {
+          font-size: 16px !important;
+        }
       }
       a {
         text-decoration: none;
@@ -53,7 +77,6 @@
         display: flex;
         align-items: center;
         gap: .3rem;
-        max-width: 40%;
       }
     }
   }

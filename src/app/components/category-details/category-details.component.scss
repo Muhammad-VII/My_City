@@ -1,6 +1,6 @@
 @import "../../../styles.scss";
 
-.distrect-page {
+.categories-details-page {
   background-color: #F8F8F8;
   overflow: hidden;
   main {
@@ -19,27 +19,7 @@
   }
   article {
     padding: 1rem 0rem;
-    
-    nz-breadcrumb {
-      margin: auto;
-      text-align: left;
-      &:lang(ar) {
-        text-align: right;
-      }
-      a {
-        font-size: 16px;
-        text-decoration: none;
-        @media screen and (max-width: 768px) {
-          font-size: 14px;
-        }
-        &:hover {
-          color: $main-theme;
-        }
-      }
-      .active-bread {
-        font-weight: 500;
-      }
-    }
+  
     .distrect-content {
       a {
         text-decoration: none;

@@ -1,4 +1,4 @@
-<section class="distrect-page">
+<section class="categories-details-page">
   <main>
     <div class="bg-overlay">
     </div>
@@ -6,29 +6,7 @@
 
   <article>
     <div class="container">
-      <header>
-        <nz-breadcrumb nzSeparator=">">
-          <nz-breadcrumb-item>
-            <a [routerLink]="['/']">{{'Home' | translate}}</a>
-          </nz-breadcrumb-item>
-  
-          <nz-breadcrumb-item>
-            <a [routerLink]="['/explore']">{{'Explore' | translate}}</a>
-          </nz-breadcrumb-item>
-  
-          <nz-breadcrumb-item>
-            <a [routerLink]="['/category-details']">{{'Categories' | translate}}</a>
-          </nz-breadcrumb-item>
-
-          <nz-breadcrumb-item>
-            <a [routerLink]="['/category-details/medical']" class="active-bread">{{'Medical' | translate}}</a>
-          </nz-breadcrumb-item>
-        </nz-breadcrumb>
-      </header>
-
-      <div class="distrect-content">
         <router-outlet></router-outlet>
-      </div>
     </div>
   </article>
   </section>
