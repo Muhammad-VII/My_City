@@ -10,21 +10,26 @@
           </nz-breadcrumb-item>
         </nz-breadcrumb>
       </header>
-  <div class="items">
-      <div class="item" *ngFor="let subject of [1,2,3,4,5,6]">
-          <div class="item-img">
-              <div>
-                  <p>01
-                      DEC
-                  </p>
+
+      <div class="row">
+        <div class="col-md-6" *ngFor="let subject of news | async">
+          <div class="news-card">
+            <div>
+              <img src="{{subject?.image}}">
+              <h4 class="news-title">
+                {{subject?.newsTitle | translate}}
+              </h4>
+              <p class="news-captian">
+                {{subject?.newsDescription | translate}}
+              </p>
+            </div>
+            <div>
+              <div class="news-date">
+                <h4>{{subject?.createdAt | date}}</h4>
               </div>
+            </div>
           </div>
-          <div class="item-text">
-              <h2>{{'Tomorrow the water will be cut off from the 100-meter area' | translate}}</h2>
-              <p>{{'Breaking news, Al-Shorouk City Authority notes that the water will be cut off tomorrow from nine in the morning until five in the evening.' | translate}}</p>
-              <a class="hvr-{{'forward' | translate}}">{{'Read More' | translate}} <span><i class="bi bi-arrow-{{'right' | translate}}"></i></span></a>
-          </div>
+        </div>
       </div>
-  </div>
   
 </div>

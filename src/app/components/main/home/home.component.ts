@@ -9,40 +9,14 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  pageContent: any;
-  offers: any[] = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ]
-  
-  places: any[] = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ]
-
-  news: any[] = [
-    {},
-    {},
-    {},
-  ]
   constructor(private _SharedService: SharedService) {
-    // this._SharedService.getMainScreen().subscribe(
-    //   (data: any) => {
-    //     console.log(data);
-    //     this.pageContent = data;
-    //   }
-    // )
+   
   }
+  pageContent: any;
+  offers: Observable<any> =  this._SharedService.getAllOffers(4, 0);
+  places: Observable<any> =  this._SharedService.getAllPlaces(4, 0);
+  news: Observable<any> =  this._SharedService.getAllNews(3, 0);
+  
 
   inputValue?: string;
   options: string[] = [];
@@ -63,7 +37,7 @@ export class HomeComponent implements OnInit {
         dots: false,
         navSpeed: 700,
         autoplaySpeed: 600,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 6000,
         margin: 20,
         rtl: true,
         autoplay: true,

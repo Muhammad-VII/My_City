@@ -153,33 +153,27 @@
     <p data-aos="fade-right">{{'Check the latests offers in the city!' | translate}}</p>
     <div data-aos="fade-up" class="carousel">
     <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide *ngFor="let offer of offers">
-        <div class="offer-card">
+      <ng-template carouselSlide *ngFor="let offer of offers | async">
+        <div class="offer-card d-flex flex-column justify-content-between">
           <div class="offer-img">
-            <img src="assets/Home/pexels-anna-shvets-2.png">
+            <img src="{{offer?.image}}">
             <div class="offer-value">
-              <h3>20%</h3>
+              <h3>{{offer?.offerPercentage}}%</h3>
               <h3>{{'OFF' | translate}}</h3>
-            </div>
-
-            <div class="is-fav">
-              <i class="bi bi-heart"></i>
             </div>
           </div>
 
           <div class="offer-title">
-            <h3>{{'Glory Palace For' | translate}}</h3>
+            <h3>{{offer?.offerTitle | translate}}</h3>
               <div class="offer-des">
-                <p>
-                  {{'Lorem ipsum dolor' | translate}}
+                <p seeMore>
+                  {{offer?.offerDescription | translate}}
                 </p>
 
-                <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                <div>
+                  <h3 class="text-muted">{{offer?.price | currency}}</h3>
+                </div>
               </div>
-          </div>
-          
-          <div class="view-offer">
-            <a [routerLink]="['offers/1']">{{'Know More' | translate}}</a>
           </div>
         </div>
       </ng-template>
@@ -209,29 +203,29 @@
     <p data-aos="fade-right">{{'The most popular places in the city!' | translate}}</p>
     <div data-aos="fade-down" class="carousel">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide *ngFor="let place of places">
+        <ng-template carouselSlide *ngFor="let place of places | async">
           <div class="place-card">
             <div class="place-img">
-              <img src="assets/Home/place-1.png">
+              <img src="{{place?.image}}">
               <div class="is-fav">
                 <i class="bi bi-heart"></i>
               </div>
             </div>
   
             <div class="place-title">
-              <h3>{{'Glory Palace For' | translate}}</h3>
+              <h3>{{place?.placeTitle | translate}}</h3>
                 <div class="place-des">
                   <p>
-                    {{'Lorem ipsum dolor' | translate}} 
+                    {{place?.placeDescription | translate}} 
                   </p>
   
-                  <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                  <nz-rate [ngModel]="place?.rate" nzDisabled></nz-rate>
                 </div>
             </div>
             
-            <div class="view-place">
+            <!-- <div class="view-place">
               <a [routerLink]="['places/1']">{{'Know More' | translate}}</a>
-            </div>
+            </div> -->
           </div>
         </ng-template>
 
@@ -254,29 +248,29 @@
       </div>
 
       <div class="show-more" data-aos="fade-left">
-        <a class="view-all-btn" [routerLink]="['/categories']">
+        <a class="view-all-btn" [routerLink]="['/news']">
          {{'View All' | translate}}
         </a>
       </div>
     </div>
     <p data-aos="fade-right">{{'What is new in El-Sherouk City' | translate}}</p>
     <div class="row">
-      <div *ngFor="let subject of news" data-aos="fade-up" data-aos-delay="300" class="col-md-4">
+      <div *ngFor="let subject of news | async" data-aos="fade-up" data-aos-delay="300" class="col-md-4">
         <div class="news-card">
-          <img src="assets/Home/pexels-anna-shvets-1.png">
-          <h4 class="news-title">
-            {{'Tomorrow the water will be cut off from the 100-meter area' | translate}}
-          </h4>
-
-          <p class="news-captian">
-            {{'Breaking news, Al-Shorouk City Authority notes that the water will be cut off tomorrow from nine in the morning until five in the evening.' | translate}}
-          </p>
-          <div class="news-date">
-            <h4>01</h4>
-            <h4>DEC</h4>
+          <div>
+            <img src="{{subject?.image}}">
+            <h4 class="news-title">
+              {{subject?.newsTitle | translate}}
+            </h4>
+            <p class="news-captian">
+              {{subject?.newsDescription | translate}}
+            </p>
           </div>
-
-          <a class="hvr-{{'forward' | translate}}">{{'Read More' | translate}} <i class="bi bi-arrow-{{'right' | translate}}"></i></a>
+          <div>
+            <div class="news-date">
+              <h4>{{subject?.createdAt | date}}</h4>
+            </div>
+          </div>
         </div>
        
       </div>
