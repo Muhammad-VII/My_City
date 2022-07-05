@@ -1,4 +1,25 @@
 @import '../../../../styles.scss';
+nz-breadcrumb {
+  margin: auto;
+  text-align: left;
+  &:lang(ar) {
+    text-align: right;
+  }
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $main-theme;
+    }
+  }
+  .active-bread {
+    font-weight: 500;
+  }
+}
+
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: $main-theme;
 }

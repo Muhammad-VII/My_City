@@ -1,446 +1,67 @@
-<nz-tabset nzType="card">
-  <nz-tab nzTitle="{{'Hospitals' | translate}}">
+<header>
+  <nz-breadcrumb nzSeparator=">">
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/']">{{'Home' | translate}}</a>
+    </nz-breadcrumb-item>
+
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/explore']">{{'Categories' | translate}}</a>
+    </nz-breadcrumb-item>
+
+    <nz-breadcrumb-item>
+      <a [routerLink]="['/category-details/entertainment']" class="active-bread">{{'Entertainment' | translate}}</a>
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+</header>
+ 
     <div class="tab-content">
       <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
+        <h3>{{'Entertainment' | translate}}</h3>
       </header>
       <article>
         <div class="row">
           <div class="col-md-4">
             <div>
-              <img src="assets/category-details/royal-elshorouk.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Royal Hospital' | translate}}</h4>
+              <img src="assets/category-details/jump.jpg" alt="Al Mostakbal" class="img-fluid">
+              <h4>{{'Jump Zone' | translate}}</h4>
               <p>
-                {{'Royal Hospital provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
+                {{"Welcome to Jump Zone trampoline and inflatables sports adventure parks! You'll find our fun venues in Liffey Valley, Sandyford and Santry. Perfect for parties and making fitness fun Jump Zone has something for everyone! So jump right in to find out more…" | translate}}
               </p>
             </div>
             <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/rG1jnizsdoNwf6nu5" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
             </div>
           </div>
 
           <div class="col-md-4">
             <div>
-              <img src="https://ahlelshorouk.com/upload/125.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'El Shorouk Central Hospital' | translate}}</h4>
+              <img src="assets/category-details/play.jpg" alt="Al Mostakbal" class="img-fluid">
+              <h4>{{'Play Time Park' | translate}}</h4>
               <p>
-                {{'El Shorouk Central Hospital provides medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
+                {{"The sweetest and most enjoyable outing for the whole family, our games for all ages Playtime amusement park is a city of games suitable for all ages, integrated for all children" | translate}}
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/ZWCp8fA6xXf3oDbk6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/G8EVTojaDJotzRh99" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
             </div>
           </div>
 
           <div class="col-md-4">
             <div>
-              <img src="https://cdn.elwatannews.com/watan/610x300/18257469881599897727.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'El Shorouk Golf Hospital' | translate}}</h4>
+              <img src="assets/category-details/ahl.jpg" alt="Al Mostakbal" class="img-fluid">
+              <h4>{{'Ahl Masr Garden' | translate}}</h4>
               <p>
-                {{'Here you can extract the health insurance forms required for work, and they also provide many distinguished medical services' | translate}}
+                {{'The sweetest and most enjoyable outing for the whole family, our games for all ages Playtime amusement park is a city of games suitable for all ages, integrated for all children' | translate}}
               </p>
             </div>
             <div>
-              <a href="https://goo.gl/maps/gePPmxAQpd9kmNEA7" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://ahlelshorouk.com/upload/522.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'International Medical Center Hospital El Shorouk Branch' | translate}}</h4>
-              <p>
-                {{'Global Medical Center has more than a hundred consultants working in many different medical and surgical specialties' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/JjcuwbDGrQw1rkhx8" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://mediaaws.almasryalyoum.com/news/large/2019/01/19/885822_0.jpeg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Future Medical Center' | translate}}</h4>
-              <p>
-                {{'Offers many medical services at good prices and with the help of an expert medical staff' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/Na8XdGM7NsaCxXJq6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
+              <a href="https://goo.gl/maps/d6sUAPm7hPTtbzcw5" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
             </div>
           </div>
 
         </div>
       </article>
     </div>
+ 
 
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 70 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://s3-eu-west-1.amazonaws.com/static.jbcgroup.com/amd/pictures/b2e571b0bb234c34c8677112b1b42d7d.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Jordanian Hospital' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-    
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="assets/category-details/Screenshot 2022-07-04 164734.png" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Health Incurance' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Motamiz' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://media.filfan.com/NewsPics/FilFanNew/Large/284421_0.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Noor EL-Shorouk Hospital' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'Al-Rehan District' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://lh5.googleusercontent.com/p/AF1QipOOquAcwr8B4_KDBX0JWrz6g1wRwJ38r4oT0la4=w408-h306-k-no" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Family Medicine Unit' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-
-  <nz-tab nzTitle="{{'Clinics' | translate}}">
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://www.shorouknews.com/uploadedimages/Other/original/64654513215451.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Al-Shorouk Comprehensive Clinic Insurance' | translate}}</h4>
-              <p>
-                {{'Here you can extract the health insurance forms required for work, and they also provide many distinguished medical services' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-  
-  <nz-tab nzTitle="{{'Pharmacies' | translate}}">
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4" *ngFor="let pharmacy of pharmacies">
-            <div>
-              <img src="{{pharmacy.imgUrl}}" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{pharmacy.name | translate}}</h4>
-              <p>
-                {{pharmacy.describtion | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="{{pharmacy.location}}" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-</nz-tabset>
-
-<nz-tabset nzType="card">
-  <nz-tab nzTitle="{{'Hospitals' | translate}}">
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="assets/category-details/royal-elshorouk.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Royal Hospital' | translate}}</h4>
-              <p>
-                {{'Royal Hospital provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://ahlelshorouk.com/upload/125.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'El Shorouk Central Hospital' | translate}}</h4>
-              <p>
-                {{'El Shorouk Central Hospital provides medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/ZWCp8fA6xXf3oDbk6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://cdn.elwatannews.com/watan/610x300/18257469881599897727.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'El Shorouk Golf Hospital' | translate}}</h4>
-              <p>
-                {{'Here you can extract the health insurance forms required for work, and they also provide many distinguished medical services' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/gePPmxAQpd9kmNEA7" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://ahlelshorouk.com/upload/522.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'International Medical Center Hospital El Shorouk Branch' | translate}}</h4>
-              <p>
-                {{'Global Medical Center has more than a hundred consultants working in many different medical and surgical specialties' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/JjcuwbDGrQw1rkhx8" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div>
-              <img src="https://mediaaws.almasryalyoum.com/news/large/2019/01/19/885822_0.jpeg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Future Medical Center' | translate}}</h4>
-              <p>
-                {{'Offers many medical services at good prices and with the help of an expert medical staff' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="https://goo.gl/maps/Na8XdGM7NsaCxXJq6" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 70 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://s3-eu-west-1.amazonaws.com/static.jbcgroup.com/amd/pictures/b2e571b0bb234c34c8677112b1b42d7d.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Jordanian Hospital' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-    
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="assets/category-details/Screenshot 2022-07-04 164734.png" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Health Incurance' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Motamiz' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://media.filfan.com/NewsPics/FilFanNew/Large/284421_0.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Noor EL-Shorouk Hospital' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <hr class="m-0 mb-4">
-
-    <div class="tab-content">
-      <header>
-        <h3>{{'Al-Rehan District' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://lh5.googleusercontent.com/p/AF1QipOOquAcwr8B4_KDBX0JWrz6g1wRwJ38r4oT0la4=w408-h306-k-no" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Family Medicine Unit' | translate}}</h4>
-              <p>
-                {{'Provides the best medical services at special prices with a specialized and highly qualified medical team and provides emergency service 24 hours a day, seven days a week' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-
-  <nz-tab nzTitle="{{'Clinics' | translate}}">
-    <div class="tab-content">
-      <header>
-        <h3>{{'AL Mostakbal' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4">
-            <div>
-              <img src="https://www.shorouknews.com/uploadedimages/Other/original/64654513215451.jpg" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{'Al-Shorouk Comprehensive Clinic Insurance' | translate}}</h4>
-              <p>
-                {{'Here you can extract the health insurance forms required for work, and they also provide many distinguished medical services' | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="http://www.royalelshrouk.com/" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-  
-  <nz-tab nzTitle="{{'Pharmacies' | translate}}">
-    <div class="tab-content">
-      <header>
-        <h3>{{'El 100 Meter' | translate}}</h3>
-      </header>
-      <article>
-        <div class="row">
-          <div class="col-md-4" *ngFor="let pharmacy of pharmacies">
-            <div>
-              <img src="{{pharmacy.imgUrl}}" alt="Al Mostakbal" class="img-fluid">
-              <h4>{{pharmacy.name | translate}}</h4>
-              <p>
-                {{pharmacy.describtion | translate}}
-              </p>
-            </div>
-            <div>
-              <a href="{{pharmacy.location}}" target="_blank" class="hvr-{{'forward' | translate}}">{{'Location' | translate}} <i class="bi mt-2 bi-arrow-{{'right' | translate}}"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </nz-tab>
-</nz-tabset>
 
