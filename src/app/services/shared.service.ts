@@ -36,9 +36,10 @@ export class SharedService {
       .pipe(map((data: any) => data.data));
   }
 
-  getMainScreen(): any {
-    return this._HttpClient.get(
-      `https://my-city-el-sherouk.herokuapp.com/homePage/getOne`
+  addContact(contact: any): Observable<any> {
+    return this._HttpClient.post(
+      `${environment.apiUrl}shared/contactUs`,
+      contact
     );
   }
 }

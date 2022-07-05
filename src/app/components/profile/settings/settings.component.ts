@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from './../../../services/auth.service';
 import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
@@ -12,7 +14,7 @@ export class SettingsComponent implements OnInit, OnDestroy {
   pageTitle = 'Account Settings';
   buttonShowen: boolean = false;
   subscribtion: Subscription[] = [];
-  constructor() {
+  constructor(private AuthService: AuthService, private _ToasterService: ToastrService) {
     this.subscribtion.push(
       this.settingsForm.valueChanges.subscribe((value) => {
         if (this.settingsForm.valid) {
@@ -28,38 +30,42 @@ export class SettingsComponent implements OnInit, OnDestroy {
       sub.unsubscribe();
     })
   }
-  messageRecevied: boolean = false;
   settingsForm: UntypedFormGroup = new UntypedFormGroup({
-    name: new UntypedFormControl({value: null, disabled: true}, [Validators.required, Validators.minLength(3)]),
+    fullName: new UntypedFormControl({value: null, disabled: true}, [Validators.required, Validators.minLength(3)]),
     email: new UntypedFormControl({value: null, disabled: true}, [
       Validators.required,
       Validators.minLength(3),
       Validators.email,
     ]),
-    phone: new UntypedFormControl({value: null, disabled: true}, [
-      Validators.required,
-      Validators.minLength(10),
-    ]),
     password: new UntypedFormControl({value: null, disabled: true}, [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+    mobileNumber: new UntypedFormControl({value: null, disabled: true}, [
       Validators.required,
       Validators.minLength(10),
     ]),
   });
 
   unlockEditFn(): void {
-    this.settingsForm.controls['name'].enable();
+    this.settingsForm.controls['fullName'].enable();
     this.settingsForm.controls['email'].enable();
-    this.settingsForm.controls['phone'].enable();
+    this.settingsForm.controls['mobileNumber'].enable();
     this.settingsForm.controls['password'].enable();
   }
 
   submitSettingsForm() {
     if (this.settingsForm.valid) {
-      this.messageRecevied = true;
-      this.settingsForm.reset();
-      setTimeout(() => {
-        this.messageRecevied = false;
-      }, 5000);
+      this.AuthService.updateUser(this.settingsForm.value).subscribe((data) => {
+        if (data.user) {
+          this._ToasterService.success('User Updated Successfully');
+          this.settingsForm.reset();
+        } else {
+          this._ToasterService.error('Something went wrong');
+        }
+      }, (err) => {
+        this._ToasterService.error('Something went wrong');
+      })
     } else {
       Object.values(this.settingsForm.controls).forEach((control) => {
         if (control.invalid) {

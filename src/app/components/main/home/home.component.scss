@@ -305,7 +305,7 @@ $card-paragraph-font-size-mb: 14px;
         left: 10px;
         top: 0;
         background-color: $main-theme;
-        padding: 0.5rem 1rem;
+        padding: 0.3rem .6rem;
         border-end-start-radius: 5px;
         border-end-end-radius: 5px;
         &:lang(ar) {
@@ -314,7 +314,7 @@ $card-paragraph-font-size-mb: 14px;
         }
         h3 {
           color: #fff;
-          font-size: 25px;
+          font-size: 18px;
           margin-block: .4rem;
         }
       }

@@ -17,12 +17,12 @@
 
   
   <div class="container">
-    <article *ngIf="!messageRecevied">
+    <article>
       <form nz-form [formGroup]="settingsForm" (ngSubmit)="submitSettingsForm()">
         <nz-form-item>
           <nz-form-control nzErrorTip="{{'Please enter your name' | translate}}">
             <nz-input-group>
-              <input autocomplete="name" type="text" nz-input formControlName="name" placeholder="{{'Ahmed Magdy' | translate}}" />
+              <input autocomplete="name" type="text" nz-input formControlName="fullName" placeholder="{{'Ahmed Magdy' | translate}}" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
@@ -38,7 +38,7 @@
         <nz-form-item>
           <nz-form-control nzErrorTip="{{'Phone is incorrect' | translate}}">
             <nz-input-group>
-              <input autocomplete="tel" type="tel" nz-input formControlName="phone" placeholder="+2597340963" />
+              <input autocomplete="tel" type="tel" nz-input formControlName="mobileNumber" placeholder="+2597340963" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
@@ -61,8 +61,5 @@
       </form>
     </article>
   </div>
-  <!-- <figure [@enterAnimation] *ngIf="messageRecevied">
-    <img src="assets/about-us/Group 31649.png" alt="" srcset="">
-  </figure> -->
   <bg-animation></bg-animation>
 </section>

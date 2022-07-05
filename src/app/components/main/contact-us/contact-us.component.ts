@@ -1,28 +1,17 @@
+import { SharedService } from 'src/app/services/shared.service';
 import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss'],
-  animations: [
-    trigger('enterAnimation', [
-      transition(':enter', [
-        style({ transform: 'translateX(100%)', opacity: 0 }),
-        animate('500ms', style({ transform: 'translateX(0)', opacity: 1 })),
-      ]),
-      transition(':leave', [
-        style({ transform: 'translateX(0)', opacity: 1 }),
-        animate('500ms', style({ transform: 'translateX(100%)', opacity: 0 })),
-      ]),
-    ]),
-  ],
 })
 export class ContactUsComponent implements OnInit {
   pageTitle: string = 'Contact Us';
   messageRecevied: boolean = false;
-  constructor() {}
+  constructor(private _ToasterService: ToastrService, private _SharedService: SharedService) {}
   contactForm: UntypedFormGroup = new UntypedFormGroup({
     name: new UntypedFormControl('', [Validators.required, Validators.minLength(3)]),
     email: new UntypedFormControl('', [
@@ -38,11 +27,14 @@ export class ContactUsComponent implements OnInit {
 
   submitContactForm() {
     if (this.contactForm.valid) {
-      this.messageRecevied = true;
-      this.contactForm.reset();
-      setTimeout(() => {
-        this.messageRecevied = false;
-      }, 5000);
+        this._SharedService.addContact(this.contactForm.value).subscribe((data) => {
+        if (data.message) {
+        this._ToasterService.success('Message sent successfully');
+        this.contactForm.reset();
+        } else {
+        this._ToasterService.error('Something went wrong');
+        }
+      })
     } else {
       Object.values(this.contactForm.controls).forEach((control) => {
         if (control.invalid) {

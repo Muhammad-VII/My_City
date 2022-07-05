@@ -1,10 +1,11 @@
+import { environment } from 'src/environments/environment';
 import { Auth } from './../States/Auth_State/AuthModel/auth-model';
 import { map, Observable, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as AuthActions from '../../app/States/Auth_State/Actions/auth-actions';
-
+import jwtDecode from 'jwt-decode'
 interface AppState {
   Auth: Auth;
 }
@@ -14,6 +15,7 @@ interface AppState {
 })
 export class AuthService {
   token$: Observable<Auth | string>;
+  user:any = jwtDecode(localStorage.getItem('Token')!);
   constructor(
     private _HttpClient: HttpClient,
     private _Store: Store<AppState>
@@ -55,6 +57,17 @@ export class AuthService {
       );
   }
 
+  updateUser(user: any): Observable<any> {
+    return this._HttpClient.patch(
+      `${environment.apiUrl}users/updateUser?id=${this.user.id}`,
+      user,
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('Token')}`,
+        },
+      }
+    );
+  }
   logout(): void {
     localStorage.removeItem('Token');
     this._Store.dispatch(AuthActions.logout());

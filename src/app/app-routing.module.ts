@@ -37,10 +37,6 @@ const routes: Routes = [
     path: 'transportaion',
     component: TransportaionComponent,
   },
-  {
-    path: 'exploredetails',
-    component: ExploreDetailsComponent,
-  },
   { path: 'story', component: AboutUsComponent },
   { path: 'distrect-details', component: DistrectDetailsComponent },
   { path: 'contact', component: ContactUsComponent },
