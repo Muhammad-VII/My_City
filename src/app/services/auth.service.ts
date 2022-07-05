@@ -15,7 +15,7 @@ interface AppState {
 })
 export class AuthService {
   token$: Observable<Auth | string>;
-  user:any = jwtDecode(localStorage.getItem('Token')!);
+  user:any;
   constructor(
     private _HttpClient: HttpClient,
     private _Store: Store<AppState>
@@ -23,6 +23,7 @@ export class AuthService {
     this.token$ = this._Store.select('Auth').pipe(
       map((res: any) => {
         if (localStorage.getItem('Token') != null) {
+          this.user = jwtDecode(localStorage.getItem('Token')!);
           return localStorage.getItem('Token')!;
         } else {
           return res.access_token;
