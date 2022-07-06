@@ -195,7 +195,7 @@
       </div>
 
       <div class="show-more" data-aos="fade-left">
-        <a class="view-all-btn" [routerLink]="['/trend-places']">
+        <a class="view-all-btn" [routerLink]="['/explore']">
          {{'View All' | translate}}
         </a>
       </div>
@@ -208,7 +208,7 @@
             <div class="place-img">
               <img src="{{place?.image}}">
               <div class="is-fav">
-                <i class="bi bi-heart"></i>
+                <i class="bi bi-heart" (click)="addToSavedPlaces(place, $event)"></i>
               </div>
             </div>
   
@@ -228,8 +228,6 @@
             </div> -->
           </div>
         </ng-template>
-
-
       </owl-carousel-o>
     </div>
 

@@ -9,21 +9,26 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private _SharedService: SharedService) {
-   
-  }
+  constructor(private _SharedService: SharedService) {}
   pageContent: any;
-  offers: Observable<any> =  this._SharedService.getAllOffers(4, 0);
-  places: Observable<any> =  this._SharedService.getAllPlaces(5, 0);
-  news: Observable<any> =  this._SharedService.getAllNews(3, 0);
-  
+  offers: Observable<any> = this._SharedService.getAllOffers(4, 0);
+  places: Observable<any> = this._SharedService.getAllPlaces(5, 0);
+  news: Observable<any> = this._SharedService.getAllNews(3, 0);
+
+  // Add saved place to local storage
+  addToSavedPlaces(place: any, event: any) {
+    if (event.target.classList.contains('bi-heart-fill')) {
+      event.target.classList.replace('bi-heart-fill', 'bi-heart');
+    } else {
+      event.target.classList.replace('bi-heart', 'bi-heart-fill');
+    }
+  }
 
   inputValue?: string;
   options: string[] = [];
   onInput(event: Event): void {
     const value = (event.target as HTMLInputElement).value;
     this.options = value ? [value, value + value, value + value + value] : [];
-    //TODO Calling search api
   }
   customOptions: OwlOptions = {};
 
@@ -90,5 +95,4 @@ export class HomeComponent implements OnInit {
       };
     }
   }
-
 }

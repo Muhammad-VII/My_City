@@ -13,7 +13,7 @@
         <h4>{{'Popular Places' | translate}}</h4>
       </div>
       <div class="d-flex gap-2 align-items-center">
-        <p class="p-0 m-0 text-nowrap fw-bold">{{'Sort B' | translate}}{{'y' | translate}}:</p>
+        <p class="p-0 m-0 text-nowrap fw-bold">{{'Sort By' | translate}}:</p>
         <select>
           <option value="">{{'Top Rated' | translate}}</option>
           <option value="">{{'Recently Added' | translate}}</option>
@@ -58,23 +58,23 @@
       </div>
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-4" *ngFor="let offer of offers">
+          <div class="col-md-4" *ngFor="let place of places | async">
             <div class="place-card">
               <div class="place-img">
-                <img src="assets/Home/place-2.png">
+                <img src="{{place?.image}}">
                 <div class="is-fav">
                   <i class="bi bi-heart"></i>
                 </div>
               </div>
     
               <div class="place-title">
-                <h3>{{'Glory Palace For' | translate}}</h3>
+                <h3>{{place?.placeTitle | translate}}</h3>
                   <div class="place-des">
                     <p>
                       {{'Lorem ipsum dolor' | translate}} 
                     </p>
     
-                    <nz-rate [ngModel]="5" nzDisabled></nz-rate>
+                    <nz-rate [ngModel]="place?.rate" nzDisabled></nz-rate>
                   </div>
               </div>
               

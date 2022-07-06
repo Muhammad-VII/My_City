@@ -412,6 +412,9 @@ $card-paragraph-font-size-mb: 14px;
         background-color: #fff;
         display: grid;
         place-items: center;
+        .bi-heart-fill::before {
+          color: red;
+        }
         i {
           transition: color .5s;
           font-size: 21px;

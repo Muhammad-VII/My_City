@@ -1,4 +1,6 @@
+import { SharedService } from 'src/app/services/shared.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-offers',
@@ -7,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersComponent implements OnInit {
   pageTitle: string = 'Offers';
-  constructor() { }
-  offers: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  constructor(private _SharedService: SharedService) {}
+  offers: Observable<any> = this._SharedService.getAllOffers(5, 0);
   openFilter(): void {
     $('.side-filter').slideToggle(300)
   }

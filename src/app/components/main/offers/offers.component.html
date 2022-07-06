@@ -58,12 +58,12 @@
       </div>
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-4" *ngFor="let offer of offers">
+          <div class="col-md-4" *ngFor="let offer of offers | async">
             <div class="offer-card">
               <div class="offer-img">
-                <img src="assets/Home/pexels-anna-shvets-1.png">
+                <img src="{{offer?.image}}">
                 <div class="offer-value">
-                  <h3>20%</h3>
+                  <h3>{{offer?.offerPercentage}}%</h3>
                   <h3>{{'OFF' | translate}}</h3>
                 </div>
     
@@ -73,18 +73,12 @@
               </div>
     
               <div class="offer-title">
-                <h3>{{'Glory Palace For' | translate}}</h3>
+                <h3>{{offer.offerTitle | translate}}</h3>
                   <div class="offer-des">
                     <p>
-                      {{'Lorem ipsum dolor' | translate}} 
+                      {{offer.offerDescription | translate}} 
                     </p>
-    
-                    <nz-rate [ngModel]="5" nzDisabled></nz-rate>
-                  </div>
-              </div>
-              
-              <div class="view-offer">
-                <a [routerLink]="['offers/1']">{{'Know More' | translate}}</a>
+                    </div>
               </div>
             </div>
           </div>
