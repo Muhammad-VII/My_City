@@ -1,0 +1,44 @@
+@import '../../../../../styles.scss';
+nz-breadcrumb {
+  margin: auto;
+  text-align: left;
+  margin-top: 1rem;
+  &:lang(ar) {
+    text-align: right;
+  }
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+    &:hover {
+      color: $main-theme;
+    }
+  }
+  .active-bread {
+    font-weight: 500;
+  }
+}
+
+.row {
+  header {
+    text-align: left;
+    margin-bottom: 1rem;
+    h3 {
+      color: $main-theme;
+    }
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    gap: 2rem;
+    li {
+      font-size: 25px;
+    }
+  }
+}
+

@@ -1,3 +1,5 @@
+import { SarayaComponent } from './components/main/buses/saraya/saraya.component';
+import { BusDetailsComponent } from './components/main/bus-details/bus-details.component';
 import { ServicesComponent } from './components/categories/services/services.component';
 import { EntertainmentComponent } from './components/categories/entertainment/entertainment.component';
 import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
@@ -49,6 +51,9 @@ const routes: Routes = [
     {
       path: '**', redirectTo: 'medical', pathMatch: 'full'
     }
+  ]},
+  { path: 'bus-details', component: BusDetailsComponent, children: [
+    { path: "saraya", component: SarayaComponent}
   ]},
   { path: 'help', component: HelpComponent },
   { path: 'offers', component: OffersComponent },

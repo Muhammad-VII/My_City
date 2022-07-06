@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
   pageContent: any;
   offers: Observable<any> =  this._SharedService.getAllOffers(4, 0);
-  places: Observable<any> =  this._SharedService.getAllPlaces(4, 0);
+  places: Observable<any> =  this._SharedService.getAllPlaces(5, 0);
   news: Observable<any> =  this._SharedService.getAllNews(3, 0);
   
 

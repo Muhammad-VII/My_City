@@ -1,0 +1,70 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+
+<section class="bus-details-section">
+  <div class="container">
+    <header>
+      <nz-breadcrumb nzSeparator=">">
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/']">{{'Home' | translate}}</a>
+        </nz-breadcrumb-item>
+
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/explore']">{{'Explore' | translate}}</a>
+        </nz-breadcrumb-item>
+    
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/transportaion']">{{'Transportaion' | translate}}</a>
+        </nz-breadcrumb-item>
+     
+        <nz-breadcrumb-item>
+          <a [routerLink]="['/bus-details/saraya']" class="active-bread">{{'Saraya EL Qubba' | translate}}</a>
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+    </header>
+    <article>
+      <div class="row">
+        <div class="col-md-6">
+          <header>
+            <h3>{{'Stations' | translate}}</h3>
+          </header>
+          <ul>
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Al Mashtal' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Suiz Gate 1' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Ring Rd' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Makram Ebid' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'El Korba' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Roxy' | translate}}</li>
+            
+            <li><i class="bi bi-geo-alt-fill"></i> {{'Saraya EL Qubba' | translate}}</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <header>
+            <h3>{{'Bus departure times' | translate}}</h3>
+          </header>
+          <nz-table nzTemplateMode>
+            <thead>
+              <tr>
+                <th>{{'From EL Shorouk' | translate}}</th>
+                <th>{{'From Saraya EL Qubba' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let time of times">
+                <td>{{time.go}}</td>
+                <td>{{time.away}}</td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>

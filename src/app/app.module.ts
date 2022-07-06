@@ -61,6 +61,8 @@ import { ShoppingComponent } from './components/categories/shopping/shopping.com
 import { ServicesComponent } from './components/categories/services/services.component';
 import { EntertainmentComponent } from './components/categories/entertainment/entertainment.component';
 import { FoodComponent } from './components/categories/food/food.component';
+import { BusDetailsComponent } from './components/main/bus-details/bus-details.component';
+import { SarayaComponent } from './components/main/buses/saraya/saraya.component';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -106,6 +108,8 @@ registerLocaleData(en);
     ServicesComponent,
     EntertainmentComponent,
     FoodComponent,
+    BusDetailsComponent,
+    SarayaComponent,
   ],
   imports: [
     BrowserModule,
