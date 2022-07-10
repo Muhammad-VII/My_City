@@ -145,8 +145,8 @@ registerLocaleData(en);
     provideFirestore(() => getFirestore()),
     provideMessaging(() => getMessaging()),
     provideStorage(() => getStorage()),
-  ],
-  providers: [
+  ],  
+  providers: [     
     { provide: NZ_I18N, useValue: en_US },
     {
       provide: HTTP_INTERCEPTORS,
