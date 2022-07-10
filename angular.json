@@ -122,6 +122,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "my_city_EL_SHOROUK:build:production",
+            "firebaseProject": "my-city-ae094",
+            "firebaseHostingSite": "my-city-elshorouk"
+          }
         }
       }
     }

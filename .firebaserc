@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-city-ae094": {
+      "hosting": {
+        "my_city_EL_SHOROUK": [
+          "my-city-elshorouk"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-city-ae094"
+  }
+}

@@ -63,6 +63,12 @@ import { EntertainmentComponent } from './components/categories/entertainment/en
 import { FoodComponent } from './components/categories/food/food.component';
 import { BusDetailsComponent } from './components/main/bus-details/bus-details.component';
 import { SarayaComponent } from './components/main/buses/saraya/saraya.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -137,6 +143,12 @@ registerLocaleData(en);
         deps: [HttpClient],
       },
     }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideMessaging(() => getMessaging()),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
@@ -145,7 +157,8 @@ registerLocaleData(en);
       useClass: LanguageInterceptor,
       multi: true,
     },
-    HttpClient
+    HttpClient,
+    ScreenTrackingService,UserTrackingService
   ],
   bootstrap: [AppComponent],
 })
