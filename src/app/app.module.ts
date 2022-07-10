@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { ar_EG, NZ_I18N } from 'ng-zorro-antd/i18n';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
@@ -24,8 +24,6 @@ import { ExploreComponent } from './components/main/explore/explore.component';
 import { AboutUsComponent } from './components/main/about-us/about-us.component';
 import { NewsComponent } from './components/main/news/news.component';
 import { ContactUsComponent } from './components/main/contact-us/contact-us.component';
-import { LoginComponent } from './components/profile/login/login.component';
-import { SignupComponent } from './components/profile/signup/signup.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NotfoundComponent } from './components/shared/notfound/notfound.component';
@@ -36,7 +34,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ParticlesModule } from 'ngx-particle';
 import { LoaderComponent } from './components/shared/loader/loader.component';
-import { PassResetComponent } from './components/profile/pass-reset/pass-reset.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { AnimationComponent } from './components/shared/animation/animation.component';
 import { HelpComponent } from './components/main/help/help.component';
@@ -52,7 +49,6 @@ import { ReviewsComponent } from './components/main/reviews/reviews.component';
 import { ShowMoreDirective } from './directives/seemore.directive';
 import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { TransportaionComponent } from './components/main/transportaion/transportaion.component';
-import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CategoryDetailsComponent } from './components/category-details/category-details.component';
@@ -85,14 +81,11 @@ registerLocaleData(en);
     AboutUsComponent,
     NewsComponent,
     ContactUsComponent,
-    LoginComponent,
-    SignupComponent,
     NavComponent,
     FooterComponent,
     NotfoundComponent,
     ImgScanPipe,
     LoaderComponent,
-    PassResetComponent,
     HeaderComponent,
     AnimationComponent,
     HelpComponent,
@@ -107,7 +100,6 @@ registerLocaleData(en);
     ShowMoreDirective,
     ExploreDetailsComponent,
     TransportaionComponent,
-    DistrectDetailsComponent,
     CategoryDetailsComponent,
     MedicalComponent,
     ShoppingComponent,

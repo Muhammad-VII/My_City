@@ -2,9 +2,7 @@ import { SarayaComponent } from './components/main/buses/saraya/saraya.component
 import { BusDetailsComponent } from './components/main/bus-details/bus-details.component';
 import { ServicesComponent } from './components/categories/services/services.component';
 import { EntertainmentComponent } from './components/categories/entertainment/entertainment.component';
-import { DistrectDetailsComponent } from './components/main/distrect-details/distrect-details.component';
 import { TransportaionComponent } from './components/main/transportaion/transportaion.component';
-import { ExploreDetailsComponent } from './components/main/explore-details/explore-details.component';
 import { ReviewsComponent } from './components/main/reviews/reviews.component';
 import { SearchComponent } from './components/main/search/search.component';
 import { HowItWorksComponent } from './components/main/how-it-works/how-it-works.component';
@@ -40,7 +38,6 @@ const routes: Routes = [
     component: TransportaionComponent,
   },
   { path: 'story', component: AboutUsComponent },
-  { path: 'distrect-details', component: DistrectDetailsComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'category-details', component: CategoryDetailsComponent, children: [
     { path: 'medical', component: MedicalComponent },
