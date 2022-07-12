@@ -10,7 +10,8 @@
       </div>
       <div data-aos="fade-up" data-aos-delay="2500">
         <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
-          <input [(ngModel)]="inputValue"
+          <input
+          (keyup)="searchPlaces($event)"
           (input)="onInput($event)"
           [nzAutocomplete]="auto" type="text" nz-input placeholder="{{'What are you looking for?' | translate}}" />
           <nz-autocomplete [nzDataSource]="options" nzBackfill #auto></nz-autocomplete>

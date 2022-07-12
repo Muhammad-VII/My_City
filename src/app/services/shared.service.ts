@@ -12,6 +12,10 @@ export class SharedService {
 
   constructor(private _HttpClient: HttpClient) {}
 
+  searchPlaces(searchTerm: string): Observable<any> {
+    return this._HttpClient.get(`${environment.apiUrl}shared/search?term=${searchTerm}`);
+  }
+
   getAllOffers(take: number = 5, skip: number = 0): Observable<any> {
     return this._HttpClient
       .get<MainScreenInterface>(

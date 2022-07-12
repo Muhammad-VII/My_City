@@ -14,7 +14,10 @@ export class HomeComponent implements OnInit {
   offers: Observable<any> = this._SharedService.getAllOffers(4, 0);
   places: Observable<any> = this._SharedService.getAllPlaces(5, 0);
   news: Observable<any> = this._SharedService.getAllNews(3, 0);
-
+  searchResults: Observable<any>[] = []
+  searchPlaces(searchTerm: any): void {
+    
+  }
   // Add saved place to local storage
   addToSavedPlaces(place: any, event: any) {
     if (event.target.classList.contains('bi-heart-fill')) {
@@ -28,7 +31,16 @@ export class HomeComponent implements OnInit {
   options: string[] = [];
   onInput(event: Event): void {
     const value = (event.target as HTMLInputElement).value;
-    this.options = value ? [value, value + value, value + value + value] : [];
+    this._SharedService.searchPlaces(value).subscribe(res => {
+      res.forEach((element:any) => {
+        this.options.push(element.placeTitle);
+        function onlyUnique(value:any, index:any, self:any) {
+          return self.indexOf(value) === index;
+        }
+        let unique:any = this.options.filter(onlyUnique);
+        this.options = [...unique];
+      });
+    })
   }
   customOptions: OwlOptions = {};
 

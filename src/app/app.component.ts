@@ -51,7 +51,7 @@ export class AppComponent {
     this.afMessaging.requestToken.subscribe(
       (token) => {
         // console.log('Permission Generated!');
-        console.log(token);
+        // console.log(token);
       },
       (error) => {
         // console.error(error);
