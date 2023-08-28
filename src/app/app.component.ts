@@ -41,9 +41,9 @@ export class AppComponent {
     const lang = localStorage.getItem("lang") || "en";
     this._TranslateService.use(lang);
     document.documentElement.lang = lang
-    this._NgxSpinner.show()
+    // this._NgxSpinner.show()
     window.onload = () => {
-      this._NgxSpinner.hide()
+      // this._NgxSpinner.hide()
     }
   }
 
