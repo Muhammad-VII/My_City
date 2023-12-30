@@ -12,7 +12,7 @@ export const environment = {
     messagingSenderId: '1063249174048',
     measurementId: 'G-5LJRYXTHQ1',
   },
-  apiUrl: "https://shorouk-city-app-b6db84228270.herokuapp.com/",
+  apiUrl: "http://ec2-18-133-227-209.eu-west-2.compute.amazonaws.com/",
   production: false
 };
 

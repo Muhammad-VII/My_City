@@ -40,14 +40,6 @@
                 [routerLink]="['/contact']">{{'Contact us' | translate}}</a>
             </li>
 
-            <!-- <li class="nav-item" *ngIf="!isLogin">
-              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">{{'Login' | translate}}</a>
-            </li>
-
-            <li class="nav-item" *ngIf="isLogin">
-              <a class="nav-link" (click)='logout()'>{{'Logout' | translate}}</a>
-            </li> -->
-
             <li class="nav-item mt-2" *ngIf="lang == 'ar'" (click) = 'changeLanguage("en")'>
               <img src="assets/Home/en.png" width="25px" height="15px">
             </li>

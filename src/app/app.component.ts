@@ -38,6 +38,10 @@ export class AppComponent {
     this.requestedPermission();
     this.listen();
     this._TranslateService.setDefaultLang("en")
+    localStorage.setItem(
+      "lang",
+      localStorage.getItem("lang") || "en"
+    )
     const lang = localStorage.getItem("lang") || "en";
     this._TranslateService.use(lang);
     document.documentElement.lang = lang

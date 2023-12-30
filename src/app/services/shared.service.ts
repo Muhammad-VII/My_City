@@ -42,7 +42,7 @@ export class SharedService {
 
   addContact(contact: any): Observable<any> {
     return this._HttpClient.post(
-      `${environment.apiUrl}shared/contactUs`,
+      `http://ec2-18-133-227-209.eu-west-2.compute.amazonaws.com/shared/contactUs`,
       contact
     );
   }

@@ -39,14 +39,14 @@ export class AuthService {
 
   signUp(signUpForm: any): Observable<any> {
     return this._HttpClient.post(
-      'https://my-city-el-sherouk.herokuapp.com/register',
+      'ec2-18-133-227-209.eu-west-2.compute.amazonaws.com/register',
       signUpForm
     );
   }
 
   login(loginForm: any): Observable<any> {
     return this._HttpClient
-      .post(`https://my-city-el-sherouk.herokuapp.com/login`, loginForm)
+      .post(`ec2-18-133-227-209.eu-west-2.compute.amazonaws.com/login`, loginForm)
       .pipe(
         tap((res: any) => {
           if (res.data.access_token) {

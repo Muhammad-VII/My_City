@@ -19,8 +19,7 @@ declare const $: any;
 export class NavComponent implements OnInit, OnDestroy {
   constructor(
     private _AuthService: AuthService,
-    private _Toaster: ToastrService,
-    private translatservice:TranslateService
+    private _Toaster: ToastrService
   ) {
     this.subscribtions.push(
       this._AuthService.token$.subscribe((res) => {
@@ -58,8 +57,8 @@ export class NavComponent implements OnInit, OnDestroy {
 
   submitSignUpForm(): void {
     if (this.signUpForm.valid) {
-      this._AuthService.signUp(this.signUpForm.value).subscribe(
-        (res) => {
+      this._AuthService.signUp(this.signUpForm.value).subscribe({
+        next: (res) => {
           this.signUpForm.reset();
           $('#signUpModal').modal('hide');
           if (localStorage.getItem('lang') === 'en') {
@@ -68,14 +67,14 @@ export class NavComponent implements OnInit, OnDestroy {
             this._Toaster.success('تم إنشاء الحساب بنجاح', 'نجاح');
           }
         },
-        (err) => {
+        error: (err) => {
           if (localStorage.getItem('lang') === 'en') {
             this._Toaster.error('Account Already Exists.', 'Error');
           } else {
             this._Toaster.error('الحساب موجود بالفعل', 'خطأ');
           }
-        }
-      );
+        },
+      });
     } else {
       Object.values(this.signUpForm.controls).forEach((control) => {
         if (control.invalid) {
@@ -230,10 +229,9 @@ export class NavComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') || 'en';
-    if(localStorage.getItem('lang') === 'en'){
+    if (localStorage.getItem('lang') === 'en') {
       document.dir = 'ltr';
-    }
-    else{
+    } else {
       document.dir = 'rtl';
     }
     this.changeNavbarColor();
